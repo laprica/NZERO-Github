@@ -81,86 +81,153 @@ void loop() {
         // Begin the sweep
         int worked = 1;
         float vG = gate_start;
-        int vS = analogRead(sourcePin);
-        // map to get real voltage number
-        float vSa = mapf(vS, 0, 1023, 0, 5);
-
-        // check if switch already closed at beginning
-        if ( abs(2.8 - vSa) > vS_thresh) {
-          Serial.println("Shorted from the start");
-          Serial.println(vSa);
-          worked = 0;
-        }
 
         int contLoop = 1;
-        // can begin the sweep
-        //Serial.print("2.8 - vsa = ");
-        //Serial.println(2.8-vSa);
-        //Serial.println(2.8-vSa > vS_thresh);
-        while (contLoop == 1 && abs(2.8 - vSa) < vS_thresh) {
+        
+        while(contLoop){
+          // check if should continue loop
           if (Serial.available() > 0) {
             inByte = Serial.read();
             if (inByte == 's') {
               write_value(0);
               contLoop = 0;
+              break;
             }
           }
-          delay(500);
 
-          if ( vG - gate_limit > 0) {
-            // open switch
-            Serial.println("open switch");
-            worked = 0;
+          // start ramp up
+          int ru = rampUp(vG);
+
+          if(!ru){
+            // something wrong happened, get out of loop
             break;
           }
 
-          // Tell PC still in loop
+          // start ramp down
+          int rd = rampDown(vG);
+          
+          if(!rd){
+            // something wrong happened, get out of loop
+            break;
+          }
+        
+          delay(500);
+
           Serial.println("loop");
-
-          // Tell PC the gate voltage
-          //Serial.println('g');
-
-          // increase bias
-          vG += gate_step;
-          Serial.println(vG);
-
-          // set bias voltage
-          //vGa = vG / 20.0; // there will be 20x gain, only need to
-          // output 1/20 of desired value from Due
-
-
-          write_value(floor(mapf(vG, 0, 5, 0, 4095)));
-          delay(5);
-
-          // read the source voltage
-          vS = analogRead(sourcePin);
-          vSa = mapf(vS, 0, 1023, 0, 5);
-          // Tell PC the TIA voltage
-          //Serial.println('s');
-          Serial.println(vSa);
         }
 
         // exited loop, now set output to 0 V
         write_value(0);
-
-        if (worked) {
-          // tell PC that it worked and at what voltage
-          Serial.println("worked");
-          Serial.println(vG);
-          Serial.println(vSa);
-        }
     }
   }
 }
 
+int rampUp(float gateV){
+  // will return 1 on success
+  // return 0 on not success
+  // This function will ramp the gate voltage up until
+  // the devices switches or the gate voltage reaches the limit
+
+  // check the source voltage
+  float sourceV = getSourceVolt();
+  if( abs(2.8 - sourceV) > vS_thresh ){
+    // the switch is shorted from the start
+    Serial.print("Shorted from the start with: ");
+    Serial.print(sourceV);
+    Serial.println(" V");
+    return 0;
+  }
+
+  // check if out of bounds to ramp up
+  if ( gateV - gate_limit > 0){
+    Serial.println("Open Switch");
+    write_value(0);
+    return 0;
+  }
+
+  // good to start the ramp up
+  while( gateV - gate_limit < 0 ) {
+
+    // increase gate voltage
+    gateV += gate_step;
+    write_value(gateV);
+
+    // look at source voltage to see if switch
+    sourceV = getSourceVolt();
+    
+    if( abs(2.8 - sourceV) > vS_thresh ){
+      // then the device has closed!
+      Serial.print("Closed at ");
+      Serial.print(gateV);
+      Serial.print(" V with ");
+      Serial.print(sourceV);
+      Serial.println(" V on source");
+      return 1;
+    }
+  }
+  return 0;
+}
+
+
+int rampDown(float gateV){
+  // will return 1 on success
+  // return 0 on not success
+  // This function will ramp the gate voltage up until
+  // the devices opens or the gate voltage goes below 0
+
+  // check the source voltage
+  float sourceV = getSourceVolt();
+  if( abs(2.8 - sourceV) < vS_thresh ){
+    // the switch is shorted from the start
+    Serial.print("Shorted from the start with: ");
+    Serial.print(sourceV);
+    Serial.println(" V");
+    return 0;
+  }
+
+  // check if out of bounds to ramp up
+  if ( gateV < 0){
+    Serial.println("Not Opening");
+    return 0;
+  }
+
+  // good to start the ramp down
+  while( gateV > 0 ) {
+
+    // decrease gate voltage
+    gateV -= gate_step;
+    write_value(gateV);
+
+    // look at source voltage to see if switch
+    sourceV = getSourceVolt();
+    
+    if( abs(2.8 - sourceV) < vS_thresh ){
+      // then the device has opened!
+      Serial.print("Opened at ");
+      Serial.print(gateV);
+      Serial.print(" V with ");
+      Serial.print(sourceV);
+      Serial.println(" V on source");
+      return 1;
+    }
+  }
+  return 0;
+}
+
+
+float getSourceVolt(){
+  // This function will return the voltage the Arduino is reading
+  // on the given source pin.
+  int vS = analogRead(sourcePin);
+  // map to get real voltage number
+  float vSa = mapf(vS, 0, 1023, 0, 5);
+  return vSa;
+}
+
 void write_value(float value) {
   // channel (0 = DACA, 1 = DACB) // Vref input buffer (0 = unbuffered, 1 = buffered) // gain (1 = 1x, 0 = 2x)  // Output power down power down (0 = output buffer disabled) //  12 bits of data
-  value = value / 20;
-  //Serial.print("value: ");
-  //Serial.println(value);
+  value = value / 20.0;
   int v = value;
-  //Serial.print("v: ");
-  //Serial.println(v);
   uint16_t out = (0 << 15) | (1 << 14) | (1 << 13) | (1 << 12) | (v);
   digitalWrite(slaveSelectPin, LOW);
   //Serial.print("out: ");
