@@ -1,6 +1,12 @@
 // Test output to MCP4921E, a 12 bit DAC with SPI
+
+// Voltage will step up (or down) every 100 ms.
+// Unless the ramp is commented out, then it will hold
+// a constant voltage.
+
+
 // Thanks to equaliser for a test ze used with a Teensy
-// and uploaded to GitHub
+// and uploaded to GitHub.
 // https://gist.github.com/equaliser/8216031
 
 // Leanna Pancoast 9 Nov 2017
