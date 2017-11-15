@@ -21,9 +21,14 @@ int slaveSelectPin = 10;
 int gatePin = 7;
 int sourcePin = A0;
 
+const byte interruptPin = 2;
+volatile byte killState = LOW;
+
 float gate_start = 0;
 float gate_step = 0.2;
 float gate_limit = 50;
+
+unsigned long gate_delay = 500;
 
 float vGa = -1;
 
@@ -37,7 +42,6 @@ float mapf(float x, float in_min, float in_max, float out_min, float out_max)
 }
 
 void setup() {
-
   // Initialize the Serial to talk to PC
   Serial.begin(9600);
   Serial.setTimeout(50);
@@ -52,7 +56,15 @@ void setup() {
   pinMode(13, OUTPUT);
   write_value(0);
 
+  // setup interrupt things
+  pinMode(interruptPin, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(interruptPin), killCode, FALLING);
+
   delay(100);
+}
+
+void killCode(){
+  killState = HIGH;
 }
 
 void loop() {
@@ -85,6 +97,14 @@ void loop() {
         int contLoop = 1;
         
         while(contLoop){
+          // check if should stop the process
+          if( killState == HIGH){
+            write_value(0);
+            contLoop = 0;
+            Serial.println("state killed");
+            break;
+          }
+          
           // check if should continue loop
           if (Serial.available() > 0) {
             inByte = Serial.read();
@@ -110,14 +130,14 @@ void loop() {
             // something wrong happened, get out of loop
             break;
           }
-        
-          delay(500);
 
+          
           Serial.println("loop");
         }
 
         // exited loop, now set output to 0 V
         write_value(0);
+        Serial.println("End program");
     }
   }
 }
@@ -148,6 +168,12 @@ int rampUp(float gateV){
   // good to start the ramp up
   while( gateV - gate_limit < 0 ) {
 
+    // check if should stop the process
+    if( killState == HIGH){
+      write_value(0);
+      Serial.println("state killed in ramp up");
+      break;
+    }
     // increase gate voltage
     gateV += gate_step;
     write_value(gateV);
@@ -193,6 +219,13 @@ int rampDown(float gateV){
 
   // good to start the ramp down
   while( gateV > 0 ) {
+
+    // check if should stop the process
+    if( killState == HIGH){
+      write_value(0);
+      Serial.println("state killed in ramp down");
+      break;
+    }
 
     // decrease gate voltage
     gateV -= gate_step;
