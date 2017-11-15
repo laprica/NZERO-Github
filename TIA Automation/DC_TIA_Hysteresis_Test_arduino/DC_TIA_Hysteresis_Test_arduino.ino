@@ -28,13 +28,15 @@ volatile byte killState = LOW;
 byte printKill = HIGH;
 
 float gate_start = 0;
-float gate_step = 0.2;
+float gate_step = 0.1;
 float gate_limit = 5;
 
 unsigned long previousMillis = 0;
 const long gate_delay = 500;
 
 float gateV = -1;
+
+int debugPin = 6;
 
 // 2.8 is the 'resting' voltage. Can change to
 // a moving average later.    
@@ -62,6 +64,7 @@ void setup() {
   Serial.println("Ready");
 
   pinMode(ledPin, OUTPUT);
+  pinMode(debugPin, OUTPUT);
   write_value(0);
 
   // setup interrupt things
@@ -77,6 +80,10 @@ void killCode(){
 }
 
 void loop() {
+  digitalWrite(debugPin,HIGH);
+  delay(200);
+  digitalWrite(debugPin,LOW);
+  delay(10);
   // Wait for python code to say OK to run
   if(killState == HIGH){
     if(printKill){
@@ -199,6 +206,10 @@ int rampUp(){
 
   // good to start the ramp up
   while( gateV - gate_limit < 0 ) {
+    digitalWrite(debugPin,HIGH);
+  delay(200);
+  digitalWrite(debugPin,LOW);
+  delay(10);
     // check if should stop the process
     if( killState == HIGH){
       write_value(0);
