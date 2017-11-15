@@ -1,0 +1,7 @@
+08/14/2017 01:57:15.233, setting both kts to volt source mode
+08/14/2017 01:57:15.236, changing volt range on bias
+08/14/2017 01:57:15.239, bias keithley volt zero and output on
+08/14/2017 01:57:15.259, curr keithley volt zero and output on
+08/14/2017 01:57:18.157, [Base        ] Leaving application in progress...
+08/14/2017 01:57:18.206, [Base        ] No event listeners have been created
+08/14/2017 01:57:18.216, [Base        ] Application will leave

@@ -1,0 +1,3 @@
+11/10/2017 01:31:14.267, Starting Serial Port
+11/10/2017 01:31:16.447, Testing switch
+11/10/2017 01:31:21.474, starting loop

@@ -1,0 +1,15 @@
+10/16/2017 18:36:31.750, setting up resource manager
+10/16/2017 18:36:31.776, getting instruments
+10/16/2017 18:36:31.831, instantiating and resetting keithley's
+10/16/2017 18:36:31.841, setting both kts to volt source mode
+10/16/2017 18:36:31.842, changing volt range on bias
+10/16/2017 18:36:31.845, bias keithley volt zero and output on
+10/16/2017 18:36:31.865, curr keithley volt zero and output on
+10/16/2017 18:36:32.361, testing switch
+10/16/2017 18:36:32.713, 0.5, 0.0001692076, 9.999771e-07
+10/16/2017 18:36:32.848, 1.0, 0.0003649755, -9.998971e-07
+10/16/2017 18:36:32.990, 1.5, 0.0005759149, -9.998978e-07
+10/16/2017 18:36:33.134, 2.0, 0.0007951237, -9.998973e-07
+10/16/2017 18:36:33.276, 2.5, 0.001000036, -9.998969e-07
+10/16/2017 18:36:33.283, MSB shorted
+10/16/2017 18:36:33.295, end backoff 2.5, -9.998969e-07

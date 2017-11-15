@@ -1,0 +1,3 @@
+05/24/2017 16:25:44.019, setting up resource manager
+05/24/2017 16:25:44.059, getting instruments
+05/24/2017 16:25:44.109, instantiating and resetting keithley's

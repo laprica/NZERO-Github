@@ -1,0 +1,16 @@
+05/26/2017 14:10:27.680, setting up resource manager
+05/26/2017 14:10:27.730, getting instruments
+05/26/2017 14:10:27.811, instantiating and resetting keithley's
+05/26/2017 14:10:27.831, setting both kts to volt source mode
+05/26/2017 14:10:27.831, changing volt range on bias
+05/26/2017 14:10:27.831, bias keithley volt zero and output on
+05/26/2017 14:10:27.851, curr keithley volt zero and output on
+05/26/2017 14:10:28.450, testing switch
+05/26/2017 14:10:28.750, 0.5, 1.929027e-08, 2.177721e-09
+05/26/2017 14:10:28.891, 1.0, 8.607928e-08, 9.193339e-10
+05/26/2017 14:10:29.030, 1.5, 2.036925e-07, -5.198068e-10
+05/26/2017 14:10:29.180, 2.0, 3.57569e-07, -3.360282e-09
+05/26/2017 14:10:29.322, 2.5, 5.028893e-07, -8.806508e-09
+05/26/2017 14:10:29.461, 3.0, 6.117605e-07, -1.479877e-08
+05/26/2017 14:10:29.471, 30nm_carbon_test_d5 contact switched at 3.0 V with -1.479877e-08 A
+05/26/2017 14:10:29.471, end backoff 3.0, -1.479877e-08

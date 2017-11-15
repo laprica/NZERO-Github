@@ -1,0 +1,7 @@
+Date       Time        Voltage (volt) Bias Current (amp) Contact Current (amp)
+08/14/2017 01:35:19.144, testing device a4 with contact bias (volt) = 0.2V
+08/14/2017 01:35:19.311, 0, -1.203226e-10, 1.131758e-10
+08/14/2017 01:35:19.881, testing device a5 with contact bias (volt) = 0.2V
+08/14/2017 01:35:20.042, 0, -1.090123e-10, 1.114979e-10
+08/14/2017 01:35:20.844, testing device a6 with contact bias (volt) = 0.2V
+08/14/2017 01:35:21.009, 0, -1.194604e-10, 1.098199e-10

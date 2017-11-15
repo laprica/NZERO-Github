@@ -1,0 +1,41 @@
+07/31/2017 14:33:36.177, setting both kts to volt source mode
+07/31/2017 14:33:36.191, changing volt range on bias
+07/31/2017 14:33:36.197, bias keithley volt zero and output on
+07/31/2017 14:33:36.219, curr keithley volt zero and output on
+07/31/2017 14:33:38.687, [Base        ] Leaving application in progress...
+07/31/2017 14:33:38.697, stderr: 
+07/31/2017 14:33:38.697, stderr: Traceback (most recent call last):
+07/31/2017 14:33:38.700, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 615, in <module>
+07/31/2017 14:33:38.701, stderr:     NzeroApp().run()
+07/31/2017 14:33:38.703, stderr:   File "C:\Python27\lib\site-packages\kivy\app.py", line 828, in run
+07/31/2017 14:33:38.704, stderr:     runTouchApp()
+07/31/2017 14:33:38.707, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 504, in runTouchApp
+07/31/2017 14:33:38.707, stderr:     EventLoop.window.mainloop()
+07/31/2017 14:33:38.710, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 663, in mainloop
+07/31/2017 14:33:38.710, stderr:     self._mainloop()
+07/31/2017 14:33:38.713, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 602, in _mainloop
+07/31/2017 14:33:38.713, stderr:     self.modifiers):
+07/31/2017 14:33:38.716, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:33:38.717, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:33:38.720, stderr:   File "kivy\_event.pyx", line 1149, in kivy._event.EventObservers._dispatch (kivy\_event.c:13564)
+07/31/2017 14:33:38.721, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\__init__.py", line 159, in _on_window_key_down
+07/31/2017 14:33:38.723, stderr:     return self.dispatch('on_key_down', keycode, text, modifiers)
+07/31/2017 14:33:38.724, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:33:38.726, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:33:38.729, stderr:   File "kivy\_event.pyx", line 1149, in kivy._event.EventObservers._dispatch (kivy\_event.c:13564)
+07/31/2017 14:33:38.730, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\textinput.py", line 2438, in keyboard_on_key_down
+07/31/2017 14:33:38.733, stderr:     self._key_down(key)
+07/31/2017 14:33:38.734, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\textinput.py", line 2300, in _key_down
+07/31/2017 14:33:38.736, stderr:     self.dispatch('on_text_validate')
+07/31/2017 14:33:38.739, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:33:38.740, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:33:38.743, stderr:   File "kivy\_event.pyx", line 1109, in kivy._event.EventObservers._dispatch (kivy\_event.c:12816)
+07/31/2017 14:33:38.744, stderr:   File "C:\Python27\lib\site-packages\kivy\lang\builder.py", line 64, in custom_callback
+07/31/2017 14:33:38.746, stderr:     exec(__kvlang__.co_value, idmap)
+07/31/2017 14:33:38.749, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\nzero.kv", line 103, in <module>
+07/31/2017 14:33:38.752, stderr:     on_text_validate: root.process_input(ti.text); self.text = ''; root.set_focus_real();
+07/31/2017 14:33:38.753, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 106, in process_input
+07/31/2017 14:33:38.756, stderr:     if tst.get_device(txt).get_stat1() not in ["o", "SC", "SCD", "SD"]:
+07/31/2017 14:33:38.759, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\test.py", line 112, in get_device
+07/31/2017 14:33:38.760, stderr:     if ord(txt[0]) < 97:
+07/31/2017 14:33:38.763, stderr: IndexError: string index out of range

@@ -1,0 +1,17 @@
+10/17/2017 18:31:45.354, setting up resource manager
+10/17/2017 18:31:45.380, getting instruments
+10/17/2017 18:31:45.434, instantiating and resetting keithley's
+10/17/2017 18:31:45.443, setting both kts to volt source mode
+10/17/2017 18:31:45.444, changing volt range on bias
+10/17/2017 18:31:45.447, bias keithley volt zero and output on
+10/17/2017 18:31:45.467, curr keithley volt zero and output on
+10/17/2017 18:31:45.756, testing switch
+10/17/2017 18:31:45.756, start 2 cycles
+10/17/2017 18:31:45.756, starting cycle 1
+10/17/2017 18:32:14.693, MSB shorted
+10/17/2017 18:32:14.693, Start sweep down
+10/17/2017 18:32:14.839, 1,99.5,99.0,99496.9155956,98996.8321014,-5100017722.56,-200020.322065
+10/17/2017 18:32:14.839, starting cycle 2
+10/17/2017 18:32:14.989, MSB and contact is shorted from start
+10/17/2017 18:32:14.989, 94.0, 0.001000032, -9.998951e-07
+10/17/2017 18:32:14.994, end numCycles loop

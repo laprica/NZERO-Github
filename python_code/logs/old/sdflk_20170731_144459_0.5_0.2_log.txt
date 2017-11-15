@@ -1,0 +1,47 @@
+07/31/2017 14:45:02.299, setting both kts to volt source mode
+07/31/2017 14:45:02.305, changing volt range on bias
+07/31/2017 14:45:02.306, bias keithley volt zero and output on
+07/31/2017 14:45:02.328, curr keithley volt zero and output on
+07/31/2017 14:45:03.357, testing device a2
+07/31/2017 14:45:03.701, seems like it's an open switch
+07/31/2017 14:45:03.707, end backoff 0.5, 9.750856e-12
+07/31/2017 14:45:05.141, testing device a3
+07/31/2017 14:45:05.502, seems like it's an open switch
+07/31/2017 14:45:05.506, end backoff 0.5, 9.344105e-12
+07/31/2017 14:45:08.101, [Base        ] Leaving application in progress...
+07/31/2017 14:45:08.111, stderr: 
+07/31/2017 14:45:08.112, stderr: Traceback (most recent call last):
+07/31/2017 14:45:08.115, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 618, in <module>
+07/31/2017 14:45:08.117, stderr:     NzeroApp().run()
+07/31/2017 14:45:08.118, stderr:   File "C:\Python27\lib\site-packages\kivy\app.py", line 828, in run
+07/31/2017 14:45:08.119, stderr:     runTouchApp()
+07/31/2017 14:45:08.121, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 504, in runTouchApp
+07/31/2017 14:45:08.122, stderr:     EventLoop.window.mainloop()
+07/31/2017 14:45:08.124, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 663, in mainloop
+07/31/2017 14:45:08.125, stderr:     self._mainloop()
+07/31/2017 14:45:08.128, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 602, in _mainloop
+07/31/2017 14:45:08.130, stderr:     self.modifiers):
+07/31/2017 14:45:08.131, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:45:08.134, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:45:08.137, stderr:   File "kivy\_event.pyx", line 1149, in kivy._event.EventObservers._dispatch (kivy\_event.c:13564)
+07/31/2017 14:45:08.138, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\__init__.py", line 159, in _on_window_key_down
+07/31/2017 14:45:08.142, stderr:     return self.dispatch('on_key_down', keycode, text, modifiers)
+07/31/2017 14:45:08.144, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:45:08.147, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:45:08.151, stderr:   File "kivy\_event.pyx", line 1149, in kivy._event.EventObservers._dispatch (kivy\_event.c:13564)
+07/31/2017 14:45:08.154, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\textinput.py", line 2438, in keyboard_on_key_down
+07/31/2017 14:45:08.157, stderr:     self._key_down(key)
+07/31/2017 14:45:08.157, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\textinput.py", line 2300, in _key_down
+07/31/2017 14:45:08.160, stderr:     self.dispatch('on_text_validate')
+07/31/2017 14:45:08.161, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:45:08.164, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:45:08.167, stderr:   File "kivy\_event.pyx", line 1109, in kivy._event.EventObservers._dispatch (kivy\_event.c:12816)
+07/31/2017 14:45:08.168, stderr:   File "C:\Python27\lib\site-packages\kivy\lang\builder.py", line 64, in custom_callback
+07/31/2017 14:45:08.171, stderr:     exec(__kvlang__.co_value, idmap)
+07/31/2017 14:45:08.173, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\nzero.kv", line 103, in <module>
+07/31/2017 14:45:08.174, stderr:     on_text_validate: root.process_input(ti.text); self.text = ''; root.set_focus_real();
+07/31/2017 14:45:08.177, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 110, in process_input
+07/31/2017 14:45:08.180, stderr:     if tst.get_device(txt).get_stat1() not in ["o", "SC", "SCD", "SD"]:
+07/31/2017 14:45:08.181, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\test.py", line 116, in get_device
+07/31/2017 14:45:08.184, stderr:     return self.get_devices()[index]
+07/31/2017 14:45:08.186, stderr: IndexError: list index out of range

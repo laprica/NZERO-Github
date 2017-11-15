@@ -1,0 +1,16 @@
+10/18/2017 11:49:57.934, setting up resource manager
+10/18/2017 11:49:57.963, getting instruments
+10/18/2017 11:49:58.033, instantiating and resetting keithley's
+10/18/2017 11:49:58.053, setting both kts to volt source mode
+10/18/2017 11:49:58.053, changing volt range on bias
+10/18/2017 11:49:58.053, bias keithley volt zero and output on
+10/18/2017 11:49:58.073, curr keithley volt zero and output on
+10/18/2017 11:49:59.483, testing switch
+10/18/2017 11:49:59.783, 0.5, 1.645648e-11, 6.666281e-10
+10/18/2017 11:49:59.934, 1.0, 3.532298e-11, 4.939559e-10
+10/18/2017 11:50:00.084, 1.5, 5.885517e-11, 7.297279e-10
+10/18/2017 11:50:00.223, 2.0, 7.148324e-11, 9.50602e-10
+10/18/2017 11:50:00.374, 2.5, 1.000871e-10, 7.449301e-10
+10/18/2017 11:50:00.513, 3.0, 1.131717e-10, 1.074818e-09
+10/18/2017 11:50:00.533, SOI8-10-M1R-7-B5 contact switched at 3.0 V with 1.074818e-09 A
+10/18/2017 11:50:00.533, end backoff 3.0, 1.074818e-09

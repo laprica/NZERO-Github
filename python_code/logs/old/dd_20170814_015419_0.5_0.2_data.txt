@@ -1,0 +1,1 @@
+Date       Time      Voltage(volt) Bias Current(amp) Contact Current(amp)

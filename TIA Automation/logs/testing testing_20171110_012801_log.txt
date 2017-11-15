@@ -1,0 +1,3 @@
+11/10/2017 01:28:01.655, Starting Serial Port
+11/10/2017 01:28:04.424, Testing switch
+11/10/2017 01:28:04.467, Shorted from the start

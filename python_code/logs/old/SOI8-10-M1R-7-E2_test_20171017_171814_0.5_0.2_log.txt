@@ -1,0 +1,18 @@
+10/17/2017 17:18:14.203, setting up resource manager
+10/17/2017 17:18:14.237, getting instruments
+10/17/2017 17:18:14.299, instantiating and resetting keithley's
+10/17/2017 17:18:14.306, setting both kts to volt source mode
+10/17/2017 17:18:14.308, changing volt range on bias
+10/17/2017 17:18:14.311, bias keithley volt zero and output on
+10/17/2017 17:18:14.331, curr keithley volt zero and output on
+10/17/2017 17:18:14.729, testing switch
+10/17/2017 17:18:14.729, start 2 cycles
+10/17/2017 17:18:14.729, starting cycle 0
+10/17/2017 17:18:16.775, seems like it's an open switch
+10/17/2017 17:18:16.775, Start sweep down
+10/17/2017 17:18:18.648, 0,6.5,0.0,34009672350.8,-0.0,-4210149618.19,-5408600865.27
+10/17/2017 17:18:18.648, starting cycle 1
+10/17/2017 17:18:20.684, seems like it's an open switch
+10/17/2017 17:18:20.684, Start sweep down
+10/17/2017 17:18:22.562, 1,6.5,0.0,35013100286.1,-0.0,-5484013552.09,-3960047869.06
+10/17/2017 17:18:22.566, end numCycles loop

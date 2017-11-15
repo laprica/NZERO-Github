@@ -1,0 +1,2 @@
+11/10/2017 01:21:14.476, Starting Serial Port
+11/10/2017 01:21:19.862, closed with ctrl+c

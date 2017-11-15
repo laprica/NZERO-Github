@@ -1,0 +1,38 @@
+10/18/2017 17:24:12.815, setting up resource manager
+10/18/2017 17:24:12.848, getting instruments
+10/18/2017 17:24:12.898, instantiating and resetting keithley's
+10/18/2017 17:24:12.924, setting both kts to volt source mode
+10/18/2017 17:24:12.924, changing volt range on bias
+10/18/2017 17:24:12.927, bias keithley volt zero and output on
+10/18/2017 17:24:12.947, curr keithley volt zero and output on
+10/18/2017 17:24:13.469, testing switch
+10/18/2017 17:24:13.469, start 10 cycles
+10/18/2017 17:24:13.469, starting cycle 1
+10/18/2017 17:24:47.065, 1,55.5,0,17510626268.3,0,32734167.138,0
+10/18/2017 17:24:47.066, starting cycle 2
+10/18/2017 17:25:22.252, 2,58.75,0,17724574889.3,0,26899081.9074,0
+10/18/2017 17:25:22.252, starting cycle 3
+10/18/2017 17:25:58.384, MSB shorted
+10/18/2017 17:25:58.388, 3,60.0,0,59998.320047,0,106848565.665,0
+10/18/2017 17:25:58.388, starting cycle 4
+10/18/2017 17:25:59.628, contact is shorted from start
+10/18/2017 17:25:59.628, 0, 2.566793e-06, 9.999737e-07
+10/18/2017 17:25:59.628, starting cycle 5
+10/18/2017 17:26:00.785, contact is shorted from start
+10/18/2017 17:26:00.786, 0, 2.338607e-06, 9.999743e-07
+10/18/2017 17:26:00.786, starting cycle 6
+10/18/2017 17:26:01.944, contact is shorted from start
+10/18/2017 17:26:01.944, 0, 2.439638e-06, 9.999734e-07
+10/18/2017 17:26:01.944, starting cycle 7
+10/18/2017 17:26:03.102, contact is shorted from start
+10/18/2017 17:26:03.104, 0, 2.38611e-06, 9.999749e-07
+10/18/2017 17:26:03.104, starting cycle 8
+10/18/2017 17:26:04.256, contact is shorted from start
+10/18/2017 17:26:04.256, 0, 2.232102e-06, 9.999743e-07
+10/18/2017 17:26:04.256, starting cycle 9
+10/18/2017 17:26:05.407, contact is shorted from start
+10/18/2017 17:26:05.407, 0, 2.186425e-06, 9.999736e-07
+10/18/2017 17:26:05.411, starting cycle 10
+10/18/2017 17:26:06.562, contact is shorted from start
+10/18/2017 17:26:06.562, 0, 2.192321e-06, 9.999738e-07
+10/18/2017 17:26:06.569, end numCycles loop

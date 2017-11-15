@@ -1,0 +1,10 @@
+07/31/2017 14:44:15.312, setting both kts to volt source mode
+07/31/2017 14:44:15.319, changing volt range on bias
+07/31/2017 14:44:15.323, bias keithley volt zero and output on
+07/31/2017 14:44:15.345, curr keithley volt zero and output on
+07/31/2017 14:44:17.187, testing device a1
+07/31/2017 14:44:17.592, seems like it's an open switch
+07/31/2017 14:44:17.598, end backoff 0.5, 1.12254e-11
+07/31/2017 14:44:21.818, testing device a2
+07/31/2017 14:44:22.161, seems like it's an open switch
+07/31/2017 14:44:22.167, end backoff 0.5, 7.971247e-12

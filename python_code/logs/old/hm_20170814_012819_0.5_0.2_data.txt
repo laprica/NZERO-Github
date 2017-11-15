@@ -1,0 +1,5 @@
+hmm nyang
+08/14/2017 01:28:25.263, testing device a3 with contact bias (volt) = 0.2V
+08/14/2017 01:28:25.430, 0, -1.21692e-10, 1.124641e-10
+08/14/2017 01:28:26.010, testing device a5 with contact bias (volt) = 0.2V
+08/14/2017 01:28:26.180, 0, -1.194096e-10, 1.078878e-10

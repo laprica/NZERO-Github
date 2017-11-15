@@ -1,0 +1,15 @@
+hmm nyang
+testing device A1 with contact bias (volt) = 0.2V
+0, -1.232643e-10, 1.183116e-10
+testing device A2 with contact bias (volt) = 0.2V
+0, -1.216413e-10, 1.163794e-10
+testing device A3 with contact bias (volt) = 0.2V
+0, -1.195618e-10, 1.136336e-10
+testing device A4 with contact bias (volt) = 0.2V
+0, -1.176852e-10, 1.130743e-10
+testing device A5 with contact bias (volt) = 0.2V
+0, -1.205254e-10, 1.118539e-10
+testing device A6 with contact bias (volt) = 0.2V
+0, -1.296041e-10, 1.120065e-10
+testing device A7 with contact bias (volt) = 0.2V
+0, -1.170258e-10, 1.125657e-10

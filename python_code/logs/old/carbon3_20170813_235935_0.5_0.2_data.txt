@@ -1,0 +1,9 @@
+hmm nyang
+testing device a1 with contact bias (volt) = 0.2V
+0, -1.181924e-10, 1.203454e-10
+testing device a8 with contact bias (volt) = 0.2V
+0, -1.244815e-10, 1.164811e-10
+testing device g8 with contact bias (volt) = 0.2V
+0, -1.185474e-10, 1.16786e-10
+testing device A1 with contact bias (volt) = 0.2V
+0, -1.180909e-10, 1.157691e-10

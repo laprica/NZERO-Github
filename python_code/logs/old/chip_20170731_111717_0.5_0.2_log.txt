@@ -1,0 +1,42 @@
+07/31/2017 11:17:23.844, setting both kts to volt source mode
+07/31/2017 11:17:23.911, changing volt range on bias
+07/31/2017 11:17:23.915, bias keithley volt zero and output on
+07/31/2017 11:17:23.937, curr keithley volt zero and output on
+07/31/2017 11:17:35.559, testing device a8
+07/31/2017 11:17:53.144, seems like it's an open switch
+07/31/2017 11:17:53.148, end backoff 60.5, -8.350354e-12
+07/31/2017 11:17:53.299, [Base        ] Leaving application in progress...
+07/31/2017 11:17:53.322, stderr: 
+07/31/2017 11:17:53.325, stderr: Traceback (most recent call last):
+07/31/2017 11:17:53.331, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 601, in <module>
+07/31/2017 11:17:53.335, stderr:     NzeroApp().run()
+07/31/2017 11:17:53.339, stderr:   File "C:\Python27\lib\site-packages\kivy\app.py", line 828, in run
+07/31/2017 11:17:53.342, stderr:     runTouchApp()
+07/31/2017 11:17:53.345, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 504, in runTouchApp
+07/31/2017 11:17:53.348, stderr:     EventLoop.window.mainloop()
+07/31/2017 11:17:53.349, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 663, in mainloop
+07/31/2017 11:17:53.352, stderr:     self._mainloop()
+07/31/2017 11:17:53.357, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 602, in _mainloop
+07/31/2017 11:17:53.359, stderr:     self.modifiers):
+07/31/2017 11:17:53.362, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 11:17:53.365, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 11:17:53.368, stderr:   File "kivy\_event.pyx", line 1149, in kivy._event.EventObservers._dispatch (kivy\_event.c:13564)
+07/31/2017 11:17:53.369, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\__init__.py", line 159, in _on_window_key_down
+07/31/2017 11:17:53.374, stderr:     return self.dispatch('on_key_down', keycode, text, modifiers)
+07/31/2017 11:17:53.375, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 11:17:53.378, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 11:17:53.380, stderr:   File "kivy\_event.pyx", line 1149, in kivy._event.EventObservers._dispatch (kivy\_event.c:13564)
+07/31/2017 11:17:53.381, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\textinput.py", line 2438, in keyboard_on_key_down
+07/31/2017 11:17:53.384, stderr:     self._key_down(key)
+07/31/2017 11:17:53.387, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\textinput.py", line 2300, in _key_down
+07/31/2017 11:17:53.388, stderr:     self.dispatch('on_text_validate')
+07/31/2017 11:17:53.391, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 11:17:53.392, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 11:17:53.395, stderr:   File "kivy\_event.pyx", line 1109, in kivy._event.EventObservers._dispatch (kivy\_event.c:12816)
+07/31/2017 11:17:53.398, stderr:   File "C:\Python27\lib\site-packages\kivy\lang\builder.py", line 64, in custom_callback
+07/31/2017 11:17:53.400, stderr:     exec(__kvlang__.co_value, idmap)
+07/31/2017 11:17:53.401, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\nzero.kv", line 103, in <module>
+07/31/2017 11:17:53.404, stderr:     on_text_validate: root.process_input(ti.text); self.text = ''; root.set_focus_real();
+07/31/2017 11:17:53.408, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 110, in process_input
+07/31/2017 11:17:53.411, stderr:     bisa_kt.beep(1000,0.5)
+07/31/2017 11:17:53.414, stderr: NameError: global name 'bisa_kt' is not defined

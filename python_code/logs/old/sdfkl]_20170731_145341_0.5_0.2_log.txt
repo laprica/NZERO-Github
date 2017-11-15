@@ -1,0 +1,48 @@
+07/31/2017 14:53:45.686, setting both kts to volt source mode
+07/31/2017 14:53:45.690, changing volt range on bias
+07/31/2017 14:53:45.691, bias keithley volt zero and output on
+07/31/2017 14:53:45.713, curr keithley volt zero and output on
+07/31/2017 14:53:51.775, testing device a1
+07/31/2017 14:53:52.118, seems like it's an open switch
+07/31/2017 14:53:52.122, end backoff 0.5, 9.140685e-12
+07/31/2017 14:54:05.256, testing device A2
+07/31/2017 14:54:05.602, seems like it's an open switch
+07/31/2017 14:54:05.608, end backoff 0.5, 1.173382e-11
+07/31/2017 14:54:06.851, testing device A2
+07/31/2017 14:54:07.197, seems like it's an open switch
+07/31/2017 14:54:07.201, end backoff 0.5, 5.123842e-12
+07/31/2017 14:54:18.427, [Base        ] Leaving application in progress...
+07/31/2017 14:54:18.437, stderr: 
+07/31/2017 14:54:18.438, stderr: Traceback (most recent call last):
+07/31/2017 14:54:18.440, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 622, in <module>
+07/31/2017 14:54:18.441, stderr:     NzeroApp().run()
+07/31/2017 14:54:18.444, stderr:   File "C:\Python27\lib\site-packages\kivy\app.py", line 828, in run
+07/31/2017 14:54:18.444, stderr:     runTouchApp()
+07/31/2017 14:54:18.447, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 504, in runTouchApp
+07/31/2017 14:54:18.447, stderr:     EventLoop.window.mainloop()
+07/31/2017 14:54:18.450, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 663, in mainloop
+07/31/2017 14:54:18.451, stderr:     self._mainloop()
+07/31/2017 14:54:18.453, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 602, in _mainloop
+07/31/2017 14:54:18.454, stderr:     self.modifiers):
+07/31/2017 14:54:18.456, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:54:18.457, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:54:18.460, stderr:   File "kivy\_event.pyx", line 1149, in kivy._event.EventObservers._dispatch (kivy\_event.c:13564)
+07/31/2017 14:54:18.461, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\__init__.py", line 159, in _on_window_key_down
+07/31/2017 14:54:18.463, stderr:     return self.dispatch('on_key_down', keycode, text, modifiers)
+07/31/2017 14:54:18.466, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:54:18.467, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:54:18.470, stderr:   File "kivy\_event.pyx", line 1149, in kivy._event.EventObservers._dispatch (kivy\_event.c:13564)
+07/31/2017 14:54:18.471, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\textinput.py", line 2438, in keyboard_on_key_down
+07/31/2017 14:54:18.473, stderr:     self._key_down(key)
+07/31/2017 14:54:18.474, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\textinput.py", line 2300, in _key_down
+07/31/2017 14:54:18.477, stderr:     self.dispatch('on_text_validate')
+07/31/2017 14:54:18.480, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:54:18.483, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:54:18.486, stderr:   File "kivy\_event.pyx", line 1109, in kivy._event.EventObservers._dispatch (kivy\_event.c:12816)
+07/31/2017 14:54:18.487, stderr:   File "C:\Python27\lib\site-packages\kivy\lang\builder.py", line 64, in custom_callback
+07/31/2017 14:54:18.490, stderr:     exec(__kvlang__.co_value, idmap)
+07/31/2017 14:54:18.493, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\nzero.kv", line 103, in <module>
+07/31/2017 14:54:18.496, stderr:     on_text_validate: root.process_input(ti.text); self.text = ''; root.set_focus_real();
+07/31/2017 14:54:18.499, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 110, in process_input
+07/31/2017 14:54:18.500, stderr:     if ((txt == '') | (len(txt) != 2) | (not txt[1].isdigit())):
+07/31/2017 14:54:18.503, stderr: IndexError: string index out of range

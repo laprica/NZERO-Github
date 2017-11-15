@@ -1,0 +1,7 @@
+setting both kts to volt source mode
+changing volt range on bias
+bias keithley volt zero and output on
+curr keithley volt zero and output on
+testing device a3
+seems like it's an open switch
+end backoff 60.5, 1.407281e-11

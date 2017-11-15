@@ -1,0 +1,58 @@
+08/01/2017 17:14:47.528, setting both kts to volt source mode
+08/01/2017 17:14:47.532, changing volt range on bias
+08/01/2017 17:14:47.535, bias keithley volt zero and output on
+08/01/2017 17:14:47.555, curr keithley volt zero and output on
+08/01/2017 17:14:48.459, testing device a3
+08/01/2017 17:15:05.967, seems like it's an open switch
+08/01/2017 17:15:05.973, end backoff 60.5, 1.376772e-11
+08/01/2017 17:15:12.720, [Base        ] Leaving application in progress...
+stderr: 
+stderr: Traceback (most recent call last):
+stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 641, in <module>
+stderr:     Nzero_Testing_AppApp().run()
+stderr:   File "C:\Python27\lib\site-packages\kivy\app.py", line 828, in run
+stderr:     runTouchApp()
+stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 504, in runTouchApp
+stderr:     EventLoop.window.mainloop()
+stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 663, in mainloop
+stderr:     self._mainloop()
+stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 405, in _mainloop
+stderr:     EventLoop.idle()
+stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 342, in idle
+stderr:     self.dispatch_input()
+stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 327, in dispatch_input
+stderr:     post_dispatch_input(*pop(0))
+stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 233, in post_dispatch_input
+stderr:     listener.dispatch('on_motion', etype, me)
+stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\__init__.py", line 1188, in on_motion
+stderr:     self.dispatch('on_touch_down', me)
+stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\__init__.py", line 1204, in on_touch_down
+stderr:     if w.dispatch('on_touch_down', touch):
+stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+stderr:   File "C:\Python27\lib\site-packages\kivy\uix\widget.py", line 457, in on_touch_down
+stderr:     if child.dispatch('on_touch_down', touch):
+stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+stderr:   File "C:\Python27\lib\site-packages\kivy\uix\widget.py", line 457, in on_touch_down
+stderr:     if child.dispatch('on_touch_down', touch):
+stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+stderr:   File "C:\Python27\lib\site-packages\kivy\uix\widget.py", line 457, in on_touch_down
+stderr:     if child.dispatch('on_touch_down', touch):
+stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+stderr:   File "C:\Python27\lib\site-packages\kivy\uix\widget.py", line 457, in on_touch_down
+stderr:     if child.dispatch('on_touch_down', touch):
+stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+stderr:   File "C:\Python27\lib\site-packages\kivy\uix\behaviors\button.py", line 151, in on_touch_down
+stderr:     self.dispatch('on_press')
+stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+stderr:   File "kivy\_event.pyx", line 1109, in kivy._event.EventObservers._dispatch (kivy\_event.c:12816)
+stderr:   File "C:\Python27\lib\site-packages\kivy\lang\builder.py", line 64, in custom_callback
+stderr:     exec(__kvlang__.co_value, idmap)
+stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\nzero_testing_app.kv", line 181, in <module>
+stderr:     on_press: root.draw_graph("a3", self.text)
+stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 249, in draw_graph
+stderr:     bias_v.append(float(arr[i_bias_v]))
+stderr: ValueError: invalid literal for float(): 3.59874e-11
+stderr: 1.5

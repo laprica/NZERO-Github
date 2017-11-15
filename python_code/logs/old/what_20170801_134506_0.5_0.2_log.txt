@@ -1,0 +1,41 @@
+08/01/2017 13:45:11.069, setting both kts to volt source mode
+08/01/2017 13:45:11.075, changing volt range on bias
+08/01/2017 13:45:11.078, bias keithley volt zero and output on
+08/01/2017 13:45:11.098, curr keithley volt zero and output on
+08/01/2017 13:45:11.671, [Base        ] Leaving application in progress...
+08/01/2017 13:45:11.690, stderr: 
+08/01/2017 13:45:11.694, stderr: Traceback (most recent call last):
+08/01/2017 13:45:11.697, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 624, in <module>
+08/01/2017 13:45:11.700, stderr:     Nzero_Testing_AppApp().run()
+08/01/2017 13:45:11.706, stderr:   File "C:\Python27\lib\site-packages\kivy\app.py", line 828, in run
+08/01/2017 13:45:11.710, stderr:     runTouchApp()
+08/01/2017 13:45:11.713, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 504, in runTouchApp
+08/01/2017 13:45:11.716, stderr:     EventLoop.window.mainloop()
+08/01/2017 13:45:11.717, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 663, in mainloop
+08/01/2017 13:45:11.720, stderr:     self._mainloop()
+08/01/2017 13:45:11.724, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 602, in _mainloop
+08/01/2017 13:45:11.726, stderr:     self.modifiers):
+08/01/2017 13:45:11.729, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+08/01/2017 13:45:11.732, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+08/01/2017 13:45:11.733, stderr:   File "kivy\_event.pyx", line 1149, in kivy._event.EventObservers._dispatch (kivy\_event.c:13564)
+08/01/2017 13:45:11.736, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\__init__.py", line 159, in _on_window_key_down
+08/01/2017 13:45:11.739, stderr:     return self.dispatch('on_key_down', keycode, text, modifiers)
+08/01/2017 13:45:11.740, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+08/01/2017 13:45:11.743, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+08/01/2017 13:45:11.746, stderr:   File "kivy\_event.pyx", line 1149, in kivy._event.EventObservers._dispatch (kivy\_event.c:13564)
+08/01/2017 13:45:11.749, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\textinput.py", line 2438, in keyboard_on_key_down
+08/01/2017 13:45:11.750, stderr:     self._key_down(key)
+08/01/2017 13:45:11.753, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\textinput.py", line 2300, in _key_down
+08/01/2017 13:45:11.756, stderr:     self.dispatch('on_text_validate')
+08/01/2017 13:45:11.759, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+08/01/2017 13:45:11.760, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+08/01/2017 13:45:11.765, stderr:   File "kivy\_event.pyx", line 1109, in kivy._event.EventObservers._dispatch (kivy\_event.c:12816)
+08/01/2017 13:45:11.766, stderr:   File "C:\Python27\lib\site-packages\kivy\lang\builder.py", line 64, in custom_callback
+08/01/2017 13:45:11.769, stderr:     exec(__kvlang__.co_value, idmap)
+08/01/2017 13:45:11.773, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\nzero_testing_app.kv", line 103, in <module>
+08/01/2017 13:45:11.779, stderr:     on_text_validate: root.process_input(ti.text); self.text = ''; root.set_focus_real();
+08/01/2017 13:45:11.780, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 124, in process_input
+08/01/2017 13:45:11.785, stderr:     if tst.get_device(self.secondbox.device.text[-2:]).get_stat1()not in ["o", "SC", "SCD", "SD"]:
+08/01/2017 13:45:11.786, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\test.py", line 113, in get_device
+08/01/2017 13:45:11.789, stderr:     index = (ord(txt[0])-65) * 8 + int(txt[1]) - 1
+08/01/2017 13:45:11.792, stderr: ValueError: invalid literal for int() with base 10: ''

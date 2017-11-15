@@ -1,0 +1,39 @@
+10/18/2017 13:05:07.230, setting up resource manager
+10/18/2017 13:05:07.250, getting instruments
+10/18/2017 13:05:07.328, instantiating and resetting keithley's
+10/18/2017 13:05:07.390, setting both kts to volt source mode
+10/18/2017 13:05:07.390, changing volt range on bias
+10/18/2017 13:05:07.390, bias keithley volt zero and output on
+10/18/2017 13:05:07.410, curr keithley volt zero and output on
+10/18/2017 13:05:07.831, testing switch
+10/18/2017 13:05:07.831, start 10 cycles
+10/18/2017 13:05:07.831, starting cycle 1
+10/18/2017 13:05:14.711, 1,10.75,0,19177880821.0,0,92499750.2507,0
+10/18/2017 13:05:14.711, starting cycle 2
+10/18/2017 13:05:14.871, contact is shorted from start
+10/18/2017 13:05:14.871, 0, -1.056671e-10, 3.229276e-09
+10/18/2017 13:05:14.871, starting cycle 3
+10/18/2017 13:05:15.032, contact is shorted from start
+10/18/2017 13:05:15.032, 0, -6.737635e-11, 3.598926e-09
+10/18/2017 13:05:15.032, starting cycle 4
+10/18/2017 13:05:15.191, contact is shorted from start
+10/18/2017 13:05:15.191, 0, -6.2964e-11, 3.424883e-09
+10/18/2017 13:05:15.191, starting cycle 5
+10/18/2017 13:05:15.342, contact is shorted from start
+10/18/2017 13:05:15.342, 0, -6.184826e-11, 2.956386e-09
+10/18/2017 13:05:15.342, starting cycle 6
+10/18/2017 13:05:15.492, contact is shorted from start
+10/18/2017 13:05:15.492, 0, -5.490012e-11, 2.910976e-09
+10/18/2017 13:05:15.492, starting cycle 7
+10/18/2017 13:05:15.641, contact is shorted from start
+10/18/2017 13:05:15.641, 0, -4.901699e-11, 2.858151e-09
+10/18/2017 13:05:15.641, starting cycle 8
+10/18/2017 13:05:15.792, contact is shorted from start
+10/18/2017 13:05:15.792, 0, -5.393652e-11, 2.452804e-09
+10/18/2017 13:05:15.792, starting cycle 9
+10/18/2017 13:05:15.941, contact is shorted from start
+10/18/2017 13:05:15.941, 0, -5.074133e-11, 2.511838e-09
+10/18/2017 13:05:15.941, starting cycle 10
+10/18/2017 13:05:16.092, contact is shorted from start
+10/18/2017 13:05:16.092, 0, -4.23225e-11, 2.6629e-09
+10/18/2017 13:05:16.101, end numCycles loop

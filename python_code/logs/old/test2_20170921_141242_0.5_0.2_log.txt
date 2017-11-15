@@ -1,0 +1,62 @@
+09/21/2017 14:14:09.220, setting both kts to volt source mode
+09/21/2017 14:14:09.223, changing volt range on bias
+09/21/2017 14:14:09.226, bias keithley volt zero and output on
+09/21/2017 14:14:09.246, curr keithley volt zero and output on
+09/21/2017 14:14:30.934, testing device a5
+09/21/2017 14:14:45.605, seems like it's an open switch
+09/21/2017 14:14:45.609, end backoff 50.5, 1.166749e-09
+09/21/2017 14:17:29.750, testing device f2
+09/21/2017 14:17:37.828, end backoff 27.5, 1.69858e-07
+09/21/2017 14:24:10.582, testing device F2
+09/21/2017 14:24:22.628, end backoff 41.5, 1.003404e-07
+09/21/2017 14:24:29.109, [Base        ] Leaving application in progress...
+09/21/2017 14:24:29.174, stderr: 
+09/21/2017 14:24:29.178, stderr: Traceback (most recent call last):
+09/21/2017 14:24:29.183, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 606, in <module>
+09/21/2017 14:24:29.187, stderr:     Nzero_Testing_AppApp().run()
+09/21/2017 14:24:29.190, stderr:   File "C:\Python27\lib\site-packages\kivy\app.py", line 828, in run
+09/21/2017 14:24:29.194, stderr:     runTouchApp()
+09/21/2017 14:24:29.197, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 504, in runTouchApp
+09/21/2017 14:24:29.201, stderr:     EventLoop.window.mainloop()
+09/21/2017 14:24:29.206, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 663, in mainloop
+09/21/2017 14:24:29.207, stderr:     self._mainloop()
+09/21/2017 14:24:29.209, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 405, in _mainloop
+09/21/2017 14:24:29.210, stderr:     EventLoop.idle()
+09/21/2017 14:24:29.213, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 342, in idle
+09/21/2017 14:24:29.214, stderr:     self.dispatch_input()
+09/21/2017 14:24:29.217, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 327, in dispatch_input
+09/21/2017 14:24:29.217, stderr:     post_dispatch_input(*pop(0))
+09/21/2017 14:24:29.220, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 233, in post_dispatch_input
+09/21/2017 14:24:29.221, stderr:     listener.dispatch('on_motion', etype, me)
+09/21/2017 14:24:29.223, stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+09/21/2017 14:24:29.226, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\__init__.py", line 1188, in on_motion
+09/21/2017 14:24:29.227, stderr:     self.dispatch('on_touch_down', me)
+09/21/2017 14:24:29.230, stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+09/21/2017 14:24:29.232, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\__init__.py", line 1204, in on_touch_down
+09/21/2017 14:24:29.233, stderr:     if w.dispatch('on_touch_down', touch):
+09/21/2017 14:24:29.236, stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+09/21/2017 14:24:29.237, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\widget.py", line 457, in on_touch_down
+09/21/2017 14:24:29.240, stderr:     if child.dispatch('on_touch_down', touch):
+09/21/2017 14:24:29.242, stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+09/21/2017 14:24:29.243, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\widget.py", line 457, in on_touch_down
+09/21/2017 14:24:29.246, stderr:     if child.dispatch('on_touch_down', touch):
+09/21/2017 14:24:29.247, stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+09/21/2017 14:24:29.250, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\widget.py", line 457, in on_touch_down
+09/21/2017 14:24:29.253, stderr:     if child.dispatch('on_touch_down', touch):
+09/21/2017 14:24:29.255, stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+09/21/2017 14:24:29.256, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\widget.py", line 457, in on_touch_down
+09/21/2017 14:24:29.259, stderr:     if child.dispatch('on_touch_down', touch):
+09/21/2017 14:24:29.260, stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+09/21/2017 14:24:29.263, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\behaviors\button.py", line 151, in on_touch_down
+09/21/2017 14:24:29.265, stderr:     self.dispatch('on_press')
+09/21/2017 14:24:29.266, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+09/21/2017 14:24:29.269, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+09/21/2017 14:24:29.270, stderr:   File "kivy\_event.pyx", line 1109, in kivy._event.EventObservers._dispatch (kivy\_event.c:12816)
+09/21/2017 14:24:29.273, stderr:   File "C:\Python27\lib\site-packages\kivy\lang\builder.py", line 64, in custom_callback
+09/21/2017 14:24:29.276, stderr:     exec(__kvlang__.co_value, idmap)
+09/21/2017 14:24:29.278, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\nzero_testing_app.kv", line 370, in <module>
+09/21/2017 14:24:29.279, stderr:     on_press: root.draw_graph("f2", self.text)
+09/21/2017 14:24:29.282, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 212, in draw_graph
+09/21/2017 14:24:29.283, stderr:     bias_v.append(float(arr[i_bias_v]))
+09/21/2017 14:24:29.286, stderr: ValueError: could not convert string to float: switched at 27.5 V with 1.69858e-07 A
+09/21/2017 14:24:29.289, stderr: 09/21/2017 14:24:10.588

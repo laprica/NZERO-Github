@@ -1,0 +1,40 @@
+10/18/2017 17:51:29.651, setting up resource manager
+10/18/2017 17:51:29.684, getting instruments
+10/18/2017 17:51:29.739, instantiating and resetting keithley's
+10/18/2017 17:51:29.767, setting both kts to volt source mode
+10/18/2017 17:51:29.769, changing volt range on bias
+10/18/2017 17:51:29.772, bias keithley volt zero and output on
+10/18/2017 17:51:29.792, curr keithley volt zero and output on
+10/18/2017 17:51:30.315, testing switch
+10/18/2017 17:51:30.315, start 10 cycles
+10/18/2017 17:51:30.315, starting cycle 1
+10/18/2017 17:51:57.121, MSB shorted
+10/18/2017 17:51:57.131, 1,44.0,0,43998.724037,0,216892.710442,0
+10/18/2017 17:51:57.131, starting cycle 2
+10/18/2017 17:51:58.372, contact is shorted from start
+10/18/2017 17:51:58.372, 0, 2.021852e-06, 9.999738e-07
+10/18/2017 17:51:58.372, starting cycle 3
+10/18/2017 17:51:59.533, contact is shorted from start
+10/18/2017 17:51:59.533, 0, 1.798457e-06, 9.999741e-07
+10/18/2017 17:51:59.533, starting cycle 4
+10/18/2017 17:52:00.694, contact is shorted from start
+10/18/2017 17:52:00.694, 0, 1.73917e-06, 9.999738e-07
+10/18/2017 17:52:00.694, starting cycle 5
+10/18/2017 17:52:01.854, contact is shorted from start
+10/18/2017 17:52:01.855, 0, 1.746995e-06, 9.99974e-07
+10/18/2017 17:52:01.855, starting cycle 6
+10/18/2017 17:52:03.015, contact is shorted from start
+10/18/2017 17:52:03.015, 0, 1.774991e-06, 9.999741e-07
+10/18/2017 17:52:03.015, starting cycle 7
+10/18/2017 17:52:04.174, contact is shorted from start
+10/18/2017 17:52:04.174, 0, 1.875771e-06, 9.999746e-07
+10/18/2017 17:52:04.174, starting cycle 8
+10/18/2017 17:52:05.328, contact is shorted from start
+10/18/2017 17:52:05.328, 0, 1.786191e-06, 9.999737e-07
+10/18/2017 17:52:05.328, starting cycle 9
+10/18/2017 17:52:06.482, contact is shorted from start
+10/18/2017 17:52:06.482, 0, 1.735802e-06, 9.999745e-07
+10/18/2017 17:52:06.482, starting cycle 10
+10/18/2017 17:52:07.635, contact is shorted from start
+10/18/2017 17:52:07.637, 0, 1.731949e-06, 9.999741e-07
+10/18/2017 17:52:07.644, end numCycles loop

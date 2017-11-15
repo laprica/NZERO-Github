@@ -1,0 +1,2 @@
+11/10/2017 01:25:32.664, Starting Serial Port
+11/10/2017 01:25:38.497, Testing switch

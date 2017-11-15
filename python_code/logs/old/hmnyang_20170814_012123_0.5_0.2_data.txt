@@ -1,0 +1,6 @@
+testing device a1 with contact bias (volt) = 0.2V
+0, -1.224021e-10, 1.125657e-10
+testing device a2 with contact bias (volt) = 0.2V
+0, -1.124104e-10, 1.082436e-10
+testing device a3 with contact bias (volt) = 0.2V
+0, -1.179895e-10, 1.089555e-10

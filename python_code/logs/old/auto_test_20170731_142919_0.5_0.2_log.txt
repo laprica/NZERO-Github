@@ -1,0 +1,172 @@
+07/31/2017 14:29:26.983, setting both kts to volt source mode
+07/31/2017 14:29:27.009, changing volt range on bias
+07/31/2017 14:29:27.013, bias keithley volt zero and output on
+07/31/2017 14:29:27.035, curr keithley volt zero and output on
+07/31/2017 14:29:27.661, testing device A1
+07/31/2017 14:29:28.056, seems like it's an open switch
+07/31/2017 14:29:28.062, end backoff 0.5, 8.123745e-12
+07/31/2017 14:29:28.461, testing device A2
+07/31/2017 14:29:28.812, seems like it's an open switch
+07/31/2017 14:29:28.819, end backoff 0.5, 2.835773e-12
+07/31/2017 14:29:29.198, testing device A3
+07/31/2017 14:29:29.542, seems like it's an open switch
+07/31/2017 14:29:29.548, end backoff 0.5, 2.530701e-12
+07/31/2017 14:29:29.941, testing device A4
+07/31/2017 14:29:30.288, seems like it's an open switch
+07/31/2017 14:29:30.292, end backoff 0.5, 3.649327e-12
+07/31/2017 14:29:30.901, testing device A5
+07/31/2017 14:29:31.253, seems like it's an open switch
+07/31/2017 14:29:31.257, end backoff 0.5, 2.581544e-12
+07/31/2017 14:29:31.641, testing device A6
+07/31/2017 14:29:31.993, seems like it's an open switch
+07/31/2017 14:29:31.997, end backoff 0.5, 1.005324e-12
+07/31/2017 14:29:32.382, testing device A7
+07/31/2017 14:29:32.734, seems like it's an open switch
+07/31/2017 14:29:32.740, end backoff 0.5, 2.937461e-12
+07/31/2017 14:29:33.171, testing device A8
+07/31/2017 14:29:33.516, seems like it's an open switch
+07/31/2017 14:29:33.522, end backoff 0.5, 5.985542e-13
+07/31/2017 14:29:34.030, testing device B1
+07/31/2017 14:29:34.377, seems like it's an open switch
+07/31/2017 14:29:34.381, end backoff 0.5, 1.917928e-13
+07/31/2017 14:29:34.763, testing device B2
+07/31/2017 14:29:35.108, seems like it's an open switch
+07/31/2017 14:29:35.114, end backoff 0.5, 1.234396e-11
+07/31/2017 14:29:35.609, testing device B3
+07/31/2017 14:29:35.960, seems like it's an open switch
+07/31/2017 14:29:35.967, end backoff 0.5, -1.641291e-13
+07/31/2017 14:29:36.470, testing device B4
+07/31/2017 14:29:36.815, seems like it's an open switch
+07/31/2017 14:29:36.821, end backoff 0.5, 1.409428e-13
+07/31/2017 14:29:37.230, testing device B5
+07/31/2017 14:29:37.578, seems like it's an open switch
+07/31/2017 14:29:37.584, end backoff 0.5, 3.925332e-14
+07/31/2017 14:29:38.081, testing device B6
+07/31/2017 14:29:38.434, seems like it's an open switch
+07/31/2017 14:29:38.440, end backoff 0.5, -4.692028e-13
+07/31/2017 14:29:38.821, testing device B7
+07/31/2017 14:29:39.165, seems like it's an open switch
+07/31/2017 14:29:39.171, end backoff 0.5, -1.53696e-12
+07/31/2017 14:29:39.680, testing device B8
+07/31/2017 14:29:40.030, seems like it's an open switch
+07/31/2017 14:29:40.036, end backoff 0.5, 2.93477e-13
+07/31/2017 14:29:40.446, testing device C1
+07/31/2017 14:29:40.792, seems like it's an open switch
+07/31/2017 14:29:40.798, end backoff 0.5, -1.231893e-12
+07/31/2017 14:29:41.203, testing device C2
+07/31/2017 14:29:41.549, seems like it's an open switch
+07/31/2017 14:29:41.555, end backoff 0.5, -5.708958e-13
+07/31/2017 14:29:41.960, testing device C3
+07/31/2017 14:29:42.306, seems like it's an open switch
+07/31/2017 14:29:42.312, end backoff 0.5, -1.892889e-12
+07/31/2017 14:29:42.698, testing device C4
+07/31/2017 14:29:43.046, seems like it's an open switch
+07/31/2017 14:29:43.052, end backoff 0.5, -3.011496e-12
+07/31/2017 14:29:43.546, testing device C5
+07/31/2017 14:29:43.898, seems like it's an open switch
+07/31/2017 14:29:43.904, end backoff 0.5, 1.409376e-13
+07/31/2017 14:29:44.290, testing device C6
+07/31/2017 14:29:44.635, seems like it's an open switch
+07/31/2017 14:29:44.641, end backoff 0.5, -4.079258e-12
+07/31/2017 14:29:45.046, testing device C7
+07/31/2017 14:29:45.391, seems like it's an open switch
+07/31/2017 14:29:45.397, end backoff 0.5, -1.181055e-12
+07/31/2017 14:29:45.778, testing device C8
+07/31/2017 14:29:46.121, seems like it's an open switch
+07/31/2017 14:29:46.127, end backoff 0.5, -2.960639e-12
+07/31/2017 14:29:46.624, testing device D1
+07/31/2017 14:29:46.973, seems like it's an open switch
+07/31/2017 14:29:46.977, end backoff 0.5, -3.723339e-12
+07/31/2017 14:29:47.359, testing device D2
+07/31/2017 14:29:47.707, seems like it's an open switch
+07/31/2017 14:29:47.711, end backoff 0.5, -1.130212e-12
+07/31/2017 14:29:48.121, testing device D3
+07/31/2017 14:29:48.470, seems like it's an open switch
+07/31/2017 14:29:48.474, end backoff 0.5, -2.655574e-12
+07/31/2017 14:29:48.770, testing device D4
+07/31/2017 14:29:49.115, seems like it's an open switch
+07/31/2017 14:29:49.119, end backoff 0.5, -1.079357e-12
+07/31/2017 14:29:49.615, testing device D5
+07/31/2017 14:29:49.967, seems like it's an open switch
+07/31/2017 14:29:49.971, end backoff 0.5, -2.80812e-12
+07/31/2017 14:29:50.279, testing device D6
+07/31/2017 14:29:50.624, seems like it's an open switch
+07/31/2017 14:29:50.628, end backoff 0.5, -4.892805e-12
+07/31/2017 14:29:51.121, testing device D7
+07/31/2017 14:29:51.469, seems like it's an open switch
+07/31/2017 14:29:51.473, end backoff 0.5, 8.530508e-12
+07/31/2017 14:29:51.795, testing device D8
+07/31/2017 14:29:52.138, seems like it's an open switch
+07/31/2017 14:29:52.144, end backoff 0.5, -3.825025e-12
+07/31/2017 14:29:52.638, testing device E1
+07/31/2017 14:29:52.984, seems like it's an open switch
+07/31/2017 14:29:52.990, end backoff 0.5, -3.367411e-12
+07/31/2017 14:29:53.381, testing device E2
+07/31/2017 14:29:53.729, seems like it's an open switch
+07/31/2017 14:29:53.733, end backoff 0.5, -3.469116e-12
+07/31/2017 14:29:54.140, testing device E3
+07/31/2017 14:29:54.483, seems like it's an open switch
+07/31/2017 14:29:54.487, end backoff 0.5, -4.994494e-12
+07/31/2017 14:29:54.868, testing device E4
+07/31/2017 14:29:55.210, seems like it's an open switch
+07/31/2017 14:29:55.216, end backoff 0.5, -8.75966e-13
+07/31/2017 14:29:55.710, testing device E5
+07/31/2017 14:29:56.061, seems like it's an open switch
+07/31/2017 14:29:56.065, end backoff 0.5, -2.858951e-12
+07/31/2017 14:29:56.338, testing device E6
+07/31/2017 14:29:56.688, seems like it's an open switch
+07/31/2017 14:29:56.694, end backoff 0.5, -4.028425e-12
+07/31/2017 14:29:57.076, testing device E7
+07/31/2017 14:29:57.427, seems like it's an open switch
+07/31/2017 14:29:57.430, end backoff 0.5, -3.16404e-12
+07/31/2017 14:29:57.750, testing device E8
+07/31/2017 14:29:58.092, seems like it's an open switch
+07/31/2017 14:29:58.098, end backoff 0.5, -3.977568e-12
+07/31/2017 14:29:58.591, testing device F1
+07/31/2017 14:29:58.941, seems like it's an open switch
+07/31/2017 14:29:58.947, end backoff 0.5, -2.960649e-12
+07/31/2017 14:29:59.351, testing device F2
+07/31/2017 14:29:59.697, seems like it's an open switch
+07/31/2017 14:29:59.703, end backoff 0.5, -4.384342e-12
+07/31/2017 14:30:00.131, testing device F3
+07/31/2017 14:30:00.479, seems like it's an open switch
+07/31/2017 14:30:00.483, end backoff 0.5, -3.062342e-12
+07/31/2017 14:30:00.892, testing device F4
+07/31/2017 14:30:01.243, seems like it's an open switch
+07/31/2017 14:30:01.247, end backoff 0.5, -1.333586e-12
+07/31/2017 14:30:01.630, testing device F5
+07/31/2017 14:30:01.971, seems like it's an open switch
+07/31/2017 14:30:01.976, end backoff 0.5, -2.197961e-12
+07/31/2017 14:30:02.471, testing device F6
+07/31/2017 14:30:02.821, seems like it's an open switch
+07/31/2017 14:30:02.825, end backoff 0.5, -2.248802e-12
+07/31/2017 14:30:03.230, testing device F7
+07/31/2017 14:30:03.573, seems like it's an open switch
+07/31/2017 14:30:03.578, end backoff 0.5, -1.994582e-12
+07/31/2017 14:30:04.069, testing device F8
+07/31/2017 14:30:04.417, seems like it's an open switch
+07/31/2017 14:30:04.421, end backoff 0.5, -1.384429e-12
+07/31/2017 14:30:04.913, testing device G1
+07/31/2017 14:30:05.259, seems like it's an open switch
+07/31/2017 14:30:05.263, end backoff 0.5, -1.842044e-12
+07/31/2017 14:30:05.648, testing device G2
+07/31/2017 14:30:05.997, seems like it's an open switch
+07/31/2017 14:30:06.003, end backoff 0.5, -2.147121e-12
+07/31/2017 14:30:06.415, testing device G3
+07/31/2017 14:30:06.756, seems like it's an open switch
+07/31/2017 14:30:06.759, end backoff 0.5, -4.079265e-12
+07/31/2017 14:30:07.358, testing device G4
+07/31/2017 14:30:07.701, seems like it's an open switch
+07/31/2017 14:30:07.707, end backoff 0.5, -2.149773e-13
+07/31/2017 14:30:08.223, testing device G5
+07/31/2017 14:30:08.569, seems like it's an open switch
+07/31/2017 14:30:08.575, end backoff 0.5, 1.081858e-11
+07/31/2017 14:30:09.068, testing device G6
+07/31/2017 14:30:09.417, seems like it's an open switch
+07/31/2017 14:30:09.423, end backoff 0.5, -1.079355e-12
+07/31/2017 14:30:09.803, testing device G7
+07/31/2017 14:30:10.148, seems like it's an open switch
+07/31/2017 14:30:10.154, end backoff 0.5, -3.011503e-12
+07/31/2017 14:30:10.575, testing device G8
+07/31/2017 14:30:10.923, seems like it's an open switch
+07/31/2017 14:30:10.927, end backoff 0.5, -2.096273e-12

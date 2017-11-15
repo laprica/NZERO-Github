@@ -1,0 +1,13 @@
+08/14/2017 00:30:38.489, setting both kts to volt source mode
+08/14/2017 00:30:38.493, changing volt range on bias
+08/14/2017 00:30:38.494, bias keithley volt zero and output on
+08/14/2017 00:30:38.516, curr keithley volt zero and output on
+08/14/2017 00:30:39.579, testing device a1
+08/14/2017 00:30:39.739, contact shorted from the start
+08/14/2017 00:30:39.744, end backoff 0, 1.152098e-10
+08/14/2017 00:30:40.548, testing device a2
+08/14/2017 00:30:40.707, contact shorted from the start
+08/14/2017 00:30:40.713, end backoff 0, 1.136335e-10
+08/14/2017 00:30:41.415, testing device a3
+08/14/2017 00:30:41.575, contact shorted from the start
+08/14/2017 00:30:41.581, end backoff 0, 1.137861e-10

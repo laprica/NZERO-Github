@@ -1,0 +1,219 @@
+07/31/2017 14:26:54.665, setting both kts to volt source mode
+07/31/2017 14:26:54.677, changing volt range on bias
+07/31/2017 14:26:54.680, bias keithley volt zero and output on
+07/31/2017 14:26:54.700, curr keithley volt zero and output on
+07/31/2017 14:26:55.391, testing device A1
+07/31/2017 14:26:55.736, seems like it's an open switch
+07/31/2017 14:26:55.742, end backoff 0.5, 7.00515e-12
+07/31/2017 14:26:57.426, testing device A2
+07/31/2017 14:26:57.776, seems like it's an open switch
+07/31/2017 14:26:57.782, end backoff 0.5, 7.055976e-12
+07/31/2017 14:26:58.687, testing device A3
+07/31/2017 14:26:59.032, seems like it's an open switch
+07/31/2017 14:26:59.038, end backoff 0.5, 5.63229e-12
+07/31/2017 14:27:00.046, testing device A4
+07/31/2017 14:27:00.391, seems like it's an open switch
+07/31/2017 14:27:00.397, end backoff 0.5, 5.327209e-12
+07/31/2017 14:27:01.298, testing device A5
+07/31/2017 14:27:01.650, seems like it's an open switch
+07/31/2017 14:27:01.655, end backoff 0.5, 3.954349e-12
+07/31/2017 14:27:02.553, testing device A6
+07/31/2017 14:27:02.900, seems like it's an open switch
+07/31/2017 14:27:02.904, end backoff 0.5, 4.462831e-12
+07/31/2017 14:27:03.694, testing device A7
+07/31/2017 14:27:04.039, seems like it's an open switch
+07/31/2017 14:27:04.046, end backoff 0.5, 3.496767e-12
+07/31/2017 14:27:05.653, testing device A8
+07/31/2017 14:27:05.997, seems like it's an open switch
+07/31/2017 14:27:06.003, end backoff 0.5, 4.564508e-12
+07/31/2017 14:27:06.792, testing device B1
+07/31/2017 14:27:07.138, seems like it's an open switch
+07/31/2017 14:27:07.142, end backoff 0.5, 5.530599e-12
+07/31/2017 14:27:07.819, testing device B2
+07/31/2017 14:27:08.164, seems like it's an open switch
+07/31/2017 14:27:08.171, end backoff 0.5, 3.395078e-12
+07/31/2017 14:27:08.846, testing device B3
+07/31/2017 14:27:09.196, seems like it's an open switch
+07/31/2017 14:27:09.201, end backoff 0.5, 2.327307e-12
+07/31/2017 14:27:09.880, testing device B4
+07/31/2017 14:27:10.221, seems like it's an open switch
+07/31/2017 14:27:10.224, end backoff 0.5, 2.784929e-12
+07/31/2017 14:27:10.900, testing device B5
+07/31/2017 14:27:11.247, seems like it's an open switch
+07/31/2017 14:27:11.253, end backoff 0.5, 2.581529e-12
+07/31/2017 14:27:11.974, testing device B6
+07/31/2017 14:27:12.319, seems like it's an open switch
+07/31/2017 14:27:12.325, end backoff 0.5, 3.08999e-12
+07/31/2017 14:27:13.003, testing device B7
+07/31/2017 14:27:13.354, seems like it's an open switch
+07/31/2017 14:27:13.359, end backoff 0.5, 6.493972e-13
+07/31/2017 14:27:13.930, testing device B8
+07/31/2017 14:27:14.275, seems like it's an open switch
+07/31/2017 14:27:14.279, end backoff 0.5, 1.869692e-12
+07/31/2017 14:27:14.842, testing device C1
+07/31/2017 14:27:15.186, seems like it's an open switch
+07/31/2017 14:27:15.190, end backoff 0.5, 8.019349e-13
+07/31/2017 14:27:15.688, testing device C2
+07/31/2017 14:27:16.032, seems like it's an open switch
+07/31/2017 14:27:16.038, end backoff 0.5, 1.157855e-12
+07/31/2017 14:27:16.601, testing device C3
+07/31/2017 14:27:16.947, seems like it's an open switch
+07/31/2017 14:27:16.953, end backoff 0.5, -4.18365e-13
+07/31/2017 14:27:17.519, testing device C4
+07/31/2017 14:27:17.869, seems like it's an open switch
+07/31/2017 14:27:17.875, end backoff 0.5, -1.384436e-12
+07/31/2017 14:27:18.441, testing device C5
+07/31/2017 14:27:18.788, seems like it's an open switch
+07/31/2017 14:27:18.792, end backoff 0.5, 3.924465e-14
+07/31/2017 14:27:19.361, testing device C6
+07/31/2017 14:27:19.710, seems like it's an open switch
+07/31/2017 14:27:19.713, end backoff 0.5, 9.008939e-14
+07/31/2017 14:27:20.279, testing device C7
+07/31/2017 14:27:20.628, seems like it's an open switch
+07/31/2017 14:27:20.634, end backoff 0.5, -1.994594e-12
+07/31/2017 14:27:21.201, testing device C8
+07/31/2017 14:27:21.551, seems like it's an open switch
+07/31/2017 14:27:21.555, end backoff 0.5, 3.242538e-12
+07/31/2017 14:27:22.124, testing device D1
+07/31/2017 14:27:22.473, seems like it's an open switch
+07/31/2017 14:27:22.477, end backoff 0.5, -2.553891e-12
+07/31/2017 14:27:23.045, testing device D2
+07/31/2017 14:27:23.394, seems like it's an open switch
+07/31/2017 14:27:23.400, end backoff 0.5, -1.282766e-12
+07/31/2017 14:27:23.966, testing device D3
+07/31/2017 14:27:24.315, seems like it's an open switch
+07/31/2017 14:27:24.321, end backoff 0.5, -1.994594e-12
+07/31/2017 14:27:24.818, testing device D4
+07/31/2017 14:27:25.163, seems like it's an open switch
+07/31/2017 14:27:25.167, end backoff 0.5, -1.486134e-12
+07/31/2017 14:27:25.733, testing device D5
+07/31/2017 14:27:26.082, seems like it's an open switch
+07/31/2017 14:27:26.086, end backoff 0.5, -1.384441e-12
+07/31/2017 14:27:26.654, testing device D6
+07/31/2017 14:27:27.005, seems like it's an open switch
+07/31/2017 14:27:27.010, end backoff 0.5, -2.401359e-12
+07/31/2017 14:27:27.463, testing device D7
+07/31/2017 14:27:27.806, seems like it's an open switch
+07/31/2017 14:27:27.809, end backoff 0.5, -3.825044e-12
+07/31/2017 14:27:28.298, testing device D8
+07/31/2017 14:27:28.642, seems like it's an open switch
+07/31/2017 14:27:28.645, end backoff 0.5, -1.94373e-12
+07/31/2017 14:27:29.111, testing device E1
+07/31/2017 14:27:29.459, seems like it's an open switch
+07/31/2017 14:27:29.461, end backoff 0.5, -2.299664e-12
+07/31/2017 14:27:29.913, testing device E2
+07/31/2017 14:27:30.256, seems like it's an open switch
+07/31/2017 14:27:30.260, end backoff 0.5, -1.587824e-12
+07/31/2017 14:27:30.828, testing device E3
+07/31/2017 14:27:31.177, seems like it's an open switch
+07/31/2017 14:27:31.184, end backoff 0.5, -1.486136e-12
+07/31/2017 14:27:31.674, testing device E4
+07/31/2017 14:27:32.026, seems like it's an open switch
+07/31/2017 14:27:32.032, end backoff 0.5, -2.197978e-12
+07/31/2017 14:27:32.492, testing device E5
+07/31/2017 14:27:32.835, seems like it's an open switch
+07/31/2017 14:27:32.841, end backoff 0.5, -1.333598e-12
+07/31/2017 14:27:33.405, testing device E6
+07/31/2017 14:27:33.756, seems like it's an open switch
+07/31/2017 14:27:33.762, end backoff 0.5, -2.452205e-12
+07/31/2017 14:27:34.266, testing device E7
+07/31/2017 14:27:34.615, seems like it's an open switch
+07/31/2017 14:27:34.621, end backoff 0.5, -7.2343e-13
+07/31/2017 14:27:35.194, testing device E8
+07/31/2017 14:27:35.540, seems like it's an open switch
+07/31/2017 14:27:35.546, end backoff 0.5, 1.092028e-11
+07/31/2017 14:27:36.221, testing device F1
+07/31/2017 14:27:36.569, seems like it's an open switch
+07/31/2017 14:27:36.573, end backoff 0.5, -2.757268e-12
+07/31/2017 14:27:37.141, testing device F2
+07/31/2017 14:27:37.490, seems like it's an open switch
+07/31/2017 14:27:37.494, end backoff 0.5, -6.725887e-13
+07/31/2017 14:27:38.063, testing device F3
+07/31/2017 14:27:38.414, seems like it's an open switch
+07/31/2017 14:27:38.418, end backoff 0.5, -3.164044e-12
+07/31/2017 14:27:38.773, testing device F4
+07/31/2017 14:27:39.118, seems like it's an open switch
+07/31/2017 14:27:39.125, end backoff 0.5, -1.689515e-12
+07/31/2017 14:27:39.628, testing device F5
+07/31/2017 14:27:39.970, seems like it's an open switch
+07/31/2017 14:27:39.974, end backoff 0.5, -2.197971e-12
+07/31/2017 14:27:40.473, testing device F6
+07/31/2017 14:27:40.821, seems like it's an open switch
+07/31/2017 14:27:40.825, end backoff 0.5, -1.638674e-12
+07/31/2017 14:27:41.395, testing device F7
+07/31/2017 14:27:41.749, seems like it's an open switch
+07/31/2017 14:27:41.755, end backoff 0.5, -4.282665e-12
+07/31/2017 14:27:42.213, testing device F8
+07/31/2017 14:27:42.562, seems like it's an open switch
+07/31/2017 14:27:42.566, end backoff 0.5, -3.062358e-12
+07/31/2017 14:27:43.180, testing device G1
+07/31/2017 14:27:43.522, seems like it's an open switch
+07/31/2017 14:27:43.526, end backoff 0.5, -1.943744e-12
+07/31/2017 14:27:44.092, testing device G2
+07/31/2017 14:27:44.437, seems like it's an open switch
+07/31/2017 14:27:44.443, end backoff 0.5, -1.384441e-12
+07/31/2017 14:27:44.907, testing device G3
+07/31/2017 14:27:45.255, seems like it's an open switch
+07/31/2017 14:27:45.259, end backoff 0.5, -1.536979e-12
+07/31/2017 14:27:45.826, testing device G4
+07/31/2017 14:27:46.173, seems like it's an open switch
+07/31/2017 14:27:46.177, end backoff 0.5, -2.909815e-12
+07/31/2017 14:27:46.670, testing device G5
+07/31/2017 14:27:47.015, seems like it's an open switch
+07/31/2017 14:27:47.019, end backoff 0.5, -1.384441e-12
+07/31/2017 14:27:47.619, testing device G6
+07/31/2017 14:27:47.964, seems like it's an open switch
+07/31/2017 14:27:47.970, end backoff 0.5, -1.130205e-12
+07/31/2017 14:27:48.581, testing device G7
+07/31/2017 14:27:48.926, seems like it's an open switch
+07/31/2017 14:27:48.931, end backoff 0.5, -2.045437e-12
+07/31/2017 14:27:49.404, testing device G8
+07/31/2017 14:27:49.750, seems like it's an open switch
+07/31/2017 14:27:49.755, end backoff 0.5, -2.706429e-12
+07/31/2017 14:27:57.312, [Base        ] Leaving application in progress...
+07/31/2017 14:27:57.368, stderr: 
+07/31/2017 14:27:57.372, stderr: Traceback (most recent call last):
+07/31/2017 14:27:57.377, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 612, in <module>
+07/31/2017 14:27:57.381, stderr:     NzeroApp().run()
+07/31/2017 14:27:57.385, stderr:   File "C:\Python27\lib\site-packages\kivy\app.py", line 828, in run
+07/31/2017 14:27:57.387, stderr:     runTouchApp()
+07/31/2017 14:27:57.388, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 504, in runTouchApp
+07/31/2017 14:27:57.390, stderr:     EventLoop.window.mainloop()
+07/31/2017 14:27:57.392, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 663, in mainloop
+07/31/2017 14:27:57.397, stderr:     self._mainloop()
+07/31/2017 14:27:57.398, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 405, in _mainloop
+07/31/2017 14:27:57.401, stderr:     EventLoop.idle()
+07/31/2017 14:27:57.401, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 342, in idle
+07/31/2017 14:27:57.404, stderr:     self.dispatch_input()
+07/31/2017 14:27:57.405, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 327, in dispatch_input
+07/31/2017 14:27:57.407, stderr:     post_dispatch_input(*pop(0))
+07/31/2017 14:27:57.408, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 233, in post_dispatch_input
+07/31/2017 14:27:57.411, stderr:     listener.dispatch('on_motion', etype, me)
+07/31/2017 14:27:57.413, stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+07/31/2017 14:27:57.414, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\__init__.py", line 1188, in on_motion
+07/31/2017 14:27:57.417, stderr:     self.dispatch('on_touch_down', me)
+07/31/2017 14:27:57.417, stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+07/31/2017 14:27:57.420, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\__init__.py", line 1204, in on_touch_down
+07/31/2017 14:27:57.421, stderr:     if w.dispatch('on_touch_down', touch):
+07/31/2017 14:27:57.424, stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+07/31/2017 14:27:57.426, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\widget.py", line 457, in on_touch_down
+07/31/2017 14:27:57.427, stderr:     if child.dispatch('on_touch_down', touch):
+07/31/2017 14:27:57.430, stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+07/31/2017 14:27:57.431, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\widget.py", line 457, in on_touch_down
+07/31/2017 14:27:57.434, stderr:     if child.dispatch('on_touch_down', touch):
+07/31/2017 14:27:57.436, stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+07/31/2017 14:27:57.437, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\widget.py", line 457, in on_touch_down
+07/31/2017 14:27:57.438, stderr:     if child.dispatch('on_touch_down', touch):
+07/31/2017 14:27:57.440, stderr:   File "kivy\_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8191)
+07/31/2017 14:27:57.443, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\behaviors\button.py", line 151, in on_touch_down
+07/31/2017 14:27:57.444, stderr:     self.dispatch('on_press')
+07/31/2017 14:27:57.447, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:27:57.448, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:27:57.450, stderr:   File "kivy\_event.pyx", line 1109, in kivy._event.EventObservers._dispatch (kivy\_event.c:12816)
+07/31/2017 14:27:57.453, stderr:   File "C:\Python27\lib\site-packages\kivy\lang\builder.py", line 64, in custom_callback
+07/31/2017 14:27:57.454, stderr:     exec(__kvlang__.co_value, idmap)
+07/31/2017 14:27:57.457, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\nzero.kv", line 117, in <module>
+07/31/2017 14:27:57.459, stderr:     on_press: root.reset_test()
+07/31/2017 14:27:57.460, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 147, in reset_test
+07/31/2017 14:27:57.463, stderr:     self.firstbox.real_graph.remove_plot(self.firstbox.real_graph.plots[0])
+07/31/2017 14:27:57.463, stderr: IndexError: list index out of range

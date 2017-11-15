@@ -1,0 +1,413 @@
+# kivy file linked with pstest.py for NZERO switch pulse-sweep testing.
+# it provides interactive GUI for the tester.
+# created by: Hyun Kyo Jung
+# data: 7/20/2017
+
+
+#: import ListItemButton kivy.uix.listview.ListItemButton
+#: import ListAdapter kivy.adapters.listadapter.ListAdapter
+#: import Window kivy.core.window
+
+<Button>
+    background_normal: ''
+    background_color: (0,0,0,1) if self.state == 'normal' else (0,1,0,1)
+    text: ""
+
+MeasureRoot:
+ 
+<MeasureRoot>:
+    firstbox: first
+    secondbox: second
+    
+    OtherInfoForm:
+        id: first
+        size_hint_x: .75
+        prompt_screen: prompt
+        chip_name: chip
+        test_modes: test_options
+        real_graph: real_graph
+        device: device
+        orientation: "vertical"
+        Label:
+            id: prompt
+            height: "60dp"
+            size_hint_y: None
+            font_size: '20sp'
+            bold: True
+            text: "Type in the chip name\n and press enter."
+             
+        Label:
+            id: chip
+            height: "40dp"
+            size_hint_y: None
+            text: "The chip being tested: "
+
+        BoxLayout:
+            id: test_options
+            manual: nonauto
+            auto: automatic
+            height: "40dp"
+            size_hint_y: None
+            ToggleButton:
+                id: nonauto
+                text: "Manual"
+                group: "Test Options"
+
+            ToggleButton:
+                id: automatic
+                text: "Auto"
+                group: "Test Options"
+
+        Label:
+            id: device
+            text: "Summary of: "
+            height: "40dp"
+            size_hint_y: None
+
+        Graph:
+            id: real_graph
+            title: "Hmm...\n hmm \n ghm"
+            xlabel: "bias volt"
+            ylabel: "cont\ncurr\n(pA)"
+            x_ticks_minor: 0.5 
+            x_ticks_major: 5
+            y_ticks_major: 15
+            y_ticks_minor: 5
+            y_grid_label: True
+            x_grid_label: True
+            padding: 5
+            x_grid: True
+            y_grid: True
+            xmin: 0
+            xmax: 60
+            ymin: -50
+            ymax: 100
+   
+            
+       
+    MeasureChipForm:
+        id: second
+        size_hint_x: 1
+        orientation: "vertical"
+        input: ti
+        device: device_being_tested
+        test_result: result
+        BoxLayout:
+            height: "40dp"
+            size_hint_y: None
+            TextInput:
+                id: ti
+                size_hint_x: 2
+                focus: True
+                multiline: False
+                on_text_validate: root.process_input(ti.text); self.text = ''; root.set_focus_real();
+            Button:
+                text: "Enter"
+                size_hint_x: 0.33
+                on_press: root.process_input(ti.text); ti.text = "";
+                on_release: ti.focus = True
+
+            Button:
+                text: "Finish"
+                size_hint_x: 0.33
+                on_press: app.get_running_app().stop(); root.close_window()
+            Button:
+                text: "Reset"
+                size_hint_x: 0.33
+                on_press: root.reset_test()
+
+        Label:
+            id: device_being_tested
+            height: "40dp"
+            size_hint_y: None
+            text: "device tested last: "
+        BoxLayout:
+            id: result
+            a: A
+            b: B
+            c: C
+            d: D
+            e: E
+            f: F
+            g: G
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    text: "8"
+                Label:
+                    text: "7"
+                Label:
+                    text: "6"
+                Label:
+                    text: "5"
+                Label:
+                    text: "4"
+                Label:
+                    text: "3"
+                Label:
+                    text: "2"
+                Label:
+                    text: "1"
+                Button:
+                    text: ""
+            BoxLayout:
+                id: A
+                a1: A1
+                a2: A2
+                a3: A3
+                a4: A4
+                a5: A5
+                a6: A6
+                a7: A7
+                a8: A8
+                orientation: "vertical"
+                Button:
+                    id: A8
+                    on_press: root.draw_graph("a8", self.text)
+                Button:
+                    id: A7
+                    on_press: root.draw_graph("a7", self.text)
+                Button:
+                    id: A6
+                    on_press: root.draw_graph("a6", self.text)
+                Button:
+                    id: A5
+                    on_press: root.draw_graph("a5", self.text)
+                Button:
+                    id: A4
+                    on_press: root.draw_graph("a4", self.text)
+                Button:
+                    id: A3
+                    on_press: root.draw_graph("a3", self.text)
+                Button:
+                    id: A2
+                    on_press: root.draw_graph("a2", self.text)
+                Button:
+                    id: A1
+                    on_press: root.draw_graph("a1", self.text)
+                Label:
+                    text: "A"
+                    
+            BoxLayout:
+                id: B
+                b1: B1
+                b2: B2
+                b3: B3
+                b4: B4
+                b5: B5
+                b6: B6
+                b7: B7
+                b8: B8
+                orientation: "vertical"
+                Button:
+                    id: B8
+                    on_press: root.draw_graph("b8", self.text)
+                Button:
+                    id: B7
+                    on_press: root.draw_graph("b7", self.text)
+                Button:
+                    id: B6
+                    on_press: root.draw_graph("b6", self.text)
+                Button:
+                    id: B5
+                    on_press: root.draw_graph("b5", self.text)
+                Button:
+                    id: B4
+                    on_press: root.draw_graph("b4", self.text)
+                Button:
+                    id: B3
+                    on_press: root.draw_graph("b3", self.text)
+                Button:
+                    id: B2
+                    on_press: root.draw_graph("b2", self.text)
+                Button:
+                    id: B1
+                    on_press: root.draw_graph("b1", self.text)
+                Label:
+                    text: "B"
+            BoxLayout:
+                id: C
+                c1: C1
+                c2: C2
+                c3: C3
+                c4: C4
+                c5: C5
+                c6: C6
+                c7: C7
+                c8: C8
+                orientation: "vertical"
+                Button:
+                    id: C8
+                    on_press: root.draw_graph("c8", self.text)
+                Button:
+                    id: C7
+                    on_press: root.draw_graph("c7", self.text)
+                Button:
+                    id: C6
+                    on_press: root.draw_graph("c6", self.text)
+                Button:
+                    id: C5
+                    on_press: root.draw_graph("c5", self.text)
+                Button:
+                    id: C4
+                    on_press: root.draw_graph("c4", self.text)
+                Button:
+                    id: C3
+                    on_press: root.draw_graph("c3", self.text)
+                Button:
+                    id: C2
+                    on_press: root.draw_graph("c2", self.text)
+                Button:
+                    id: C1
+                    on_press: root.draw_graph("c1", self.text)
+                Label:
+                    text: "C"
+            BoxLayout:
+                id: D
+                d1: D1
+                d2: D2
+                d3: D3
+                d4: D4
+                d5: D5
+                d6: D6
+                d7: D7
+                d8: D8
+                orientation: "vertical"
+                Button:
+                    id: D8
+                    on_press: root.draw_graph("d8", self.text)
+                Button:
+                    id: D7
+                    on_press: root.draw_graph("d7", self.text)
+                Button:
+                    id: D6
+                    on_press: root.draw_graph("d6", self.text)
+                Button:
+                    id: D5
+                    on_press: root.draw_graph("d5", self.text)
+                Button:
+                    id: D4
+                    on_press: root.draw_graph("d4", self.text)
+                Button:
+                    id: D3
+                    on_press: root.draw_graph("d3", self.text)
+                Button:
+                    id: D2
+                    on_press: root.draw_graph("d2", self.text)
+                Button:
+                    id: D1
+                    on_press: root.draw_graph("d1", self.text)
+                Label:
+                    text: "D"
+            BoxLayout:
+                id: E
+                e1: E1
+                e2: E2
+                e3: E3
+                e4: E4
+                e5: E5
+                e6: E6
+                e7: E7
+                e8: E8
+                orientation: "vertical"
+                Button:
+                    id: E8
+                    on_press: root.draw_graph("e8", self.text)
+                Button:
+                    id: E7
+                    on_press: root.draw_graph("e7", self.text)
+                Button:
+                    id: E6
+                    on_press: root.draw_graph("e6", self.text)
+                Button:
+                    id: E5
+                    on_press: root.draw_graph("e5", self.text)
+                Button:
+                    id: E4
+                    on_press: root.draw_graph("e4", self.text)
+                Button:
+                    id: E3
+                    on_press: root.draw_graph("e3", self.text)
+                Button:
+                    id: E2
+                    on_press: root.draw_graph("e2", self.text)
+                Button:
+                    id: E1
+                    on_press: root.draw_graph("e1", self.text)
+                Label:
+                    text: "E"
+            BoxLayout:
+                id: F
+                f1: F1
+                f2: F2
+                f3: F3
+                f4: F4
+                f5: F5
+                f6: F6
+                f7: F7
+                f8: F8
+                orientation: "vertical"
+                Button:
+                    id: F8
+                    on_press: root.draw_graph("f8", self.text)
+                Button:
+                    id: F7
+                    on_press: root.draw_graph("f7", self.text)
+                Button:
+                    id: F6
+                    on_press: root.draw_graph("f6", self.text)
+                Button:
+                    id: F5
+                    on_press: root.draw_graph("f5", self.text)
+                Button:
+                    id: F4
+                    on_press: root.draw_graph("f4", self.text)
+                Button:
+                    id: F3
+                    on_press: root.draw_graph("f3", self.text)
+                Button:
+                    id: F2
+                    on_press: root.draw_graph("f2", self.text)
+                Button:
+                    id: F1
+                    on_press: root.draw_graph("f1", self.text)
+                Label:
+                    text: "F" 
+            BoxLayout:
+                id: G
+                g1: G1
+                g2: G2
+                g3: G3
+                g4: G4
+                g5: G5
+                g6: G6
+                g7: G7
+                g8: G8
+                orientation: "vertical"
+                Button:
+                    id: G8
+                    on_press: root.draw_graph("g8", self.text)
+                Button:
+                    id: G7
+                    on_press: root.draw_graph("g7", self.text)
+                Button:
+                    id: G6
+                    on_press: root.draw_graph("g6", self.text)
+                Button:
+                    id: G5
+                    on_press: root.draw_graph("g5", self.text)
+                Button:
+                    id: G4
+                    on_press: root.draw_graph("g4", self.text)
+                Button:
+                    id: G3
+                    on_press: root.draw_graph("g3", self.text)
+                Button:
+                    id: G2
+                    on_press: root.draw_graph("g2", self.text)
+                Button:
+                    id: G1
+                    on_press: root.draw_graph("g1", self.text)
+                Label:
+                    text: "G"
+

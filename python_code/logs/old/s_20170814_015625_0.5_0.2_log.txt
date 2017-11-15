@@ -1,0 +1,13 @@
+08/14/2017 01:56:29.898, setting both kts to volt source mode
+08/14/2017 01:56:29.901, changing volt range on bias
+08/14/2017 01:56:29.904, bias keithley volt zero and output on
+08/14/2017 01:56:29.924, curr keithley volt zero and output on
+08/14/2017 01:56:30.938, testing device a3
+08/14/2017 01:56:31.099, contact shorted from the start
+08/14/2017 01:56:31.105, end backoff 0, 1.119046e-10
+08/14/2017 01:56:32.059, testing device a5
+08/14/2017 01:56:32.219, contact shorted from the start
+08/14/2017 01:56:32.224, end backoff 0, 1.073793e-10
+08/14/2017 01:56:33.990, [Base        ] Leaving application in progress...
+08/14/2017 01:56:34.042, [Base        ] No event listeners have been created
+08/14/2017 01:56:34.042, [Base        ] Application will leave

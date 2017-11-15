@@ -1,0 +1,44 @@
+07/31/2017 14:14:00.489, setting both kts to volt source mode
+07/31/2017 14:14:00.500, changing volt range on bias
+07/31/2017 14:14:00.503, bias keithley volt zero and output on
+07/31/2017 14:14:00.525, curr keithley volt zero and output on
+07/31/2017 14:14:01.384, testing device A1
+07/31/2017 14:14:18.974, seems like it's an open switch
+07/31/2017 14:14:18.980, end backoff 60.5, -2.658308e-13
+07/31/2017 14:14:19.134, [Base        ] Leaving application in progress...
+07/31/2017 14:14:19.157, stderr: 
+07/31/2017 14:14:19.161, stderr: Traceback (most recent call last):
+07/31/2017 14:14:19.167, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 606, in <module>
+07/31/2017 14:14:19.173, stderr:     NzeroApp().run()
+07/31/2017 14:14:19.176, stderr:   File "C:\Python27\lib\site-packages\kivy\app.py", line 828, in run
+07/31/2017 14:14:19.178, stderr:     runTouchApp()
+07/31/2017 14:14:19.181, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 504, in runTouchApp
+07/31/2017 14:14:19.184, stderr:     EventLoop.window.mainloop()
+07/31/2017 14:14:19.187, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 663, in mainloop
+07/31/2017 14:14:19.190, stderr:     self._mainloop()
+07/31/2017 14:14:19.193, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 602, in _mainloop
+07/31/2017 14:14:19.196, stderr:     self.modifiers):
+07/31/2017 14:14:19.198, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:14:19.201, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:14:19.206, stderr:   File "kivy\_event.pyx", line 1149, in kivy._event.EventObservers._dispatch (kivy\_event.c:13564)
+07/31/2017 14:14:19.209, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\__init__.py", line 159, in _on_window_key_down
+07/31/2017 14:14:19.211, stderr:     return self.dispatch('on_key_down', keycode, text, modifiers)
+07/31/2017 14:14:19.214, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:14:19.217, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:14:19.221, stderr:   File "kivy\_event.pyx", line 1149, in kivy._event.EventObservers._dispatch (kivy\_event.c:13564)
+07/31/2017 14:14:19.226, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\textinput.py", line 2438, in keyboard_on_key_down
+07/31/2017 14:14:19.232, stderr:     self._key_down(key)
+07/31/2017 14:14:19.234, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\textinput.py", line 2300, in _key_down
+07/31/2017 14:14:19.237, stderr:     self.dispatch('on_text_validate')
+07/31/2017 14:14:19.240, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:14:19.243, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:14:19.246, stderr:   File "kivy\_event.pyx", line 1109, in kivy._event.EventObservers._dispatch (kivy\_event.c:12816)
+07/31/2017 14:14:19.250, stderr:   File "C:\Python27\lib\site-packages\kivy\lang\builder.py", line 64, in custom_callback
+07/31/2017 14:14:19.256, stderr:     exec(__kvlang__.co_value, idmap)
+07/31/2017 14:14:19.259, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\nzero.kv", line 103, in <module>
+07/31/2017 14:14:19.260, stderr:     on_text_validate: root.process_input(ti.text); self.text = ''; root.set_focus_real();
+07/31/2017 14:14:19.263, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 106, in process_input
+07/31/2017 14:14:19.266, stderr:     if tst.get_device(txt).get_stat1() not in ["o", "SC", "SCD", "SD"]:
+07/31/2017 14:14:19.269, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\test.py", line 112, in get_device
+07/31/2017 14:14:19.273, stderr:     if ord(txt[0]) < 97:
+07/31/2017 14:14:19.276, stderr: IndexError: string index out of range

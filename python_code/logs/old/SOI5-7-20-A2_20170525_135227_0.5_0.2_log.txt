@@ -1,0 +1,8 @@
+05/25/2017 13:52:27.588, setting up resource manager
+05/25/2017 13:52:27.848, getting instruments
+05/25/2017 13:52:27.947, instantiating and resetting keithley's
+05/25/2017 13:52:27.957, setting both kts to volt source mode
+05/25/2017 13:52:27.957, changing volt range on bias
+05/25/2017 13:52:27.957, bias keithley volt zero and output on
+05/25/2017 13:52:27.987, curr keithley volt zero and output on
+05/25/2017 13:52:29.598, closed with ctrl+c

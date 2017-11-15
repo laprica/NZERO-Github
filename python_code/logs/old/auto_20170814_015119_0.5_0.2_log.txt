@@ -1,0 +1,4 @@
+08/14/2017 01:51:24.743, setting both kts to volt source mode
+08/14/2017 01:51:24.749, changing volt range on bias
+08/14/2017 01:51:24.753, bias keithley volt zero and output on
+08/14/2017 01:51:24.775, curr keithley volt zero and output on

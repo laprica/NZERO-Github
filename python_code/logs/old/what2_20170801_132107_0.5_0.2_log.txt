@@ -1,0 +1,10 @@
+08/01/2017 13:22:24.788, setting both kts to volt source mode
+08/01/2017 13:22:24.792, changing volt range on bias
+08/01/2017 13:22:24.793, bias keithley volt zero and output on
+08/01/2017 13:22:24.813, curr keithley volt zero and output on
+08/01/2017 13:22:25.756, testing device A1
+08/01/2017 13:22:43.309, seems like it's an open switch
+08/01/2017 13:22:43.313, end backoff 60.5, 5.784866e-12
+08/01/2017 13:37:42.318, [Base        ] Leaving application in progress...
+08/01/2017 13:37:42.372, [Base        ] No event listeners have been created
+08/01/2017 13:37:42.381, [Base        ] Application will leave

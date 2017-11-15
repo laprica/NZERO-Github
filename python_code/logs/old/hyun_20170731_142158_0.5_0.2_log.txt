@@ -1,0 +1,44 @@
+07/31/2017 14:22:06.128, setting both kts to volt source mode
+07/31/2017 14:22:06.196, changing volt range on bias
+07/31/2017 14:22:06.201, bias keithley volt zero and output on
+07/31/2017 14:22:06.223, curr keithley volt zero and output on
+07/31/2017 14:22:06.836, testing device A1
+07/31/2017 14:22:24.424, seems like it's an open switch
+07/31/2017 14:22:24.430, end backoff 60.5, -5.709079e-13
+07/31/2017 14:22:24.578, [Base        ] Leaving application in progress...
+07/31/2017 14:22:24.586, stderr: 
+07/31/2017 14:22:24.591, stderr: Traceback (most recent call last):
+07/31/2017 14:22:24.595, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 618, in <module>
+07/31/2017 14:22:24.599, stderr:     NzeroApp().run()
+07/31/2017 14:22:24.604, stderr:   File "C:\Python27\lib\site-packages\kivy\app.py", line 828, in run
+07/31/2017 14:22:24.608, stderr:     runTouchApp()
+07/31/2017 14:22:24.609, stderr:   File "C:\Python27\lib\site-packages\kivy\base.py", line 504, in runTouchApp
+07/31/2017 14:22:24.611, stderr:     EventLoop.window.mainloop()
+07/31/2017 14:22:24.614, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 663, in mainloop
+07/31/2017 14:22:24.617, stderr:     self._mainloop()
+07/31/2017 14:22:24.618, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\window_sdl2.py", line 602, in _mainloop
+07/31/2017 14:22:24.622, stderr:     self.modifiers):
+07/31/2017 14:22:24.625, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:22:24.628, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:22:24.630, stderr:   File "kivy\_event.pyx", line 1149, in kivy._event.EventObservers._dispatch (kivy\_event.c:13564)
+07/31/2017 14:22:24.631, stderr:   File "C:\Python27\lib\site-packages\kivy\core\window\__init__.py", line 159, in _on_window_key_down
+07/31/2017 14:22:24.634, stderr:     return self.dispatch('on_key_down', keycode, text, modifiers)
+07/31/2017 14:22:24.637, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:22:24.638, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:22:24.641, stderr:   File "kivy\_event.pyx", line 1149, in kivy._event.EventObservers._dispatch (kivy\_event.c:13564)
+07/31/2017 14:22:24.642, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\textinput.py", line 2438, in keyboard_on_key_down
+07/31/2017 14:22:24.644, stderr:     self._key_down(key)
+07/31/2017 14:22:24.647, stderr:   File "C:\Python27\lib\site-packages\kivy\uix\textinput.py", line 2300, in _key_down
+07/31/2017 14:22:24.648, stderr:     self.dispatch('on_text_validate')
+07/31/2017 14:22:24.650, stderr:   File "kivy\_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy\_event.c:8146)
+07/31/2017 14:22:24.651, stderr:   File "kivy\_event.pyx", line 1225, in kivy._event.EventObservers.dispatch (kivy\_event.c:14035)
+07/31/2017 14:22:24.654, stderr:   File "kivy\_event.pyx", line 1109, in kivy._event.EventObservers._dispatch (kivy\_event.c:12816)
+07/31/2017 14:22:24.655, stderr:   File "C:\Python27\lib\site-packages\kivy\lang\builder.py", line 64, in custom_callback
+07/31/2017 14:22:24.657, stderr:     exec(__kvlang__.co_value, idmap)
+07/31/2017 14:22:24.661, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\nzero.kv", line 103, in <module>
+07/31/2017 14:22:24.663, stderr:     on_text_validate: root.process_input(ti.text); self.text = ''; root.set_focus_real();
+07/31/2017 14:22:24.664, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\pstest.py", line 118, in process_input
+07/31/2017 14:22:24.667, stderr:     if tst.get_device(self.secondbox.device.text).get_stat1()not in ["o", "SC", "SCD", "SD"]:
+07/31/2017 14:22:24.668, stderr:   File "C:\Users\MOLNAR_PH330_D1\Desktop\NZERO\python_code\test.py", line 113, in get_device
+07/31/2017 14:22:24.671, stderr:     index = (ord(txt[0])-65) * 8 + int(txt[1]) - 1
+07/31/2017 14:22:24.673, stderr: ValueError: invalid literal for int() with base 10: 'e'

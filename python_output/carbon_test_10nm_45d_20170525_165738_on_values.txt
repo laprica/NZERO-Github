@@ -1,0 +1,10 @@
+Chip,carbon_test_10nm_45d
+8,~3.5  (-0.0001),o  ,o  ,o  ,~24.5  (-0.0001),o  ,o  
+7,o  ,o  ,~18.0  (-0.0001),o  ,o  ,o  ,o  
+6,o  ,o  ,o  ,o  ,o  ,o  ,o  
+5,o  ,o  ,o  ,o  ,o  ,o  ,o  
+4,o  ,o  ,o  ,o  ,o  ,o  ,o  
+3,o  ,o  ,o  ,o  ,o  ,o  ,o  
+2,~44.5  (0.0001),o  ,o  ,o  ,o  ,o  ,o  
+1,~57.0  (-0.0001),o  ,o  ,o  ,o  ,o  ,o  
+,A,B,C,D,E,F,G

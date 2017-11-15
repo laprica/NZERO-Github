@@ -1,0 +1,14 @@
+11/10/2017 01:34:18.700, Starting Serial Port
+11/10/2017 01:34:21.137, Testing switch
+11/10/2017 01:34:21.153, starting loop
+11/10/2017 01:34:21.153, reading data
+11/10/2017 01:34:21.154, appending to list
+11/10/2017 01:34:21.160, 48
+,0
+
+11/10/2017 01:34:21.160, reading data
+11/10/2017 01:34:26.167, appending to list
+11/10/2017 01:34:26.176, open switch
+,
+11/10/2017 01:34:26.176, reading data
+11/10/2017 01:34:31.183, closed with ctrl+c

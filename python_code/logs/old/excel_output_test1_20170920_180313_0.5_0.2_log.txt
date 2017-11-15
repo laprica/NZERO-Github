@@ -1,0 +1,32 @@
+09/20/2017 18:03:13.032, setting up resource manager
+09/20/2017 18:03:13.082, getting instruments
+09/20/2017 18:03:13.171, instantiating and resetting keithley's
+09/20/2017 18:03:13.181, setting both kts to volt source mode
+09/20/2017 18:03:13.181, changing volt range on bias
+09/20/2017 18:03:13.191, bias keithley volt zero and output on
+09/20/2017 18:03:13.211, curr keithley volt zero and output on
+09/20/2017 18:03:14.101, testing switch A1
+09/20/2017 18:03:14.101, testing switch
+09/20/2017 18:03:14.252, contact is shorted from start
+09/20/2017 18:03:14.252, 0, -1.116415e-09, 4.475117e-09
+09/20/2017 18:03:14.262, end backoff 0, 4.475117e-09
+09/20/2017 18:03:16.482, testing switch A2
+09/20/2017 18:03:16.482, testing switch
+09/20/2017 18:03:16.631, contact is shorted from start
+09/20/2017 18:03:16.631, 0, -1.12169e-09, 4.469877e-09
+09/20/2017 18:03:16.631, end backoff 0, 4.469877e-09
+09/20/2017 18:03:17.601, testing switch A3
+09/20/2017 18:03:17.601, testing switch
+09/20/2017 18:03:17.762, contact is shorted from start
+09/20/2017 18:03:17.762, 0, -1.154913e-09, 4.479843e-09
+09/20/2017 18:03:17.762, end backoff 0, 4.479843e-09
+09/20/2017 18:03:18.601, testing switch A4
+09/20/2017 18:03:18.601, testing switch
+09/20/2017 18:03:18.753, contact is shorted from start
+09/20/2017 18:03:18.753, 0, -1.136957e-09, 4.382777e-09
+09/20/2017 18:03:18.753, end backoff 0, 4.382777e-09
+09/20/2017 18:03:19.392, testing switch A5
+09/20/2017 18:03:19.392, testing switch
+09/20/2017 18:03:19.542, contact is shorted from start
+09/20/2017 18:03:19.542, 0, -1.130972e-09, 4.447353e-09
+09/20/2017 18:03:19.552, end backoff 0, 4.447353e-09
