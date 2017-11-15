@@ -23,16 +23,21 @@ int sourcePin = A0;
 
 const byte interruptPin = 2;
 volatile byte killState = LOW;
+byte printKill = HIGH;
 
 float gate_start = 0;
 float gate_step = 0.2;
-float gate_limit = 50;
+float gate_limit = 5;
 
-unsigned long gate_delay = 500;
+unsigned long previousMillis = 0;
+const long gate_delay = 500;
 
-float vGa = -1;
+float gateV = -1;
 
-float vS_thresh = 0.3;
+// 2.8 is the 'resting' voltage. Can change to
+// a moving average later.    
+float sourceRest = 3.26;
+float vS_thresh = 0.5;
 
 int inByte = 0;
 
@@ -60,6 +65,7 @@ void setup() {
   pinMode(interruptPin, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(interruptPin), killCode, FALLING);
 
+  // give Arduino time before starting
   delay(100);
 }
 
@@ -69,6 +75,12 @@ void killCode(){
 
 void loop() {
   // Wait for python code to say OK to run
+  if(killState == HIGH){
+    if(printKill){
+      Serial.println("stopped");
+    }
+    printKill = LOW;
+  }
   if (Serial.available() > 0) {
     // get incoming byte:
     inByte = Serial.read();
@@ -92,13 +104,13 @@ void loop() {
       case 'b':
         // Begin the sweep
         int worked = 1;
-        float vG = gate_start;
+        gateV = gate_start;
 
         int contLoop = 1;
         
         while(contLoop){
           // check if should stop the process
-          if( killState == HIGH){
+          if( killState == HIGH ){
             write_value(0);
             contLoop = 0;
             Serial.println("state killed");
@@ -106,8 +118,9 @@ void loop() {
           }
           
           // check if should continue loop
-          if (Serial.available() > 0) {
+          if ( Serial.available() > 0 ) {
             inByte = Serial.read();
+            // s will be sent in ctrl+c case
             if (inByte == 's') {
               write_value(0);
               contLoop = 0;
@@ -115,24 +128,25 @@ void loop() {
             }
           }
 
+          Serial.println("loop");
+
           // start ramp up
-          int ru = rampUp(vG);
+          int ru = rampUp();
 
           if(!ru){
             // something wrong happened, get out of loop
+            Serial.println("ramp up failed");
             break;
           }
 
           // start ramp down
-          int rd = rampDown(vG);
+          int rd = rampDown();
           
           if(!rd){
             // something wrong happened, get out of loop
+            Serial.println("ramp down failed");
             break;
           }
-
-          
-          Serial.println("loop");
         }
 
         // exited loop, now set output to 0 V
@@ -142,7 +156,7 @@ void loop() {
   }
 }
 
-int rampUp(float gateV){
+int rampUp(){
   // will return 1 on success
   // return 0 on not success
   // This function will ramp the gate voltage up until
@@ -150,7 +164,8 @@ int rampUp(float gateV){
 
   // check the source voltage
   float sourceV = getSourceVolt();
-  if( abs(2.8 - sourceV) > vS_thresh ){
+  
+  if( abs(sourceRest - sourceV) > vS_thresh ){
     // the switch is shorted from the start
     Serial.print("Shorted from the start with: ");
     Serial.print(sourceV);
@@ -167,21 +182,30 @@ int rampUp(float gateV){
 
   // good to start the ramp up
   while( gateV - gate_limit < 0 ) {
-
     // check if should stop the process
     if( killState == HIGH){
       write_value(0);
       Serial.println("state killed in ramp up");
-      break;
+      return;
     }
-    // increase gate voltage
-    gateV += gate_step;
-    write_value(gateV);
 
+    unsigned long currentMillis = millis();
+
+    // increase gate voltage
+    if(currentMillis - previousMillis >= gate_delay){
+      previousMillis = currentMillis;
+      Serial.print("gate V: ");
+      Serial.println(gateV);
+      gateV += gate_step;
+      write_value(gateV);
+      Serial.print("Source volt: ");
+      Serial.println(sourceV);
+    }
+    
     // look at source voltage to see if switch
     sourceV = getSourceVolt();
     
-    if( abs(2.8 - sourceV) > vS_thresh ){
+    if( abs(sourceRest - sourceV) > vS_thresh ){
       // then the device has closed!
       Serial.print("Closed at ");
       Serial.print(gateV);
@@ -191,11 +215,12 @@ int rampUp(float gateV){
       return 1;
     }
   }
+  Serial.println("Reached limit, open switch");
   return 0;
 }
 
 
-int rampDown(float gateV){
+int rampDown(){
   // will return 1 on success
   // return 0 on not success
   // This function will ramp the gate voltage up until
@@ -203,9 +228,10 @@ int rampDown(float gateV){
 
   // check the source voltage
   float sourceV = getSourceVolt();
-  if( abs(2.8 - sourceV) < vS_thresh ){
+  
+  if( abs(sourceRest - sourceV) < vS_thresh ){
     // the switch is shorted from the start
-    Serial.print("Shorted from the start with: ");
+    Serial.print("Open from start of Ramp Down with ");
     Serial.print(sourceV);
     Serial.println(" V");
     return 0;
@@ -219,22 +245,32 @@ int rampDown(float gateV){
 
   // good to start the ramp down
   while( gateV > 0 ) {
-
+    
     // check if should stop the process
     if( killState == HIGH){
       write_value(0);
       Serial.println("state killed in ramp down");
-      break;
+      return;
     }
 
-    // decrease gate voltage
-    gateV -= gate_step;
-    write_value(gateV);
+    unsigned long currentMillis = millis();
+    
+    // decrease gate voltage if time is correct
+    if(currentMillis - previousMillis >= gate_delay){
+      previousMillis = currentMillis;
+      Serial.print("gate V: ");
+      Serial.println(gateV);
+      
+      gateV -= gate_step;
+      write_value(gateV);
+      Serial.print("Source volt: ");
+      Serial.println(sourceV);
+    }
 
     // look at source voltage to see if switch
     sourceV = getSourceVolt();
     
-    if( abs(2.8 - sourceV) < vS_thresh ){
+    if( abs(sourceRest - sourceV) - vS_thresh < 0 ){
       // then the device has opened!
       Serial.print("Opened at ");
       Serial.print(gateV);
@@ -244,6 +280,7 @@ int rampDown(float gateV){
       return 1;
     }
   }
+  Serial.println("Reached 0, closed switch");
   return 0;
 }
 
@@ -259,12 +296,11 @@ float getSourceVolt(){
 
 void write_value(float value) {
   // channel (0 = DACA, 1 = DACB) // Vref input buffer (0 = unbuffered, 1 = buffered) // gain (1 = 1x, 0 = 2x)  // Output power down power down (0 = output buffer disabled) //  12 bits of data
+  // TODO: Check if changing from float to int is necessary
   value = value / 20.0;
   int v = value;
   uint16_t out = (0 << 15) | (1 << 14) | (1 << 13) | (1 << 12) | (v);
   digitalWrite(slaveSelectPin, LOW);
-  //Serial.print("out: ");
-  //Serial.println(out);
   SPI.transfer(out >> 8);         //you can only put out one byte at a time so this is splitting the 16 bit value.
   SPI.transfer(out & 0xFF);
   digitalWrite(slaveSelectPin, HIGH);
