@@ -16,6 +16,8 @@
 
 #include <SPI.h>
 
+int ledPin = 7;
+
 int slaveSelectPin = 10;
 
 int gatePin = 7;
@@ -48,17 +50,18 @@ float mapf(float x, float in_min, float in_max, float out_min, float out_max)
 
 void setup() {
   // Initialize the Serial to talk to PC
-  Serial.begin(9600);
+  Serial.begin(115200);
   Serial.setTimeout(50);
 
   pinMode(slaveSelectPin, OUTPUT);
+  pinMode(13, OUTPUT);
 
   SPI.begin();
   SPI.setClockDivider(SPI_CLOCK_DIV2); // 8 MHz on Arduino Uno
 
   Serial.println("Ready");
 
-  pinMode(13, OUTPUT);
+  pinMode(ledPin, OUTPUT);
   write_value(0);
 
   // setup interrupt things
@@ -107,6 +110,20 @@ void loop() {
         gateV = gate_start;
 
         int contLoop = 1;
+
+        digitalWrite(ledPin, HIGH);
+        delay(250);
+        digitalWrite(ledPin, LOW);
+        delay(250);
+        digitalWrite(ledPin, HIGH);
+        delay(250);
+        digitalWrite(ledPin, LOW);
+        delay(250);
+        digitalWrite(ledPin, HIGH);
+        delay(250);
+        digitalWrite(ledPin, LOW);
+        delay(250);
+        digitalWrite(ledPin, HIGH);
         
         while(contLoop){
           // check if should stop the process
