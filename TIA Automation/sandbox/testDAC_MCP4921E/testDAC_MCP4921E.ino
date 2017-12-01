@@ -20,7 +20,7 @@
 #include <SPI.h>
 
 int slaveSelectPin = 10;
-int i = 600;
+int i = 0;
 
 float mapf(float x, float in_min, float in_max, float out_min, float out_max){
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
@@ -32,22 +32,26 @@ void setup() {
 
   pinMode(slaveSelectPin, OUTPUT);
   
-  SPI.begin();
-  SPI.setClockDivider(SPI_CLOCK_DIV2); // 24 MHz
+  //SPI.begin();
+  //SPI.setClockDivider(SPI_CLOCK_DIV2); // 24 MHz
 
+  SPI.beginTransaction(SPISettings(4000000,MSBFIRST,SPI_MODE0));
+  SPI.begin();
+  
   delay(100);
 
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Serial.println(mapf(i,0,4095,0,5));
-  //i +=10;
-  write_value(i/20.0);
-  delay(500);
-  //if(i > 4095) {
-    //i = 0;
-  //}
+  mapf(i,0,4095,0,5);
+  //Serial.println(mapf(i,0,4095,0,5));
+  i +=1;
+  write_value(i);
+  //delay(500);
+  if(i > 1200) {
+    i = 0;
+  }
 }
 
 void write_value(int value){
