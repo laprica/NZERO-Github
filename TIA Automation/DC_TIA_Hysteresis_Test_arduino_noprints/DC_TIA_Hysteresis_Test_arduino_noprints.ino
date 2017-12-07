@@ -30,14 +30,6 @@ byte printKill = HIGH;
 
 unsigned long previousMillis = 0;
 
-uint16_t ftou(float x){
-    return x * (4096 / 5.0);
-}
-
-float utof(uint16_t x){
-    return x * (5.0/4096);
-}
-
 // initialize testing parameters
 uint16_t gate_start = 0;
 uint16_t gate_step = 1;
@@ -55,6 +47,13 @@ float vS_thresh = 0.5;
 
 int inByte = 0;
 
+uint16_t ftou(float x){
+    return x * (4096 / 5.0);
+}
+
+float utof(uint16_t x){
+    return x * (5.0/4096)
+}
 
 float mapf(float x, float in_min, float in_max, float out_min, float out_max)
 {
@@ -225,14 +224,12 @@ int rampUp(){
     // increase gate voltage
     if(currentMillis - previousMillis >= gate_delay){
       previousMillis = currentMillis;
-      Serial.print("gate V orig: ");
-      Serial.println(utof(gateV));
-      Serial.print("gate V final: ");
-      Serial.println(utof(gateV)*20);
+      //Serial.print("gate V: ");
+      //Serial.println(gateV);
       gateV += gate_step;
       write_value(gateV);
-      Serial.print("Source volt: ");
-      Serial.println(sourceV);
+      //Serial.print("Source volt: ");
+      //Serial.println(sourceV);
     }
     
     // look at source voltage to see if switch
@@ -291,15 +288,13 @@ int rampDown(){
     // decrease gate voltage if time is correct
     if(currentMillis - previousMillis >= gate_delay){
       previousMillis = currentMillis;
-      Serial.print("gate V orig: ");
-      Serial.println(utof(gateV));
-      Serial.print("gate V final: ");
-      Serial.println(utof(gateV)*20);
+      //Serial.print("gate V: ");
+      //Serial.println(gateV);
       
       gateV -= gate_step;
       write_value(gateV);
-      Serial.print("Source volt: ");
-      Serial.println(sourceV);
+      //Serial.print("Source volt: ");
+      //Serial.println(sourceV);
     }
 
     // look at source voltage to see if switch
@@ -329,9 +324,9 @@ float getSourceVolt(){
   return vSa;
 }
 
-void write_value(uint16_t value) {
+void write_value(float value) {
   // channel (0 = DACA, 1 = DACB) // Vref input buffer (0 = unbuffered, 1 = buffered) // gain (1 = 1x, 0 = 2x)  // Output power down power down (0 = output buffer disabled) //  12 bits of data
-  uint16_t out = (0 << 15) | (1 << 14) | (1 << 13) | (1 << 12) | (value);
+  uint16_t out = (0 << 15) | (1 << 14) | (1 << 13) | (1 << 12) | (v);
   digitalWrite(slaveSelectPin, LOW);
   SPI.transfer(out >> 8);         //you can only put out one byte at a time so this is splitting the 16 bit value.
   SPI.transfer(out & 0xFF);
