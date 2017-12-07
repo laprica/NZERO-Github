@@ -129,7 +129,7 @@ def main():
     
     checkFail(line)
     
-    while(!checkFail(line)):
+    while(not checkFail(line)):
         
         if (line.find('Closed') != -1):
             vG = stream.readline()

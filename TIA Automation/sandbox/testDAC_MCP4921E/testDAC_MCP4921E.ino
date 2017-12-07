@@ -44,7 +44,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  mapf(i,0,4095,0,5);
+  //mapf(i,0,4095,0,5);
   //Serial.println(mapf(i,0,4095,0,5));
   i +=1;
   write_value(i);
