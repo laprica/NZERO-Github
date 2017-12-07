@@ -23,6 +23,7 @@ int slaveSelectPin = 10;
 
 int gatePin = 7;
 int sourcePin = A0;
+int resetPin = 5;
 
 const byte interruptPin = 2;
 volatile byte killState = LOW;
@@ -40,17 +41,17 @@ float utof(uint16_t x){
 
 // initialize testing parameters
 uint16_t gate_start = 0;
-uint16_t gate_step = 1;
+uint16_t gate_step = 100;
 uint16_t gate_limit = ftou(50.0/20);
 
-
-const long gate_delay = 500;
+// delay in ms
+const long gate_delay = 1000;
 
 uint16_t gateV = 0;
 
 // 2.8 is the 'resting' voltage. Can change to
 // a moving average later.    
-float sourceRest = 3.26;
+float sourceRest = 0;
 float vS_thresh = 0.5;
 
 int inByte = 0;
@@ -68,6 +69,7 @@ void setup() {
 
   pinMode(slaveSelectPin, OUTPUT);
   pinMode(13, OUTPUT);
+  pinMode(resetPin, OUTPUT);
 
   SPI.begin();
   SPI.setClockDivider(SPI_CLOCK_DIV2); // 8 MHz on Arduino Uno
@@ -89,12 +91,19 @@ void killCode(){
   killState = HIGH;
 }
 
+void resetPulse(){
+  digitalWrite(resetPin, HIGH);
+  delay(1);
+  digitalWrite(resetPin, LOW);
+}
+
 void loop() {
   // Wait for python code to say OK to run
   if(killState == HIGH){
     if(printKill){
       Serial.println("stopped");
     }
+    digitalWrite(ledPin, LOW);
     printKill = LOW;
   }
   if (Serial.available() > 0) {
@@ -144,6 +153,7 @@ void loop() {
             write_value(0);
             contLoop = 0;
             Serial.println("state killed");
+            digitalWrite(ledPin,LOW);
             break;
           }
           
@@ -161,26 +171,31 @@ void loop() {
           Serial.println("loop");
 
           // start ramp up
+          Serial.println("start ramp up");
           int ru = rampUp();
 
           if(!ru){
             // something wrong happened, get out of loop
             Serial.println("ramp up failed");
+            digitalWrite(ledPin, LOW);
             break;
           }
 
+          Serial.println("start ramp down");
           // start ramp down
           int rd = rampDown();
           
           if(!rd){
             // something wrong happened, get out of loop
             Serial.println("ramp down failed");
+            digitalWrite(ledPin, LOW);
             break;
           }
         }
 
         // exited loop, now set output to 0 V
         write_value(0);
+        digitalWrite(ledPin, LOW);
         Serial.println("End program");
     }
   }
@@ -204,20 +219,24 @@ int rampUp(){
   }
 
   // check if out of bounds to ramp up
-  if ( gateV - gate_limit > 0){
+  if ( gateV > gate_limit){
+    Serial.println(gateV - gate_limit);
+    Serial.println(gateV);
+    Serial.println(gate_limit);
     Serial.println("Open Switch");
     write_value(0);
     return 0;
   }
 
   // good to start the ramp up
-  while( gateV - gate_limit < 0 ) {
+  while( gateV < gate_limit ) {
     
     // check if should stop the process
     if( killState == HIGH){
       write_value(0);
       Serial.println("state killed in ramp up");
-      return;
+      digitalWrite(ledPin, LOW);
+      return 0;
     }
 
     unsigned long currentMillis = millis();
@@ -245,6 +264,8 @@ int rampUp(){
       Serial.print(" V with ");
       Serial.print(sourceV);
       Serial.println(" V on source");
+      // apply reset pulse
+      resetPulse();
       return 1;
     }
   }
@@ -277,13 +298,14 @@ int rampDown(){
   }
 
   // good to start the ramp down
-  while( gateV > 0 ) {
+  while( gateV > gate_step ) {
     
     // check if should stop the process
     if( killState == HIGH){
       write_value(0);
       Serial.println("state killed in ramp down");
-      return;
+      digitalWrite(ledPin, LOW);
+      return 0;
     }
 
     unsigned long currentMillis = millis();
