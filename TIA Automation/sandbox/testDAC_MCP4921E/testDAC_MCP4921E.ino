@@ -28,7 +28,7 @@ float mapf(float x, float in_min, float in_max, float out_min, float out_max){
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial.begin(115200);
 
   pinMode(slaveSelectPin, OUTPUT);
   

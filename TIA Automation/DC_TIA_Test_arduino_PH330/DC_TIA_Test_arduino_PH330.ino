@@ -125,7 +125,7 @@
               vS = analogRead(sourcePin);
               vSa = mapf(vS,0, 1023, 0, 5);
               // Tell PC the TIA voltage
-              //Serial.println('s');
+              Serial.print("s: ");
               Serial.println(vSa);              
             }
     

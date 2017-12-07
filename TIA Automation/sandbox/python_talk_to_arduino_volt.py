@@ -20,7 +20,8 @@ import sys
 # *** SERIAL ***
 # open serial port
 print('Starting Serial port')
-stream = serial.Serial('COM5',9600)
+stream = serial.Serial('COM3',9600)
+
 
 
 
@@ -29,7 +30,7 @@ stream = serial.Serial('COM5',9600)
 
 kb = raw_input("Would you like to continue? (y/n)")
 
-while (kb is 'y'):
+while (kb == 'y'):
     kb = raw_input("number between 0 and 5 V")
     stream.write(kb)
     kb = raw_input("Would you like to continue? (y/n)")

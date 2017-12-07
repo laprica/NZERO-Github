@@ -62,7 +62,7 @@ if os.path.exists(log_fn):
 # open serial port
 print('Starting Serial port')
 #log.info('Starting Serial Port')
-stream = serial.Serial( 'COM5',9600,timeout=5)
+stream = serial.Serial( 'COM5',115200,timeout=5)
 time.sleep(0.5)
 line = ''
 while line.find("Ready") == -1:
