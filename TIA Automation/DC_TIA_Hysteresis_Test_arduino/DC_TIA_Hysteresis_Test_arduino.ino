@@ -77,7 +77,7 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   write_value(0);
 
-  // setup interrupt things
+  // setup interrupt for kill switch
   pinMode(interruptPin, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(interruptPin), killCode, FALLING);
 
@@ -90,13 +90,14 @@ void killCode(){
 }
 
 void loop() {
-  // Wait for python code to say OK to run
+  // check if kill switch is pressed
   if(killState == HIGH){
     if(printKill){
       Serial.println("stopped");
     }
     printKill = LOW;
   }
+  // Wait for python code to say OK to run
   if (Serial.available() > 0) {
     // get incoming byte:
     inByte = Serial.read();
@@ -149,6 +150,7 @@ void loop() {
           
           // check if should continue loop
           if ( Serial.available() > 0 ) {
+            
             inByte = Serial.read();
             // s will be sent in ctrl+c case
             if (inByte == 's') {
@@ -157,8 +159,6 @@ void loop() {
               break;
             }
           }
-
-          Serial.println("loop");
 
           // start ramp up
           int ru = rampUp();
@@ -205,7 +205,7 @@ int rampUp(){
 
   // check if out of bounds to ramp up
   if ( gateV - gate_limit > 0){
-    Serial.println("Open Switch");
+    Serial.println("open Switch");
     write_value(0);
     return 0;
   }
@@ -225,13 +225,13 @@ int rampUp(){
     // increase gate voltage
     if(currentMillis - previousMillis >= gate_delay){
       previousMillis = currentMillis;
-      Serial.print("gate V orig: ");
+      //Serial.print("gate V orig: ");
       Serial.println(utof(gateV));
-      Serial.print("gate V final: ");
+      //Serial.print("gate V final: ");
       Serial.println(utof(gateV)*20);
       gateV += gate_step;
       write_value(gateV);
-      Serial.print("Source volt: ");
+      //Serial.print("Source volt: ");
       Serial.println(sourceV);
     }
     
@@ -241,10 +241,10 @@ int rampUp(){
     if( abs(sourceRest - sourceV) > vS_thresh ){
       // then the device has closed!
       Serial.print("Closed at ");
-      Serial.print(gateV);
-      Serial.print(" V with ");
-      Serial.print(sourceV);
-      Serial.println(" V on source");
+      Serial.println(utof(gateV));
+      //Serial.print(" V with ");
+      Serial.println(sourceV);
+      //Serial.println(" V on source");
       return 1;
     }
   }
@@ -264,7 +264,7 @@ int rampDown(){
   
   if( abs(sourceRest - sourceV) < vS_thresh ){
     // the switch is shorted from the start
-    Serial.print("Open from start of Ramp Down with ");
+    Serial.print("open from start of Ramp Down with ");
     Serial.print(sourceV);
     Serial.println(" V");
     return 0;
@@ -272,7 +272,7 @@ int rampDown(){
 
   // check if out of bounds to ramp up
   if ( gateV < 0){
-    Serial.println("Not Opening");
+    Serial.println("Not opening");
     return 0;
   }
 
@@ -291,14 +291,14 @@ int rampDown(){
     // decrease gate voltage if time is correct
     if(currentMillis - previousMillis >= gate_delay){
       previousMillis = currentMillis;
-      Serial.print("gate V orig: ");
+      //Serial.print("gate V orig: ");
       Serial.println(utof(gateV));
-      Serial.print("gate V final: ");
+      //Serial.print("gate V final: ");
       Serial.println(utof(gateV)*20);
       
       gateV -= gate_step;
       write_value(gateV);
-      Serial.print("Source volt: ");
+      //Serial.print("Source volt: ");
       Serial.println(sourceV);
     }
 
@@ -308,14 +308,14 @@ int rampDown(){
     if( abs(sourceRest - sourceV) - vS_thresh < 0 ){
       // then the device has opened!
       Serial.print("Opened at ");
-      Serial.print(gateV);
-      Serial.print(" V with ");
-      Serial.print(sourceV);
-      Serial.println(" V on source");
+      Serial.println(utof(gateV)*20.0);
+      //Serial.print(" V with ");
+      Serial.println(sourceV);
+      //Serial.println(" V on source");
       return 1;
     }
   }
-  Serial.println("Reached 0, closed switch");
+  Serial.println("Reached 0, stuck switch");
   return 0;
 }
 
