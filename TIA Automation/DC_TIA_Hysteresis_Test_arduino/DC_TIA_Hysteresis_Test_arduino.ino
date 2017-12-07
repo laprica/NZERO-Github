@@ -31,6 +31,9 @@ byte printKill = HIGH;
 
 unsigned long previousMillis = 0;
 
+// reset pulse length in ms
+int resetLength = 1;
+
 uint16_t ftou(float x){
     return x * (4096 / 5.0);
 }
@@ -93,7 +96,7 @@ void killCode(){
 
 void resetPulse(){
   digitalWrite(resetPin, HIGH);
-  delay(1);
+  delay(resetLength);
   digitalWrite(resetPin, LOW);
 }
 
