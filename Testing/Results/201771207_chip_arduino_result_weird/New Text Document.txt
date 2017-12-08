@@ -1,0 +1,1755 @@
+Ready
+loop
+start ramp up
+gate V final: 10.02136
+Source volt: 2.79
+Closed at 10.02 V with 3.36 V on source
+start ramp down
+Open from start of Ramp Down with 2.79 V on source
+loop
+start ramp up
+gate V final: 9.92615
+Source volt: 2.78
+gate V final: 9.94995
+Source volt: 2.78
+gate V final: 9.97375
+Source volt: 2.78
+gate V final: 9.99756
+Source volt: 2.78
+gate V final: 10.02136
+Source volt: 2.78
+gate V final: 10.04517
+Source volt: 2.79
+gate V final: 10.06897
+Source volt: 2.79
+gate V final: 10.09277
+Source volt: 2.78
+gate V final: 10.11658
+Source volt: 2.78
+gate V final: 10.14038
+Source volt: 2.78
+gate V final: 10.16418
+Source volt: 2.78
+gate V final: 10.18799
+Source volt: 2.79
+gate V final: 10.21179
+Source volt: 2.79
+gate V final: 10.23560
+Source volt: 2.79
+gate V final: 10.25940
+Source volt: 2.78
+gate V final: 10.28320
+Source volt: 2.78
+gate V final: 10.30701
+Source volt: 2.78
+gate V final: 10.33081
+Source volt: 2.78
+gate V final: 10.35461
+Source volt: 2.78
+gate V final: 10.37842
+Source volt: 2.78
+gate V final: 10.40222
+Source volt: 2.78
+gate V final: 10.42603
+Source volt: 2.78
+gate V final: 10.44983
+Source volt: 2.78
+gate V final: 10.47363
+Source volt: 2.78
+gate V final: 10.49744
+Source volt: 2.78
+gate V final: 10.52124
+Source volt: 2.78
+gate V final: 10.54504
+Source volt: 2.78
+gate V final: 10.56885
+Source volt: 2.78
+gate V final: 10.59265
+Source volt: 2.78
+gate V final: 10.61645
+Source volt: 2.78
+gate V final: 10.64026
+Source volt: 2.79
+gate V final: 10.66406
+Source volt: 2.78
+gate V final: 10.68787
+Source volt: 2.78
+gate V final: 10.71167
+Source volt: 2.78
+gate V final: 10.73547
+Source volt: 2.79
+gate V final: 10.75928
+Source volt: 2.78
+gate V final: 10.78308
+Source volt: 2.78
+gate V final: 10.80688
+Source volt: 2.78
+gate V final: 10.83069
+Source volt: 2.78
+gate V final: 10.85449
+Source volt: 2.78
+gate V final: 10.87830
+Source volt: 2.78
+gate V final: 10.90210
+Source volt: 2.78
+gate V final: 10.92590
+Source volt: 2.78
+gate V final: 10.94971
+Source volt: 2.78
+gate V final: 10.97351
+Source volt: 2.78
+gate V final: 10.99731
+Source volt: 2.78
+gate V final: 11.02112
+Source volt: 2.78
+gate V final: 11.04492
+Source volt: 2.78
+gate V final: 11.06873
+Source volt: 2.78
+gate V final: 11.09253
+Source volt: 2.78
+gate V final: 11.11633
+Source volt: 2.78
+gate V final: 11.14014
+Source volt: 2.78
+gate V final: 11.16394
+Source volt: 2.78
+gate V final: 11.18774
+Source volt: 2.78
+gate V final: 11.21155
+Source volt: 2.78
+gate V final: 11.23535
+Source volt: 2.78
+gate V final: 11.25916
+Source volt: 2.78
+gate V final: 11.28296
+Source volt: 2.78
+gate V final: 11.30676
+Source volt: 2.78
+gate V final: 11.33057
+Source volt: 2.78
+gate V final: 11.35437
+Source volt: 2.78
+gate V final: 11.37817
+Source volt: 2.78
+gate V final: 11.40198
+Source volt: 2.78
+gate V final: 11.42578
+Source volt: 2.78
+gate V final: 11.44958
+Source volt: 2.78
+gate V final: 11.47339
+Source volt: 2.78
+gate V final: 11.49719
+Source volt: 2.78
+gate V final: 11.52100
+Source volt: 2.78
+gate V final: 11.54480
+Source volt: 2.78
+gate V final: 11.56860
+Source volt: 2.78
+gate V final: 11.59241
+Source volt: 2.78
+gate V final: 11.61621
+Source volt: 2.78
+gate V final: 11.64001
+Source volt: 2.78
+gate V final: 11.66382
+Source volt: 2.78
+gate V final: 11.68762
+Source volt: 2.79
+gate V final: 11.71143
+Source volt: 2.78
+gate V final: 11.73523
+Source volt: 2.78
+gate V final: 11.75903
+Source volt: 2.78
+gate V final: 11.78284
+Source volt: 2.78
+gate V final: 11.80664
+Source volt: 2.78
+gate V final: 11.83044
+Source volt: 2.78
+gate V final: 11.85425
+Source volt: 2.78
+gate V final: 11.87805
+Source volt: 2.78
+gate V final: 11.90186
+Source volt: 2.78
+gate V final: 11.92566
+Source volt: 2.78
+gate V final: 11.94946
+Source volt: 2.78
+gate V final: 11.97327
+Source volt: 2.78
+gate V final: 11.99707
+Source volt: 2.78
+gate V final: 12.02087
+Source volt: 2.78
+gate V final: 12.04468
+Source volt: 2.78
+gate V final: 12.06848
+Source volt: 2.78
+gate V final: 12.09228
+Source volt: 2.78
+gate V final: 12.11609
+Source volt: 2.78
+gate V final: 12.13989
+Source volt: 2.78
+gate V final: 12.16370
+Source volt: 2.78
+gate V final: 12.18750
+Source volt: 2.79
+gate V final: 12.21130
+Source volt: 2.78
+gate V final: 12.23511
+Source volt: 2.78
+gate V final: 12.25891
+Source volt: 2.78
+gate V final: 12.28271
+Source volt: 2.79
+gate V final: 12.30652
+Source volt: 2.78
+gate V final: 12.33032
+Source volt: 2.78
+gate V final: 12.35413
+Source volt: 2.78
+gate V final: 12.37793
+Source volt: 2.78
+gate V final: 12.40173
+Source volt: 2.78
+gate V final: 12.42554
+Source volt: 2.78
+gate V final: 12.44934
+Source volt: 2.78
+gate V final: 12.47314
+Source volt: 2.78
+gate V final: 12.49695
+Source volt: 2.78
+gate V final: 12.52075
+Source volt: 2.78
+gate V final: 12.54456
+Source volt: 2.78
+gate V final: 12.56836
+Source volt: 2.78
+gate V final: 12.59216
+Source volt: 2.78
+gate V final: 12.61597
+Source volt: 2.78
+gate V final: 12.63977
+Source volt: 2.78
+gate V final: 12.66357
+Source volt: 2.78
+gate V final: 12.68738
+Source volt: 2.78
+gate V final: 12.71118
+Source volt: 2.78
+gate V final: 12.73499
+Source volt: 2.78
+gate V final: 12.75879
+Source volt: 2.78
+gate V final: 12.78259
+Source volt: 2.78
+gate V final: 12.80640
+Source volt: 2.79
+gate V final: 12.83020
+Source volt: 2.78
+gate V final: 12.85400
+Source volt: 2.78
+gate V final: 12.87781
+Source volt: 2.78
+gate V final: 12.90161
+Source volt: 2.78
+gate V final: 12.92541
+Source volt: 2.78
+gate V final: 12.94922
+Source volt: 2.78
+gate V final: 12.97302
+Source volt: 2.78
+gate V final: 12.99683
+Source volt: 2.78
+gate V final: 13.02063
+Source volt: 2.78
+gate V final: 13.04443
+Source volt: 2.78
+gate V final: 13.06824
+Source volt: 2.78
+gate V final: 13.09204
+Source volt: 2.78
+gate V final: 13.11584
+Source volt: 2.78
+gate V final: 13.13965
+Source volt: 2.78
+gate V final: 13.16345
+Source volt: 2.78
+gate V final: 13.18726
+Source volt: 2.78
+gate V final: 13.21106
+Source volt: 2.79
+gate V final: 13.23486
+Source volt: 2.78
+gate V final: 13.25867
+Source volt: 2.78
+gate V final: 13.28247
+Source volt: 2.79
+gate V final: 13.30627
+Source volt: 2.78
+gate V final: 13.33008
+Source volt: 2.78
+gate V final: 13.35388
+Source volt: 2.79
+gate V final: 13.37769
+Source volt: 2.79
+gate V final: 13.40149
+Source volt: 2.79
+gate V final: 13.42529
+Source volt: 2.79
+gate V final: 13.44910
+Source volt: 2.78
+gate V final: 13.47290
+Source volt: 2.78
+gate V final: 13.49670
+Source volt: 2.79
+gate V final: 13.52051
+Source volt: 2.79
+gate V final: 13.54431
+Source volt: 2.79
+gate V final: 13.56812
+Source volt: 2.79
+gate V final: 13.59192
+Source volt: 2.79
+gate V final: 13.61572
+Source volt: 2.78
+gate V final: 13.63953
+Source volt: 2.79
+gate V final: 13.66333
+Source volt: 2.78
+gate V final: 13.68713
+Source volt: 2.78
+gate V final: 13.71094
+Source volt: 2.78
+gate V final: 13.73474
+Source volt: 2.78
+gate V final: 13.75854
+Source volt: 2.79
+gate V final: 13.78235
+Source volt: 2.78
+gate V final: 13.80615
+Source volt: 2.78
+gate V final: 13.82996
+Source volt: 2.78
+gate V final: 13.85376
+Source volt: 2.78
+gate V final: 13.87756
+Source volt: 2.78
+gate V final: 13.90137
+Source volt: 2.78
+gate V final: 13.92517
+Source volt: 2.78
+gate V final: 13.94897
+Source volt: 2.78
+gate V final: 13.97278
+Source volt: 2.78
+gate V final: 13.99658
+Source volt: 2.78
+gate V final: 14.02039
+Source volt: 2.79
+gate V final: 14.04419
+Source volt: 2.79
+gate V final: 14.06799
+Source volt: 2.78
+gate V final: 14.09180
+Source volt: 2.79
+gate V final: 14.11560
+Source volt: 2.78
+gate V final: 14.13940
+Source volt: 2.78
+gate V final: 14.16321
+Source volt: 2.79
+gate V final: 14.18701
+Source volt: 2.78
+gate V final: 14.21082
+Source volt: 2.78
+gate V final: 14.23462
+Source volt: 2.78
+gate V final: 14.25842
+Source volt: 2.78
+gate V final: 14.28223
+Source volt: 2.79
+gate V final: 14.30603
+Source volt: 2.78
+gate V final: 14.32983
+Source volt: 2.78
+gate V final: 14.35364
+Source volt: 2.79
+gate V final: 14.37744
+Source volt: 2.78
+gate V final: 14.40124
+Source volt: 2.78
+gate V final: 14.42505
+Source volt: 2.79
+gate V final: 14.44885
+Source volt: 2.78
+gate V final: 14.47266
+Source volt: 2.79
+gate V final: 14.49646
+Source volt: 2.78
+gate V final: 14.52026
+Source volt: 2.78
+gate V final: 14.54407
+Source volt: 2.78
+gate V final: 14.56787
+Source volt: 2.78
+gate V final: 14.59167
+Source volt: 2.78
+gate V final: 14.61548
+Source volt: 2.78
+gate V final: 14.63928
+Source volt: 2.78
+gate V final: 14.66309
+Source volt: 2.78
+gate V final: 14.68689
+Source volt: 2.78
+gate V final: 14.71069
+Source volt: 2.78
+gate V final: 14.73450
+Source volt: 2.79
+gate V final: 14.75830
+Source volt: 2.78
+gate V final: 14.78210
+Source volt: 2.78
+gate V final: 14.80591
+Source volt: 2.78
+gate V final: 14.82971
+Source volt: 2.78
+gate V final: 14.85352
+Source volt: 2.78
+gate V final: 14.87732
+Source volt: 2.78
+gate V final: 14.90112
+Source volt: 2.78
+gate V final: 14.92493
+Source volt: 2.78
+gate V final: 14.94873
+Source volt: 2.78
+gate V final: 14.97253
+Source volt: 2.78
+gate V final: 14.99634
+Source volt: 2.78
+gate V final: 15.02014
+Source volt: 2.78
+gate V final: 15.04395
+Source volt: 2.78
+gate V final: 15.06775
+Source volt: 2.79
+gate V final: 15.09155
+Source volt: 2.78
+gate V final: 15.11536
+Source volt: 2.78
+gate V final: 15.13916
+Source volt: 2.79
+gate V final: 15.16296
+Source volt: 2.78
+gate V final: 15.18677
+Source volt: 2.78
+gate V final: 15.21057
+Source volt: 2.78
+gate V final: 15.23437
+Source volt: 2.78
+gate V final: 15.25818
+Source volt: 2.78
+gate V final: 15.28198
+Source volt: 2.78
+gate V final: 15.30579
+Source volt: 2.78
+gate V final: 15.32959
+Source volt: 2.78
+gate V final: 15.35339
+Source volt: 2.78
+gate V final: 15.37720
+Source volt: 2.78
+gate V final: 15.40100
+Source volt: 2.78
+gate V final: 15.42480
+Source volt: 2.78
+gate V final: 15.44861
+Source volt: 2.78
+gate V final: 15.47241
+Source volt: 2.78
+gate V final: 15.49622
+Source volt: 2.78
+gate V final: 15.52002
+Source volt: 2.78
+gate V final: 15.54382
+Source volt: 2.78
+gate V final: 15.56763
+Source volt: 2.78
+gate V final: 15.59143
+Source volt: 2.78
+gate V final: 15.61523
+Source volt: 2.78
+gate V final: 15.63904
+Source volt: 2.78
+gate V final: 15.66284
+Source volt: 2.78
+gate V final: 15.68665
+Source volt: 2.78
+gate V final: 15.71045
+Source volt: 2.78
+gate V final: 15.73425
+Source volt: 2.78
+gate V final: 15.75806
+Source volt: 2.78
+gate V final: 15.78186
+Source volt: 2.78
+gate V final: 15.80566
+Source volt: 2.78
+gate V final: 15.82947
+Source volt: 2.78
+gate V final: 15.85327
+Source volt: 2.78
+gate V final: 15.87707
+Source volt: 2.78
+gate V final: 15.90088
+Source volt: 2.78
+gate V final: 15.92468
+Source volt: 2.78
+gate V final: 15.94849
+Source volt: 2.78
+gate V final: 15.97229
+Source volt: 2.78
+gate V final: 15.99609
+Source volt: 2.78
+gate V final: 16.01990
+Source volt: 2.79
+gate V final: 16.04370
+Source volt: 2.78
+gate V final: 16.06751
+Source volt: 2.78
+gate V final: 16.09131
+Source volt: 2.78
+gate V final: 16.11511
+Source volt: 2.78
+gate V final: 16.13892
+Source volt: 2.78
+gate V final: 16.16272
+Source volt: 2.78
+gate V final: 16.18652
+Source volt: 2.79
+gate V final: 16.21033
+Source volt: 2.78
+gate V final: 16.23413
+Source volt: 2.78
+gate V final: 16.25794
+Source volt: 2.78
+gate V final: 16.28174
+Source volt: 2.78
+gate V final: 16.30554
+Source volt: 2.78
+gate V final: 16.32935
+Source volt: 2.78
+gate V final: 16.35315
+Source volt: 2.78
+gate V final: 16.37695
+Source volt: 2.78
+gate V final: 16.40076
+Source volt: 2.78
+gate V final: 16.42456
+Source volt: 2.78
+gate V final: 16.44836
+Source volt: 2.78
+gate V final: 16.47217
+Source volt: 2.78
+gate V final: 16.49597
+Source volt: 2.78
+gate V final: 16.51978
+Source volt: 2.79
+gate V final: 16.54358
+Source volt: 2.78
+gate V final: 16.56738
+Source volt: 2.78
+gate V final: 16.59119
+Source volt: 2.78
+gate V final: 16.61499
+Source volt: 2.78
+gate V final: 16.63879
+Source volt: 2.78
+gate V final: 16.66260
+Source volt: 2.78
+gate V final: 16.68640
+Source volt: 2.78
+gate V final: 16.71021
+Source volt: 2.78
+gate V final: 16.73401
+Source volt: 2.78
+gate V final: 16.75781
+Source volt: 2.78
+gate V final: 16.78162
+Source volt: 2.78
+gate V final: 16.80542
+Source volt: 2.78
+gate V final: 16.82922
+Source volt: 2.78
+gate V final: 16.85303
+Source volt: 2.78
+gate V final: 16.87683
+Source volt: 2.78
+gate V final: 16.90064
+Source volt: 2.78
+gate V final: 16.92444
+Source volt: 2.78
+gate V final: 16.94824
+Source volt: 2.78
+gate V final: 16.97205
+Source volt: 2.78
+gate V final: 16.99585
+Source volt: 2.79
+gate V final: 17.01965
+Source volt: 2.79
+gate V final: 17.04346
+Source volt: 2.78
+gate V final: 17.06726
+Source volt: 2.79
+gate V final: 17.09107
+Source volt: 2.78
+gate V final: 17.11487
+Source volt: 2.78
+gate V final: 17.13867
+Source volt: 2.78
+gate V final: 17.16248
+Source volt: 2.78
+gate V final: 17.18628
+Source volt: 2.79
+gate V final: 17.21008
+Source volt: 2.78
+gate V final: 17.23389
+Source volt: 2.78
+gate V final: 17.25769
+Source volt: 2.78
+gate V final: 17.28149
+Source volt: 2.78
+gate V final: 17.30530
+Source volt: 2.78
+gate V final: 17.32910
+Source volt: 2.78
+gate V final: 17.35291
+Source volt: 2.78
+gate V final: 17.37671
+Source volt: 2.78
+gate V final: 17.40051
+Source volt: 2.79
+gate V final: 17.42432
+Source volt: 2.78
+gate V final: 17.44812
+Source volt: 2.78
+gate V final: 17.47192
+Source volt: 2.78
+gate V final: 17.49573
+Source volt: 2.79
+gate V final: 17.51953
+Source volt: 2.78
+gate V final: 17.54334
+Source volt: 2.78
+gate V final: 17.56714
+Source volt: 2.79
+gate V final: 17.59094
+Source volt: 2.78
+gate V final: 17.61475
+Source volt: 2.78
+gate V final: 17.63855
+Source volt: 2.78
+gate V final: 17.66235
+Source volt: 2.78
+gate V final: 17.68616
+Source volt: 2.78
+gate V final: 17.70996
+Source volt: 2.78
+gate V final: 17.73377
+Source volt: 2.78
+gate V final: 17.75757
+Source volt: 2.79
+gate V final: 17.78137
+Source volt: 2.78
+gate V final: 17.80518
+Source volt: 2.78
+gate V final: 17.82898
+Source volt: 2.78
+gate V final: 17.85278
+Source volt: 2.78
+gate V final: 17.87659
+Source volt: 2.78
+gate V final: 17.90039
+Source volt: 2.78
+gate V final: 17.92420
+Source volt: 2.78
+gate V final: 17.94800
+Source volt: 2.78
+gate V final: 17.97180
+Source volt: 2.78
+gate V final: 17.99561
+Source volt: 2.78
+gate V final: 18.01941
+Source volt: 2.78
+gate V final: 18.04321
+Source volt: 2.78
+gate V final: 18.06702
+Source volt: 2.79
+gate V final: 18.09082
+Source volt: 2.78
+gate V final: 18.11462
+Source volt: 2.78
+gate V final: 18.13843
+Source volt: 2.78
+gate V final: 18.16223
+Source volt: 2.78
+gate V final: 18.18604
+Source volt: 2.78
+gate V final: 18.20984
+Source volt: 2.78
+gate V final: 18.23364
+Source volt: 2.78
+gate V final: 18.25745
+Source volt: 2.78
+gate V final: 18.28125
+Source volt: 2.78
+gate V final: 18.30505
+Source volt: 2.78
+gate V final: 18.32886
+Source volt: 2.78
+gate V final: 18.35266
+Source volt: 2.78
+gate V final: 18.37647
+Source volt: 2.78
+gate V final: 18.40027
+Source volt: 2.79
+gate V final: 18.42407
+Source volt: 2.78
+gate V final: 18.44788
+Source volt: 2.78
+gate V final: 18.47168
+Source volt: 2.79
+gate V final: 18.49548
+Source volt: 2.79
+gate V final: 18.51929
+Source volt: 2.78
+gate V final: 18.54309
+Source volt: 2.78
+gate V final: 18.56690
+Source volt: 2.78
+gate V final: 18.59070
+Source volt: 2.78
+gate V final: 18.61450
+Source volt: 2.78
+gate V final: 18.63831
+Source volt: 2.78
+gate V final: 18.66211
+Source volt: 2.78
+gate V final: 18.68591
+Source volt: 2.78
+gate V final: 18.70972
+Source volt: 2.78
+gate V final: 18.73352
+Source volt: 2.78
+gate V final: 18.75732
+Source volt: 2.78
+gate V final: 18.78113
+Source volt: 2.78
+gate V final: 18.80493
+Source volt: 2.78
+gate V final: 18.82874
+Source volt: 2.78
+gate V final: 18.85254
+Source volt: 2.78
+gate V final: 18.87634
+Source volt: 2.78
+gate V final: 18.90015
+Source volt: 2.78
+gate V final: 18.92395
+Source volt: 2.78
+gate V final: 18.94775
+Source volt: 2.78
+gate V final: 18.97156
+Source volt: 2.78
+gate V final: 18.99536
+Source volt: 2.78
+gate V final: 19.01917
+Source volt: 2.78
+gate V final: 19.04297
+Source volt: 2.78
+gate V final: 19.06677
+Source volt: 2.78
+gate V final: 19.09058
+Source volt: 2.78
+gate V final: 19.11438
+Source volt: 2.78
+gate V final: 19.13818
+Source volt: 2.78
+gate V final: 19.16199
+Source volt: 2.78
+gate V final: 19.18579
+Source volt: 2.78
+gate V final: 19.20960
+Source volt: 2.78
+gate V final: 19.23340
+Source volt: 2.78
+gate V final: 19.25720
+Source volt: 2.78
+gate V final: 19.28101
+Source volt: 2.78
+gate V final: 19.30481
+Source volt: 2.78
+gate V final: 19.32861
+Source volt: 2.78
+gate V final: 19.35242
+Source volt: 2.78
+gate V final: 19.37622
+Source volt: 2.78
+gate V final: 19.40003
+Source volt: 2.78
+gate V final: 19.42383
+Source volt: 2.78
+gate V final: 19.44763
+Source volt: 2.78
+gate V final: 19.47144
+Source volt: 2.78
+gate V final: 19.49524
+Source volt: 2.78
+gate V final: 19.51904
+Source volt: 2.78
+gate V final: 19.54285
+Source volt: 2.78
+gate V final: 19.56665
+Source volt: 2.78
+gate V final: 19.59045
+Source volt: 2.78
+gate V final: 19.61426
+Source volt: 2.78
+gate V final: 19.63806
+Source volt: 2.78
+gate V final: 19.66187
+Source volt: 2.78
+gate V final: 19.68567
+Source volt: 2.78
+gate V final: 19.70947
+Source volt: 2.78
+gate V final: 19.73328
+Source volt: 2.78
+gate V final: 19.75708
+Source volt: 2.78
+gate V final: 19.78088
+Source volt: 2.78
+gate V final: 19.80469
+Source volt: 2.78
+gate V final: 19.82849
+Source volt: 2.78
+gate V final: 19.85230
+Source volt: 2.78
+gate V final: 19.87610
+Source volt: 2.78
+gate V final: 19.89990
+Source volt: 2.78
+gate V final: 19.92371
+Source volt: 2.78
+gate V final: 19.94751
+Source volt: 2.78
+gate V final: 19.97131
+Source volt: 2.78
+gate V final: 19.99512
+Source volt: 2.78
+gate V final: 20.01892
+Source volt: 2.79
+gate V final: 20.04273
+Source volt: 2.78
+gate V final: 20.06653
+Source volt: 2.79
+gate V final: 20.09033
+Source volt: 2.79
+gate V final: 20.11414
+Source volt: 2.78
+gate V final: 20.13794
+Source volt: 2.79
+gate V final: 20.16174
+Source volt: 2.78
+gate V final: 20.18555
+Source volt: 2.78
+gate V final: 20.20935
+Source volt: 2.78
+gate V final: 20.23316
+Source volt: 2.78
+gate V final: 20.25696
+Source volt: 2.78
+gate V final: 20.28076
+Source volt: 2.78
+gate V final: 20.30457
+Source volt: 2.78
+gate V final: 20.32837
+Source volt: 2.78
+gate V final: 20.35217
+Source volt: 2.78
+gate V final: 20.37598
+Source volt: 2.78
+gate V final: 20.39978
+Source volt: 2.78
+gate V final: 20.42358
+Source volt: 2.78
+gate V final: 20.44739
+Source volt: 2.78
+gate V final: 20.47119
+Source volt: 2.78
+gate V final: 20.49500
+Source volt: 2.78
+gate V final: 20.51880
+Source volt: 2.78
+gate V final: 20.54260
+Source volt: 2.78
+gate V final: 20.56641
+Source volt: 2.78
+gate V final: 20.59021
+Source volt: 2.79
+gate V final: 20.61401
+Source volt: 2.79
+gate V final: 20.63782
+Source volt: 2.78
+gate V final: 20.66162
+Source volt: 2.79
+gate V final: 20.68543
+Source volt: 2.79
+gate V final: 20.70923
+Source volt: 2.78
+gate V final: 20.73303
+Source volt: 2.78
+gate V final: 20.75684
+Source volt: 2.79
+gate V final: 20.78064
+Source volt: 2.79
+gate V final: 20.80444
+Source volt: 2.78
+gate V final: 20.82825
+Source volt: 2.79
+gate V final: 20.85205
+Source volt: 2.79
+gate V final: 20.87586
+Source volt: 2.79
+gate V final: 20.89966
+Source volt: 2.78
+gate V final: 20.92346
+Source volt: 2.79
+gate V final: 20.94727
+Source volt: 2.78
+gate V final: 20.97107
+Source volt: 2.78
+gate V final: 20.99487
+Source volt: 2.79
+gate V final: 21.01868
+Source volt: 2.78
+gate V final: 21.04248
+Source volt: 2.79
+gate V final: 21.06628
+Source volt: 2.78
+gate V final: 21.09009
+Source volt: 2.78
+gate V final: 21.11389
+Source volt: 2.78
+gate V final: 21.13770
+Source volt: 2.78
+gate V final: 21.16150
+Source volt: 2.79
+gate V final: 21.18530
+Source volt: 2.78
+gate V final: 21.20911
+Source volt: 2.78
+gate V final: 21.23291
+Source volt: 2.78
+gate V final: 21.25671
+Source volt: 2.78
+gate V final: 21.28052
+Source volt: 2.78
+gate V final: 21.30432
+Source volt: 2.78
+gate V final: 21.32813
+Source volt: 2.78
+gate V final: 21.35193
+Source volt: 2.78
+gate V final: 21.37573
+Source volt: 2.78
+gate V final: 21.39954
+Source volt: 2.78
+gate V final: 21.42334
+Source volt: 2.78
+gate V final: 21.44714
+Source volt: 2.78
+gate V final: 21.47095
+Source volt: 2.78
+gate V final: 21.49475
+Source volt: 2.78
+gate V final: 21.51856
+Source volt: 2.78
+gate V final: 21.54236
+Source volt: 2.78
+gate V final: 21.56616
+Source volt: 2.79
+gate V final: 21.58997
+Source volt: 2.78
+gate V final: 21.61377
+Source volt: 2.78
+gate V final: 21.63757
+Source volt: 2.79
+gate V final: 21.66138
+Source volt: 2.78
+gate V final: 21.68518
+Source volt: 2.78
+gate V final: 21.70899
+Source volt: 2.78
+gate V final: 21.73279
+Source volt: 2.78
+gate V final: 21.75659
+Source volt: 2.78
+gate V final: 21.78040
+Source volt: 2.78
+gate V final: 21.80420
+Source volt: 2.78
+gate V final: 21.82800
+Source volt: 2.78
+gate V final: 21.85181
+Source volt: 2.78
+gate V final: 21.87561
+Source volt: 2.78
+gate V final: 21.89941
+Source volt: 2.78
+gate V final: 21.92322
+Source volt: 2.78
+gate V final: 21.94702
+Source volt: 2.78
+gate V final: 21.97083
+Source volt: 2.78
+gate V final: 21.99463
+Source volt: 2.78
+gate V final: 22.01843
+Source volt: 2.78
+gate V final: 22.04224
+Source volt: 2.78
+gate V final: 22.06604
+Source volt: 2.78
+gate V final: 22.08984
+Source volt: 2.78
+gate V final: 22.11365
+Source volt: 2.78
+gate V final: 22.13745
+Source volt: 2.78
+gate V final: 22.16126
+Source volt: 2.78
+gate V final: 22.18506
+Source volt: 2.78
+gate V final: 22.20886
+Source volt: 2.78
+gate V final: 22.23267
+Source volt: 2.78
+gate V final: 22.25647
+Source volt: 2.78
+gate V final: 22.28027
+Source volt: 2.78
+gate V final: 22.30408
+Source volt: 2.78
+gate V final: 22.32788
+Source volt: 2.78
+gate V final: 22.35169
+Source volt: 2.78
+gate V final: 22.37549
+Source volt: 2.78
+gate V final: 22.39929
+Source volt: 2.78
+gate V final: 22.42310
+Source volt: 2.78
+gate V final: 22.44690
+Source volt: 2.78
+gate V final: 22.47070
+Source volt: 2.78
+gate V final: 22.49451
+Source volt: 2.78
+gate V final: 22.51831
+Source volt: 2.78
+gate V final: 22.54211
+Source volt: 2.78
+gate V final: 22.56592
+Source volt: 2.78
+gate V final: 22.58972
+Source volt: 2.78
+gate V final: 22.61353
+Source volt: 2.78
+gate V final: 22.63733
+Source volt: 2.78
+gate V final: 22.66113
+Source volt: 2.78
+gate V final: 22.68494
+Source volt: 2.78
+gate V final: 22.70874
+Source volt: 2.78
+gate V final: 22.73254
+Source volt: 2.79
+gate V final: 22.75635
+Source volt: 2.78
+gate V final: 22.78015
+Source volt: 2.78
+gate V final: 22.80396
+Source volt: 2.78
+gate V final: 22.82776
+Source volt: 2.78
+gate V final: 22.85156
+Source volt: 2.79
+gate V final: 22.87537
+Source volt: 2.78
+gate V final: 22.89917
+Source volt: 2.78
+gate V final: 22.92297
+Source volt: 2.78
+gate V final: 22.94678
+Source volt: 2.78
+gate V final: 22.97058
+Source volt: 2.78
+gate V final: 22.99439
+Source volt: 2.78
+gate V final: 23.01819
+Source volt: 2.78
+gate V final: 23.04199
+Source volt: 2.79
+gate V final: 23.06580
+Source volt: 2.79
+gate V final: 23.08960
+Source volt: 2.79
+gate V final: 23.11340
+Source volt: 2.78
+gate V final: 23.13721
+Source volt: 2.78
+gate V final: 23.16101
+Source volt: 2.78
+gate V final: 23.18482
+Source volt: 2.79
+gate V final: 23.20862
+Source volt: 2.78
+gate V final: 23.23242
+Source volt: 2.79
+gate V final: 23.25623
+Source volt: 2.78
+gate V final: 23.28003
+Source volt: 2.78
+gate V final: 23.30383
+Source volt: 2.79
+gate V final: 23.32764
+Source volt: 2.78
+gate V final: 23.35144
+Source volt: 2.78
+gate V final: 23.37524
+Source volt: 2.79
+gate V final: 23.39905
+Source volt: 2.78
+gate V final: 23.42285
+Source volt: 2.78
+gate V final: 23.44666
+Source volt: 2.79
+gate V final: 23.47046
+Source volt: 2.78
+gate V final: 23.49426
+Source volt: 2.78
+gate V final: 23.51807
+Source volt: 2.79
+gate V final: 23.54187
+Source volt: 2.78
+gate V final: 23.56567
+Source volt: 2.78
+gate V final: 23.58948
+Source volt: 2.79
+gate V final: 23.61328
+Source volt: 2.78
+gate V final: 23.63709
+Source volt: 2.78
+gate V final: 23.66089
+Source volt: 2.79
+gate V final: 23.68469
+Source volt: 2.78
+gate V final: 23.70850
+Source volt: 2.78
+gate V final: 23.73230
+Source volt: 2.78
+gate V final: 23.75610
+Source volt: 2.78
+gate V final: 23.77991
+Source volt: 2.78
+gate V final: 23.80371
+Source volt: 2.79
+gate V final: 23.82752
+Source volt: 2.78
+gate V final: 23.85132
+Source volt: 2.79
+gate V final: 23.87512
+Source volt: 2.78
+gate V final: 23.89893
+Source volt: 2.79
+gate V final: 23.92273
+Source volt: 2.78
+gate V final: 23.94653
+Source volt: 2.78
+gate V final: 23.97034
+Source volt: 2.78
+gate V final: 23.99414
+Source volt: 2.78
+gate V final: 24.01795
+Source volt: 2.78
+gate V final: 24.04175
+Source volt: 2.78
+gate V final: 24.06555
+Source volt: 2.78
+gate V final: 24.08936
+Source volt: 2.78
+gate V final: 24.11316
+Source volt: 2.78
+gate V final: 24.13696
+Source volt: 2.78
+gate V final: 24.16077
+Source volt: 2.78
+gate V final: 24.18457
+Source volt: 2.78
+gate V final: 24.20837
+Source volt: 2.78
+gate V final: 24.23218
+Source volt: 2.78
+gate V final: 24.25598
+Source volt: 2.79
+gate V final: 24.27979
+Source volt: 2.78
+gate V final: 24.30359
+Source volt: 2.78
+gate V final: 24.32739
+Source volt: 2.78
+gate V final: 24.35120
+Source volt: 2.78
+gate V final: 24.37500
+Source volt: 2.78
+gate V final: 24.39880
+Source volt: 2.78
+gate V final: 24.42261
+Source volt: 2.78
+gate V final: 24.44641
+Source volt: 2.78
+gate V final: 24.47022
+Source volt: 2.78
+gate V final: 24.49402
+Source volt: 2.78
+gate V final: 24.51782
+Source volt: 2.78
+gate V final: 24.54163
+Source volt: 2.78
+gate V final: 24.56543
+Source volt: 2.79
+gate V final: 24.58923
+Source volt: 2.78
+gate V final: 24.61304
+Source volt: 2.78
+gate V final: 24.63684
+Source volt: 2.78
+gate V final: 24.66065
+Source volt: 2.78
+gate V final: 24.68445
+Source volt: 2.79
+gate V final: 24.70825
+Source volt: 2.78
+gate V final: 24.73206
+Source volt: 2.78
+gate V final: 24.75586
+Source volt: 2.78
+gate V final: 24.77966
+Source volt: 2.78
+gate V final: 24.80347
+Source volt: 2.78
+gate V final: 24.82727
+Source volt: 2.78
+gate V final: 24.85107
+Source volt: 2.79
+gate V final: 24.87488
+Source volt: 2.78
+gate V final: 24.89868
+Source volt: 2.78
+gate V final: 24.92249
+Source volt: 2.78
+gate V final: 24.94629
+Source volt: 2.78
+gate V final: 24.97009
+Source volt: 2.78
+gate V final: 24.99390
+Source volt: 2.78
+gate V final: 25.01770
+Source volt: 2.79
+gate V final: 25.04150
+Source volt: 2.79
+gate V final: 25.06531
+Source volt: 2.79
+gate V final: 25.08911
+Source volt: 2.78
+gate V final: 25.11292
+Source volt: 2.79
+gate V final: 25.13672
+Source volt: 2.78
+gate V final: 25.16052
+Source volt: 2.78
+gate V final: 25.18433
+Source volt: 2.79
+gate V final: 25.20813
+Source volt: 2.79
+gate V final: 25.23193
+Source volt: 2.78
+gate V final: 25.25574
+Source volt: 2.78
+gate V final: 25.27954
+Source volt: 2.78
+gate V final: 25.30335
+Source volt: 2.78
+gate V final: 25.32715
+Source volt: 2.79
+gate V final: 25.35095
+Source volt: 2.78
+gate V final: 25.37476
+Source volt: 2.78
+gate V final: 25.39856
+Source volt: 2.78
+gate V final: 25.42236
+Source volt: 2.78
+gate V final: 25.44617
+Source volt: 2.78
+gate V final: 25.46997
+Source volt: 2.78
+gate V final: 25.49378
+Source volt: 2.78
+gate V final: 25.51758
+Source volt: 2.79
+gate V final: 25.54138
+Source volt: 2.78
+gate V final: 25.56519
+Source volt: 2.78
+gate V final: 25.58899
+Source volt: 2.78
+gate V final: 25.61279
+Source volt: 2.78
+gate V final: 25.63660
+Source volt: 2.78
+gate V final: 25.66040
+Source volt: 2.78
+gate V final: 25.68420
+Source volt: 2.78
+gate V final: 25.70801
+Source volt: 2.78
+gate V final: 25.73181
+Source volt: 2.78
+gate V final: 25.75562
+Source volt: 2.78
+gate V final: 25.77942
+Source volt: 2.78
+gate V final: 25.80322
+Source volt: 2.78
+gate V final: 25.82703
+Source volt: 2.78
+gate V final: 25.85083
+Source volt: 2.78
+gate V final: 25.87463
+Source volt: 2.78
+gate V final: 25.89844
+Source volt: 2.78
+gate V final: 25.92224
+Source volt: 2.78
+gate V final: 25.94605
+Source volt: 2.78
+gate V final: 25.96985
+Source volt: 2.78
+gate V final: 25.99365
+Source volt: 2.78
+gate V final: 26.01746
+Source volt: 2.78
+gate V final: 26.04126
+Source volt: 2.78
+gate V final: 26.06506
+Source volt: 2.78
+gate V final: 26.08887
+Source volt: 2.78
+gate V final: 26.11267
+Source volt: 2.78
+gate V final: 26.13648
+Source volt: 2.78
+gate V final: 26.16028
+Source volt: 2.78
+gate V final: 26.18408
+Source volt: 2.78
+gate V final: 26.20789
+Source volt: 2.78
+gate V final: 26.23169
+Source volt: 2.78
+gate V final: 26.25549
+Source volt: 2.78
+gate V final: 26.27930
+Source volt: 2.78
+gate V final: 26.30310
+Source volt: 2.78
+gate V final: 26.32691
+Source volt: 2.78
+gate V final: 26.35071
+Source volt: 2.78
+gate V final: 26.37451
+Source volt: 2.79
+gate V final: 26.39832
+Source volt: 2.78
+gate V final: 26.42212
+Source volt: 2.78
+gate V final: 26.44592
+Source volt: 2.78
+gate V final: 26.46973
+Source volt: 2.79
+gate V final: 26.49353
+Source volt: 2.78
+gate V final: 26.51733
+Source volt: 2.78
+gate V final: 26.54114
+Source volt: 2.78
+gate V final: 26.56494
+Source volt: 2.78
+gate V final: 26.58875
+Source volt: 2.78
+gate V final: 26.61255
+Source volt: 2.78
+gate V final: 26.63635
+Source volt: 2.78
+gate V final: 26.66016
+Source volt: 2.79
+gate V final: 26.68396
+Source volt: 2.79
+gate V final: 26.70776
+Source volt: 2.82
+gate V final: 26.73157
+Source volt: 2.79
+gate V final: 26.75537
+Source volt: 2.78
+gate V final: 26.77918
+Source volt: 2.79
+gate V final: 26.80298
+Source volt: 2.79
+gate V final: 26.82678
+Source volt: 2.78
+gate V final: 26.85059
+Source volt: 2.78
+gate V final: 26.87439
+Source volt: 2.78
+gate V final: 26.89819
+Source volt: 2.78
+gate V final: 26.92200
+Source volt: 2.79
+gate V final: 26.94580
+Source volt: 2.78
+gate V final: 26.96961
+Source volt: 2.78
+gate V final: 26.99341
+Source volt: 2.78
+gate V final: 27.01721
+Source volt: 2.78
+gate V final: 27.04102
+Source volt: 2.78
+gate V final: 27.06482
+Source volt: 2.78
+gate V final: 27.08862
+Source volt: 2.79
+gate V final: 27.11243
+Source volt: 2.78
+gate V final: 27.13623
+Source volt: 2.78
+gate V final: 27.16003
+Source volt: 2.78
+gate V final: 27.18384
+Source volt: 2.79
+gate V final: 27.20764
+Source volt: 2.78
+gate V final: 27.23145
+Source volt: 2.79
+gate V final: 27.25525
+Source volt: 2.78
+gate V final: 27.27905
+Source volt: 2.79
+gate V final: 27.30286
+Source volt: 2.79
+gate V final: 27.32666
+Source volt: 2.78
+gate V final: 27.35046
+Source volt: 2.78
+gate V final: 27.37427
+Source volt: 2.78
+gate V final: 27.39807
+Source volt: 2.79
+gate V final: 27.42188
+Source volt: 2.78
+gate V final: 27.44568
+Source volt: 2.80
+gate V final: 27.46948
+Source volt: 2.79
+gate V final: 27.49329
+Source volt: 2.79
+gate V final: 27.51709
+Source volt: 2.79
+gate V final: 27.54089
+Source volt: 2.78
+Closed at 27.55 V with 2.85 V on source
+start ramp down
+Opened at 27.43 V with 2.75 V on source
+loop
+start ramp up
+gate V final: 27.44568
+Source volt: 2.81
+Closed at 27.45 V with 2.85 V on source
+start ramp down
+Opened at 27.33 V with 2.75 V on source
+loop
+start ramp up
+Closed at 27.33 V with 2.85 V on source
+start ramp down
+Opened at 27.21 V with 2.76 V on source
+loop
+start ramp up
+gate V final: 27.23145
+Source volt: 2.83
+gate V final: 27.25525
+Source volt: 2.82
+Closed at 27.26 V with 2.85 V on source
+start ramp down
+Opened at 27.14 V with 2.76 V on source
+loop
+start ramp up
+gate V final: 27.16003
+Source volt: 2.83
+Closed at 27.17 V with 2.85 V on source
+start ramp down
+Opened at 27.05 V with 2.76 V on source
+loop
+start ramp up
+gate V final: 27.06482
+Source volt: 2.83
+gate V final: 27.08862
+Source volt: 2.83
+Closed at 27.10 V with 2.85 V on source
+start ramp down
+Opened at 26.98 V with 2.75 V on source
+loop
+start ramp up
+Closed at 26.98 V with 2.85 V on source
+start ramp down
+Opened at 26.86 V with 2.75 V on source
+loop
+start ramp up
+gate V final: 26.87439
+Source volt: 2.79
+gate V final: 26.89819
+Source volt: 2.80
+gate V final: 26.92200
+Source volt: 2.80
+gate V final: 26.94580
+Source volt: 2.80
+gate V final: 26.96961
+Source volt: 2.79
+gate V final: 26.99341
+Source volt: 2.79
+gate V final: 27.01721
+Source volt: 2.79
+gate V final: 27.04102
+Source volt: 2.79
+gate V final: 27.06482
+Source volt: 2.78
+gate V final: 27.08862
+Source volt: 2.80
+gate V final: 27.11243
+Source volt: 2.78
+gate V final: 27.13623
+Source volt: 2.79
+gate V final: 27.16003
+Source volt: 2.79
+gate V final: 27.18384
+Source volt: 2.78
+gate V final: 27.20764
+Source volt: 2.79
+gate V final: 27.23145
+Source volt: 2.78
+gate V final: 27.25525
+Source volt: 2.78
+gate V final: 27.27905
+Source volt: 2.78
+gate V final: 27.30286
+Source volt: 2.79
+gate V final: 27.32666
+Source volt: 2.79
+gate V final: 27.35046
+Source volt: 2.79
+gate V final: 27.37427
+Source volt: 2.79
+gate V final: 27.39807
+Source volt: 2.79
+gate V final: 27.42188
+Source volt: 2.79
+gate V final: 27.44568
+Source volt: 2.79
+gate V final: 27.46948
+Source volt: 2.79
+gate V final: 27.49329
+Source volt: 2.80
+gate V final: 27.51709
+Source volt: 2.79
+gate V final: 27.54089
+Source volt: 2.80
+gate V final: 27.56470
+Source volt: 2.79
+gate V final: 27.58850
+Source volt: 2.79
+gate V final: 27.61231
+Source volt: 2.80
+gate V final: 27.63611
+Source volt: 2.79
+gate V final: 27.65991
+Source volt: 2.79
+gate V final: 27.68372
+Source volt: 2.82
+gate V final: 27.70752
+Source volt: 2.81
+gate V final: 27.73132
+Source volt: 2.79
+gate V final: 27.75513
+Source volt: 2.79
+gate V final: 27.77893
+Source volt: 2.79
+gate V final: 27.80274
+Source volt: 2.79
+Closed at 27.81 V with 2.86 V on source
+start ramp down
+Open from start of Ramp Down with 2.76 V on source
+loop
+start ramp up
+Closed at 27.69 V with 2.85 V on source
+start ramp down
+Opened at 27.57 V with 2.75 V on source
+loop
+start ramp up
+gate V final: 27.58850
+Source volt: 2.82
+Closed at 27.60 V with 2.85 V on source
+start ramp down
+Opened at 27.48 V with 2.75 V on source
+loop
+start ramp up
+Closed at 27.48 V with 2.85 V on source
+start ramp down
+Opened at 27.36 V with 2.75 V on source
+loop
+start ramp up
+gate V final: 27.37427
+Source volt: 2.80
+Closed at 27.38 V with 2.85 V on source
+start ramp down
+Opened at 27.26 V with 2.75 V on source
+loop
+start ramp up
+gate V final: 27.27905
+Source volt: 2.82
+Closed at 27.29 V with 2.85 V on source
+start ramp down
+Opened at 27.17 V with 2.75 V on source
+loop
+start ramp up
+gate V final: 27.18384
+Source volt: 2.79
+gate V final: 27.20764
+Source volt: 2.79
+gate V final: 27.23145
+Source volt: 2.79
+gate V final: 27.25525
+Source volt: 2.79
+gate V final: 27.27905
+Source volt: 2.79
+gate V final: 27.30286
+Source volt: 2.79
+Closed at 27.31 V with 2.85 V on source
+start ramp down
+Opened at 27.19 V with 2.75 V on source
+loop
+start ramp up
+gate V final: 27.20764
+Source volt: 2.79
+gate V final: 27.23145
+Source volt: 2.79
+gate V final: 27.25525
+Source volt: 2.79
+gate V final: 27.27905
+Source volt: 2.79
+gate V final: 27.30286
+Source volt: 2.79
+gate V final: 27.32666
+Source volt: 2.79
+gate V final: 27.35046
+Source volt: 2.79
+gate V final: 27.37427
+Source volt: 2.80
+gate V final: 27.39807
+Source volt: 2.79
+gate V final: 27.42188
+Source volt: 2.79
+gate V final: 27.44568
+Source volt: 2.79
+gate V final: 27.46948
+Source volt: 2.80
+gate V final: 27.49329
+Source volt: 2.79
+gate V final: 27.51709
+Source volt: 2.79
+gate V final: 27.54089
+Source volt: 2.79
+gate V final: 27.56470
+Source volt: 2.78
+gate V final: 27.58850
+Source volt: 2.78
+gate V final: 27.61231
+Source volt: 2.79
+gate V final: 27.63611
+Source volt: 2.79
+gate V final: 27.65991
+Source volt: 2.79
+gate V final: 27.68372
+Source volt: 2.78
+gate V final: 27.70752
+Source volt: 2.79
+gate V final: 27.73132
+Source volt: 2.79
+gate V final: 27.75513
+Source volt: 2.79
+gate V final: 27.77893
+Source volt: 2.81
+gate V final: 27.80274
+Source volt: 2.79
+gate V final: 27.82654
+Source volt: 2.80
+Closed at 27.83 V with 2.85 V on source
+start ramp down
+Opened at 27.71 V with 2.75 V on source
+loop
+start ramp up
+gate V final: 27.73132
+Source volt: 2.79
+gate V final: 27.75513
+Source volt: 2.78
+gate V final: 27.77893
+Source volt: 2.79
+gate V final: 27.80274
+Source volt: 2.78
+gate V final: 27.82654
+Source volt: 2.78
+gate V final: 27.85034
+Source volt: 2.78
+gate V final: 27.87415
+Source volt: 2.78
+gate V final: 27.89795
+Source volt: 2.78
+Closed at 27.90 V with 2.86 V on source
+start ramp down
+Open from start of Ramp Down with 2.81 V on source
+loop
+start ramp up
+Shorted from the start with: 2.90 V
+ramp up failed
+End program
