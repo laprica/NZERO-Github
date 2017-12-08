@@ -96,7 +96,7 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   write_value(0);
 
-  // setup interrupt things
+  // setup interrupt things 
   pinMode(interruptPin, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(interruptPin), killCode, FALLING);
 
@@ -207,8 +207,26 @@ void loop() {
             digitalWrite(ledPin, LOW);
           }
 
+          Serial.print("The gate voltage is waiting at ");
+          Serial.print(mapf(gateV,0,4095,0,5)*19.5);
+          Serial.println(" V. Maintaining voltage and waiting for closure.");
+
+          float sourceV = getSourceVolt();
           // wait until kill. just hold until the RF pulse happens
           while(1){
+
+            sourceV = getSourceVolt();
+
+            if( abs(sourceRest - sourceV) > vS_thresh ){
+              // the switch has closed from RF or something else
+              Serial.print("The switch closed at ");
+              Serial.print(sourceV);
+              Serial.println(" V! Applying reset pulse and setting gate voltage to 0");
+              resetPulse();
+              write_value(0);
+              break;
+            }
+            
             // check if should stop
             // check if should stop the process
             if( killState == HIGH ){
