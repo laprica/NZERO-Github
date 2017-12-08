@@ -67,7 +67,7 @@ uint16_t gateV = 0;
 // 2.8 is the 'resting' voltage. Can change to
 // a moving average later.    
 float sourceRest = 2.8;
-float vS_thresh = 0.3;
+float vS_thresh = 0.2;
 
 int inByte = 0;
 
@@ -204,7 +204,7 @@ void loop() {
             // something wrong happened, get out of loop
             Serial.println("ramp down failed");
             digitalWrite(ledPin, LOW);
-            break;
+            //break;
           }
         }
 
@@ -261,16 +261,16 @@ int rampUp(){
       gateV += gate_step;
       write_value(gateV);
       previousMillis = currentMillis;
-      Serial.print("gate V orig: ");
-      Serial.println(utof(gateV),5);
+      //Serial.print("gate V orig: ");
+      //Serial.println(utof(gateV),5);
       Serial.print("gate V final: ");
       Serial.println(utof(gateV)*19.5,5);
-      Serial.print("Binary: ");
-      Serial.println(gateV, BIN);
-      Serial.println();
+      //Serial.print("Binary: ");
+      //Serial.println(gateV, BIN);
+      //Serial.println();
       
-      //Serial.print("Source volt: ");
-      //Serial.println(sourceV);
+      Serial.print("Source volt: ");
+      Serial.println(sourceV);
     }
     
     // look at source voltage to see if switch
@@ -280,6 +280,7 @@ int rampUp(){
       // then the device has closed!
       Serial.print("Closed at ");
       Serial.print(gateV);
+      Serial.print(mapf(gateV,0,4095,0,5)*19.5);
       Serial.print(" V with ");
       Serial.print(sourceV);
       Serial.println(" V on source");
@@ -301,13 +302,13 @@ int rampDown(){
 
   // check the source voltage
   float sourceV = getSourceVolt();
-  
+
   if( abs(sourceRest - sourceV) < vS_thresh ){
-    // the switch is shorted from the start
+    // the switch is open from the start
     Serial.print("Open from start of Ramp Down with ");
     Serial.print(sourceV);
-    Serial.println(" V");
-    return 0;
+    Serial.println(" V on source");
+    return 1;
   }
 
   // check if out of bounds to ramp up
@@ -332,15 +333,15 @@ int rampDown(){
     // decrease gate voltage if time is correct
     if(currentMillis - previousMillis >= gate_delay){
       previousMillis = currentMillis;
-      Serial.print("gate V orig: ");
-      Serial.println(utof(gateV));
+      //Serial.print("gate V orig: ");
+      //Serial.println(utof(gateV));
       Serial.print("gate V final: ");
       Serial.println(utof(gateV)*19.5);
       
       gateV -= gate_step;
       write_value(gateV);
-      //Serial.print("Source volt: ");
-      //Serial.println(sourceV);
+      Serial.print("Source volt: ");
+      Serial.println(sourceV);
     }
 
     // look at source voltage to see if switch
@@ -349,7 +350,7 @@ int rampDown(){
     if( abs(sourceRest - sourceV) - vS_thresh < 0 ){
       // then the device has opened!
       Serial.print("Opened at ");
-      Serial.print(gateV);
+      Serial.print(mapf(gateV,0,4095,0,5)*19.5);
       Serial.print(" V with ");
       Serial.print(sourceV);
       Serial.println(" V on source");
