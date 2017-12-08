@@ -91,7 +91,7 @@ void setup() {
   SPI.begin();
   SPI.setClockDivider(SPI_CLOCK_DIV2); // 8 MHz on Arduino Uno
 
-  Serial.println("Ready v2.1");
+  Serial.println("Ready v2.2");
 
   pinMode(ledPin, OUTPUT);
   write_value(0);
@@ -363,7 +363,7 @@ int rampDown(){
     // look at source voltage to see if switch
     sourceV = getSourceVolt();
     
-    if( abs(sourceRest - sourceV) - vS_thresh < 0 ){
+    if( abs(sourceRest - sourceV) < vS_thresh ){
       // then the device has opened!
       Serial.print("Opened at ");
       Serial.print(mapf(gateV,0,4095,0,5)*19.5);
