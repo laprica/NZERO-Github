@@ -55,9 +55,9 @@ float utof(uint16_t x){
 }
 
 // initialize testing parameters
-uint16_t gate_start = 10;
+uint16_t gate_start = ftou(10.0/19.5);
 uint16_t gate_step = 1;
-uint16_t gate_limit = ftou(50.0/20);
+uint16_t gate_limit = ftou(50.0/19.5);
 
 // delay in ms
 const long gate_delay = 200;
@@ -67,7 +67,7 @@ uint16_t gateV = 0;
 // 2.8 is the 'resting' voltage. Can change to
 // a moving average later.    
 float sourceRest = 2.8;
-float vS_thresh = 0.2;
+float vS_thresh = 0.05;
 
 int inByte = 0;
 
