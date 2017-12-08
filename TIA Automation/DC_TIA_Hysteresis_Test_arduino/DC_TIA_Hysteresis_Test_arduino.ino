@@ -65,9 +65,10 @@ const long gate_delay = 200;
 uint16_t gateV = 0;
 
 // 2.8 is the 'resting' voltage. Can change to
-// a moving average later.    
-float sourceRest = 2.8;
-float vS_thresh = 0.05;
+// a moving average later.  
+  
+int sourceRest = constrain(map(   2.8,  0,5,0,1023),0,1023);
+float vS_thresh = constrain(map(  0.05, 0,5,0,1023),0,1023);
 
 int inByte = 0;
 
@@ -91,7 +92,7 @@ void setup() {
   SPI.begin();
   SPI.setClockDivider(SPI_CLOCK_DIV2); // 8 MHz on Arduino Uno
 
-  Serial.println("Ready v2.1");
+  Serial.println("Ready v2.2");
 
   pinMode(ledPin, OUTPUT);
   write_value(0);
@@ -226,7 +227,8 @@ int rampUp(){
 
   // check the source voltage
   float sourceV = getSourceVolt();
-  
+
+  // check if switch is closed from the start
   if( abs(sourceRest - sourceV) > vS_thresh ){
     // the switch is shorted from the start
     Serial.print("Shorted from the start with: ");
@@ -282,7 +284,9 @@ int rampUp(){
     
     // look at source voltage to see if switch
     sourceV = getSourceVolt();
-    
+
+    // check if device has closed
+    // the sourceV should be greater than threshold
     if( abs(sourceRest - sourceV) > vS_thresh ){
       // then the device has closed!
       Serial.print("Closed at ");
@@ -317,12 +321,14 @@ int rampDown(){
   // the devices opens or the gate voltage goes below 0
 
   // check the source voltage
-  float sourceV = getSourceVolt();
+  int sourceV = getSourceVolt();
 
+  // check if the switch is already open (from reset pulse and backup voltage)
+  // see if sourceV is within the threshold
   if( abs(sourceRest - sourceV) < vS_thresh ){
     // the switch is open from the start
     Serial.print("Open from start of Ramp Down with ");
-    Serial.print(sourceV);
+    Serial.print(mapf(sourceV,0,1023,0,5));
     Serial.println(" V on source");
     return 1;
   }
@@ -363,7 +369,7 @@ int rampDown(){
     // look at source voltage to see if switch
     sourceV = getSourceVolt();
     
-    if( abs(sourceRest - sourceV) - vS_thresh < 0 ){
+    if( abs(sourceRest - sourceV) < vS_thresh ){
       // then the device has opened!
       Serial.print("Opened at ");
       Serial.print(mapf(gateV,0,4095,0,5)*19.5);
@@ -378,13 +384,13 @@ int rampDown(){
 }
 
 
-float getSourceVolt(){
+int getSourceVolt(){
   // This function will return the voltage the Arduino is reading
   // on the given source pin.
   int vS = analogRead(sourcePin);
   // map to get real voltage number
-  float vSa = mapf(vS, 0, 1023, 0, 5);
-  return vSa;
+  //float vSa = mapf(vS, 0, 1023, 0, 5);
+  return vS;
 }
 
 void write_value(uint16_t value) {
