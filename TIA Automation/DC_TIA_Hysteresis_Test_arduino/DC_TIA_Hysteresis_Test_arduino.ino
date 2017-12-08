@@ -55,7 +55,7 @@ float utof(uint16_t x){
 }
 
 // initialize testing parameters
-uint16_t gate_start = ftou(10.0/19.5);
+uint16_t gate_start = ftou(0/19.5);
 uint16_t gate_step = 1;
 uint16_t gate_limit = ftou(50.0/19.5);
 
@@ -91,7 +91,7 @@ void setup() {
   SPI.begin();
   SPI.setClockDivider(SPI_CLOCK_DIV2); // 8 MHz on Arduino Uno
 
-  Serial.println("Ready");
+  Serial.println("Ready v2.1");
 
   pinMode(ledPin, OUTPUT);
   write_value(0);
@@ -293,13 +293,15 @@ int rampUp(){
 
       // don't want device to touch for a long time
       // so need to try to pull it off
+
+      // apply reset pulse
+      resetPulse();
       
       // back off voltage 5 steps
       gateV -= 5*gate_step;
       write_value(gateV);
       
-      // apply reset pulse
-      resetPulse();
+      
       return 1;
     }
   }
