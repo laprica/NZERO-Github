@@ -55,7 +55,7 @@ float utof(uint16_t x){
 }
 
 // initialize testing parameters
-uint16_t gate_start = 0;
+uint16_t gate_start = 10;
 uint16_t gate_step = 1;
 uint16_t gate_limit = ftou(50.0/20);
 
@@ -70,6 +70,8 @@ float sourceRest = 2.8;
 float vS_thresh = 0.2;
 
 int inByte = 0;
+
+//uint16_t prevV = 0;
 
 
 float mapf(float x, float in_min, float in_max, float out_min, float out_max)
@@ -256,6 +258,9 @@ int rampUp(){
 
     unsigned long currentMillis = millis();
 
+    // only print out when it increases by a volt
+    //prevV = gateV;
+
     // increase gate voltage
     if(currentMillis - previousMillis >= gate_delay){
       gateV += gate_step;
@@ -263,14 +268,16 @@ int rampUp(){
       previousMillis = currentMillis;
       //Serial.print("gate V orig: ");
       //Serial.println(utof(gateV),5);
-      Serial.print("gate V final: ");
-      Serial.println(utof(gateV)*19.5,5);
-      //Serial.print("Binary: ");
-      //Serial.println(gateV, BIN);
-      //Serial.println();
-      
+      //if(gateV - prevV > 1){
+        Serial.print("gate V final: ");
+        Serial.println(utof(gateV)*19.5,5);
+        //Serial.print("Binary: ");
+        //Serial.println(gateV, BIN);
+        //Serial.println();
+      //}  
       Serial.print("Source volt: ");
       Serial.println(sourceV);
+      
     }
     
     // look at source voltage to see if switch
@@ -279,11 +286,18 @@ int rampUp(){
     if( abs(sourceRest - sourceV) > vS_thresh ){
       // then the device has closed!
       Serial.print("Closed at ");
-      Serial.print(gateV);
       Serial.print(mapf(gateV,0,4095,0,5)*19.5);
       Serial.print(" V with ");
       Serial.print(sourceV);
       Serial.println(" V on source");
+
+      // don't want device to touch for a long time
+      // so need to try to pull it off
+      
+      // back off voltage 5 steps
+      gateV -= 5*gate_step;
+      write_value(gateV);
+      
       // apply reset pulse
       resetPulse();
       return 1;
