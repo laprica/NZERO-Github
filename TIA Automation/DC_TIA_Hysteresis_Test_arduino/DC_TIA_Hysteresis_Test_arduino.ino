@@ -14,7 +14,19 @@
 
 // Leanna Pancoast 15 Nov 2017
 
+#define DEBUG
+
 #include <SPI.h>
+
+#ifdef DEBUG
+#define DEBUG_PRINT(x)     Serial.print (x)
+#define DEBUG_PRINTDEC(x)     Serial.print (x, DEC)
+#define DEBUG_PRINTLN(x)  Serial.println (x)
+#else
+#define DEBUG_PRINT(x)
+#define DEBUG_PRINTDEC(x)
+#define DEBUG_PRINTLN(x) 
+#endif 
 
 // initialize hardware pins
 int ledPin = 7;
@@ -44,18 +56,18 @@ float utof(uint16_t x){
 
 // initialize testing parameters
 uint16_t gate_start = 0;
-uint16_t gate_step = 100;
+uint16_t gate_step = 1;
 uint16_t gate_limit = ftou(50.0/20);
 
 // delay in ms
-const long gate_delay = 1000;
+const long gate_delay = 200;
 
 uint16_t gateV = 0;
 
 // 2.8 is the 'resting' voltage. Can change to
 // a moving average later.    
-float sourceRest = 0;
-float vS_thresh = 0.5;
+float sourceRest = 2.8;
+float vS_thresh = 0.3;
 
 int inByte = 0;
 
@@ -246,15 +258,19 @@ int rampUp(){
 
     // increase gate voltage
     if(currentMillis - previousMillis >= gate_delay){
-      previousMillis = currentMillis;
-      Serial.print("gate V orig: ");
-      Serial.println(utof(gateV));
-      Serial.print("gate V final: ");
-      Serial.println(utof(gateV)*20);
       gateV += gate_step;
       write_value(gateV);
-      Serial.print("Source volt: ");
-      Serial.println(sourceV);
+      previousMillis = currentMillis;
+      Serial.print("gate V orig: ");
+      Serial.println(utof(gateV),5);
+      Serial.print("gate V final: ");
+      Serial.println(utof(gateV)*19.5,5);
+      Serial.print("Binary: ");
+      Serial.println(gateV, BIN);
+      Serial.println();
+      
+      //Serial.print("Source volt: ");
+      //Serial.println(sourceV);
     }
     
     // look at source voltage to see if switch
@@ -319,12 +335,12 @@ int rampDown(){
       Serial.print("gate V orig: ");
       Serial.println(utof(gateV));
       Serial.print("gate V final: ");
-      Serial.println(utof(gateV)*20);
+      Serial.println(utof(gateV)*19.5);
       
       gateV -= gate_step;
       write_value(gateV);
-      Serial.print("Source volt: ");
-      Serial.println(sourceV);
+      //Serial.print("Source volt: ");
+      //Serial.println(sourceV);
     }
 
     // look at source voltage to see if switch
