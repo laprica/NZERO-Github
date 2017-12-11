@@ -63,9 +63,10 @@ float utof(uint16_t x){
 uint16_t gate_start = ftou(0/19.5);
 uint16_t gate_step = 1;
 uint16_t gate_limit = ftou(50.0/19.5);
+uint16_t gate_restart = ftou(0/19.5);
 
 // delay in ms
-const long gate_delay = 200;
+const long gate_delay = 1;
 
 // reset pulse length in ms
 int resetLength = 1;
@@ -73,7 +74,7 @@ int resetLength = 1;
 // 2.78 is the 'resting' voltage. Can change to
 // a moving average later.    
 float sourceRest = 2.78;
-float vS_thresh = 0.03;
+float vS_thresh = 0.015;
 
 // number of open cycles before determining a switch as open
 int numOC = 10;
@@ -114,7 +115,7 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(interruptPin), killCode, FALLING);
 
   // Tell the user the Arduino is ready
-  Serial.println("Ready BUH v1.3");
+  Serial.println("Ready BUH v1.4.2");
 
   // give Arduino time before starting
   delay(100);
@@ -128,7 +129,7 @@ void killCode(){
 void resetPulse(){
   // Sets the reset pin high for resetLength ms
   digitalWrite(resetPin, HIGH);
-  delay(resetLength);
+  delay(2*resetLength);
   digitalWrite(resetPin, LOW);
 }
 
@@ -194,7 +195,7 @@ int openNumTimes(){
     else{
       Serial.print("closed at ");
       Serial.print(numOpen);
-      Serial.print(" while waiting for ");
+      Serial.print(" cycles while waiting for ");
       Serial.print(numOC);
       Serial.println(" cycles.");
       numOpen = 0;
@@ -338,6 +339,7 @@ void loop() {
                 break;
               }
               if(inByte == 'r'){
+                Serial.println("Received RF Ready");
                 rfReady = 1;
                 break;
               }
@@ -347,7 +349,11 @@ void loop() {
             if(!openNumTimesQ()){
               rampDown();
             }
+            Serial.println("waiting for rf ready");
           }
+          
+
+          // received rfReady at this point.          
 
           float sourceV = getSourceVolt();
 
@@ -364,8 +370,10 @@ void loop() {
               // the switch has closed from RF or something else
               Serial.print("The switch closed with ");
               Serial.print(sourceV);
-              Serial.println(" V on source. Applying reset pulse and setting gate voltage back 5 steps");
+              Serial.println(" V on source. Applying reset pulse and setting gate voltage to 0");
               backup();
+              gateV = gate_restart;
+              write_value(gateV);
               break;
             }
             
