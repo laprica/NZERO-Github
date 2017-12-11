@@ -37,15 +37,15 @@ int gatePin = 7;
 int sourcePin = A0;
 int resetPin = 5;
 
+// initialize info for stopping processes
 const byte interruptPin = 2;
 volatile byte killState = LOW;
 byte rfReady = 0;
 byte printKill = HIGH;
 
+// variable to keep track of time passed for bias increase
 unsigned long previousMillis = 0;
 
-// reset pulse length in ms
-int resetLength = 1;
 
 uint16_t ftou(float x){
   // This function converts a float to a uint16_t that will
@@ -67,24 +67,27 @@ uint16_t gate_limit = ftou(50.0/19.5);
 // delay in ms
 const long gate_delay = 200;
 
-// Variable to keep track of gate voltage
-uint16_t gateV = 0;
+// reset pulse length in ms
+int resetLength = 1;
 
 // 2.78 is the 'resting' voltage. Can change to
 // a moving average later.    
 float sourceRest = 2.78;
 float vS_thresh = 0.03;
 
-// 
+// number of open cycles before determining a switch as open
+int numOC = 10;
+
+// Variable to keep track of gate voltage
+uint16_t gateV = 0;
+
+// variable to receive from Serial
 int inByte = 0;
 
-int numCC = 10;
-
-//uint16_t prevV = 0;
 
 
-float mapf(float x, float in_min, float in_max, float out_min, float out_max)
-{
+float mapf(float x, float in_min, float in_max, float out_min, float out_max){
+  // This function changes a number in a range to a number in a different range.
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
@@ -100,30 +103,38 @@ void setup() {
   SPI.begin();
   SPI.setClockDivider(SPI_CLOCK_DIV2); // 8 MHz on Arduino Uno
 
-  Serial.println("Ready BUH v1.2");
-
+  // Initialize led pin
   pinMode(ledPin, OUTPUT);
+
+  // initialize DAC to 0 V
   write_value(0);
 
-  // setup interrupt things 
+  // Setup KILL clicky switch intterupt
   pinMode(interruptPin, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(interruptPin), killCode, FALLING);
+
+  // Tell the user the Arduino is ready
+  Serial.println("Ready BUH v1.3");
 
   // give Arduino time before starting
   delay(100);
 }
 
 void killCode(){
+  // This function is an ISR to stop the process
   killState = HIGH;
 }
 
 void resetPulse(){
+  // Sets the reset pin high for resetLength ms
   digitalWrite(resetPin, HIGH);
   delay(resetLength);
   digitalWrite(resetPin, LOW);
 }
 
 void backup(){
+  // Changes the gate voltage back 5 steps in the middle
+  // of the reset pulse.
   digitalWrite(resetPin, HIGH);
   delay(resetLength/2.0);
   gateV = gateV - 5*gate_step;
@@ -134,16 +145,21 @@ void backup(){
 }
 
 int isOpen(float sV){
+  // Checks if the source voltage is within threshold
+  // to be labelled as open
   return abs(sourceRest - sV) < vS_thresh;
 }
 
 int isClosed(float sV){
+  // Checks if the source voltage is out of  threshold
+  // to be labelled as closed
   return abs(sourceRest - sV) < vS_thresh;
 }
 
 int openNumTimesQ(){
+  // Makes sure the switch is open numOC times in a row, quietly
   int numOpen = 0;
-  while(numOpen < numCC){
+  while(numOpen < numOC){
     float sourceV = getSourceVolt();
     
     if( isOpen(sourceV) ){
@@ -161,8 +177,9 @@ int openNumTimesQ(){
 }
 
 int openNumTimes(){
+  // Makes sure switch is open unmOC times in a row, with details to the user
   int numOpen = 0;
-  while(numOpen < numCC){
+  while(numOpen < numOC){
     float sourceV = getSourceVolt();
     
     if( isOpen(sourceV) ){
@@ -179,7 +196,7 @@ int openNumTimes(){
       Serial.print("closed at ");
       Serial.print(numOpen);
       Serial.print(" while waiting for ");
-      Serial.print(numCC);
+      Serial.print(numOC);
       Serial.println(" cycles.");
       numOpen = 0;
       return 0;
@@ -189,15 +206,19 @@ int openNumTimes(){
 }
 
 void loop() {
-  // Wait for python code to say OK to run
+  
+  // Checks if process should be stopped
   if(killState == HIGH){
     if(printKill){
       Serial.println("stopped");
     }
     digitalWrite(ledPin, LOW);
     printKill = LOW;
+    delay(1000);
   }
-  if (Serial.available() > 0) {
+
+  // Wait for python code to say OK to run
+  else if (Serial.available() > 0) {
     // get incoming byte:
     inByte = Serial.read();
 
@@ -216,6 +237,10 @@ void loop() {
           gate_limit = Serial.read();
         }
         Serial.println("received parameters");
+        break;
+      case 's':
+        Serial.println("received s, stopping process");
+        killState = HIGH;
         break;
       case 'b':
         // Begin the sweep
@@ -434,7 +459,7 @@ int rampUp(){
         //Serial.print("Binary: ");
         //Serial.println(gateV, BIN);
         //Serial.println();
-      //}  
+      //}
       Serial.print("Source volt: ");
       Serial.println(sourceV);
       
