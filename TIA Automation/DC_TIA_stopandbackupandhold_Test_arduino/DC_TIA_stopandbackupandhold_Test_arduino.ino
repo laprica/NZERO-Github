@@ -136,10 +136,10 @@ void backup(){
   // Changes the gate voltage back 5 steps in the middle
   // of the reset pulse.
   digitalWrite(resetPin, HIGH);
-  delay(resetLength/2.0);
+  delay(resetLength);
   gateV = gateV - 5*gate_step;
   write_value(gateV);
-  delay(resetLength/2.0);
+  delay(resetLength);
   digitalWrite(resetPin, LOW);
   
 }
@@ -172,8 +172,7 @@ int openNumTimesQ(){
       return 0;
     }
   }
-  return 1;
-  
+  return 1;  
 }
 
 int openNumTimes(){
@@ -462,7 +461,6 @@ int rampUp(){
       //}
       Serial.print("Source volt: ");
       Serial.println(sourceV);
-      
     }
     
     // look at source voltage to see if switch
