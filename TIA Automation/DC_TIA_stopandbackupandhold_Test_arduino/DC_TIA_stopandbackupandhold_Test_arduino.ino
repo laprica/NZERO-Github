@@ -114,6 +114,16 @@ void resetPulse(){
   digitalWrite(resetPin, LOW);
 }
 
+void backup(){
+  digitalWrite(resetPin, HIGH);
+  delay(resetLength/2.0);
+  gateV = gateV - 5*gate_step;
+  write_value(gateV);
+  delay(resetLength/2.0);
+  digitalWrite(resetPin, LOW);
+  
+}
+
 void loop() {
   // Wait for python code to say OK to run
   if(killState == HIGH){
@@ -197,6 +207,8 @@ void loop() {
           break;
         }
         else{
+
+          // need to make sure that it's open for enough time
           Serial.println("start ramp down");
           // start ramp down
           int rd = rampDown();
@@ -221,9 +233,8 @@ void loop() {
               // the switch has closed from RF or something else
               Serial.print("The switch closed with ");
               Serial.print(sourceV);
-              Serial.println(" V on source. Applying reset pulse and setting gate voltage to 0");
-              resetPulse();
-              write_value(0);
+              Serial.println(" V on source. Applying reset pulse and setting gate voltage back 5 steps");
+              backup();
               break;
             }
             
@@ -334,14 +345,10 @@ int rampUp(){
       Serial.println(" V on source");
 
       // don't want device to touch for a long time
-      // so need to try to pull it off
+      // so neeresed to try to pull it off
 
       // apply reset pulse
-      resetPulse();
-      
-      // back off voltage 5 steps
-      gateV -= 5*gate_step;
-      write_value(gateV);
+      backup();
       
       
       return 1;
