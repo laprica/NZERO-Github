@@ -115,7 +115,7 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(interruptPin), killCode, FALLING);
 
   // Tell the user the Arduino is ready
-  Serial.println("Ready BUH v1.4.2");
+  Serial.println("Ready BUH v1.4.3");
 
   // give Arduino time before starting
   delay(100);
@@ -347,9 +347,8 @@ void loop() {
             
             // check if need to ramp down
             if(!openNumTimesQ()){
-              rampDown();
+              rampDownQ();
             }
-            Serial.println("waiting for rf ready");
           }
           
 
@@ -506,6 +505,71 @@ int rampDown(){
   float sourceV = getSourceVolt();
 
   if( openNumTimes() ){
+    // the switch is open from the start
+    Serial.print("Open from start of Ramp Down with ");
+    Serial.print(sourceV);
+    Serial.println(" V on source");
+    return 1;
+  }
+
+  // check if out of bounds to ramp up
+  if ( gateV < gate_step ){
+    Serial.println("Not Opening");
+    return 0;
+  }
+
+  // good to start the ramp down
+  while( gateV > gate_step ) {
+    
+    // check if should stop the process
+    if( killState == HIGH){
+      write_value(0);
+      Serial.println("state killed in ramp down");
+      digitalWrite(ledPin, LOW);
+      return 0;
+    }
+
+    unsigned long currentMillis = millis();
+    
+    // decrease gate voltage if time is correct
+    if(currentMillis - previousMillis >= gate_delay){
+      previousMillis = currentMillis;
+      Serial.print("gate V final: ");
+      Serial.println(utof(gateV)*19.5);
+      
+      gateV -= gate_step;
+      write_value(gateV);
+      Serial.print("Source volt: ");
+      Serial.println(sourceV);
+    }
+
+    // look at source voltage to see if switch
+    sourceV = getSourceVolt();
+
+    // check if open for n times
+    if( openNumTimes() ){
+      // then the device has opened!
+      Serial.print("Opened at ");
+      Serial.print(mapf(gateV,0,4095,0,5)*19.5);
+      Serial.print(" V with ");
+      Serial.print(sourceV);
+      Serial.println(" V on source");
+      return 1;
+    }
+  }
+  Serial.println("Reached 0, closed switch");
+  return 0;
+}
+
+int rampDownQ(){
+  // will return 1 on success
+  // return 0 on not success
+  // This function will ramp the gate voltage up until
+  // the devices opens or the gate voltage goes below 0
+  // check the source voltage
+  float sourceV = getSourceVolt();
+
+  if( openNumTimesQ() ){
     // the switch is open from the start
     Serial.print("Open from start of Ramp Down with ");
     Serial.print(sourceV);
