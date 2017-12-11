@@ -66,8 +66,8 @@ uint16_t gateV = 0;
 
 // 2.8 is the 'resting' voltage. Can change to
 // a moving average later.    
-float sourceRest = 2.8;
-float vS_thresh = 0.05;
+float sourceRest = 2.78;
+float vS_thresh = 0.03;
 
 int inByte = 0;
 
@@ -91,7 +91,7 @@ void setup() {
   SPI.begin();
   SPI.setClockDivider(SPI_CLOCK_DIV2); // 8 MHz on Arduino Uno
 
-  Serial.println("Ready BUH v1.0");
+  Serial.println("Ready BUH v1.2");
 
   pinMode(ledPin, OUTPUT);
   write_value(0);
@@ -219,9 +219,9 @@ void loop() {
 
             if( abs(sourceRest - sourceV) > vS_thresh ){
               // the switch has closed from RF or something else
-              Serial.print("The switch closed at ");
+              Serial.print("The switch closed with ");
               Serial.print(sourceV);
-              Serial.println(" V! Applying reset pulse and setting gate voltage to 0");
+              Serial.println(" V on source. Applying reset pulse and setting gate voltage to 0");
               resetPulse();
               write_value(0);
               break;
