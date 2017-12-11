@@ -39,6 +39,7 @@ int resetPin = 5;
 
 const byte interruptPin = 2;
 volatile byte killState = LOW;
+byte rfReady = 0;
 byte printKill = HIGH;
 
 unsigned long previousMillis = 0;
@@ -47,10 +48,14 @@ unsigned long previousMillis = 0;
 int resetLength = 1;
 
 uint16_t ftou(float x){
+  // This function converts a float to a uint16_t that will
+  // be written to the MCP4921E DAC
     return x * (4096 / 5.0);
 }
 
 float utof(uint16_t x){
+  // This function converts a uint16_t that will
+  // be written to the MCP4921E DAC to a more readable float
     return x * (5.0/4096);
 }
 
@@ -62,14 +67,18 @@ uint16_t gate_limit = ftou(50.0/19.5);
 // delay in ms
 const long gate_delay = 200;
 
+// Variable to keep track of gate voltage
 uint16_t gateV = 0;
 
-// 2.8 is the 'resting' voltage. Can change to
+// 2.78 is the 'resting' voltage. Can change to
 // a moving average later.    
 float sourceRest = 2.78;
 float vS_thresh = 0.03;
 
+// 
 int inByte = 0;
+
+int numCC = 10;
 
 //uint16_t prevV = 0;
 
@@ -122,6 +131,61 @@ void backup(){
   delay(resetLength/2.0);
   digitalWrite(resetPin, LOW);
   
+}
+
+int isOpen(float sV){
+  return abs(sourceRest - sV) < vS_thresh;
+}
+
+int isClosed(float sV){
+  return abs(sourceRest - sV) < vS_thresh;
+}
+
+int openNumTimesQ(){
+  int numOpen = 0;
+  while(numOpen < numCC){
+    float sourceV = getSourceVolt();
+    
+    if( isOpen(sourceV) ){
+      // then the device has opened!
+      numOpen += 1;
+    }
+
+    else{
+      numOpen = 0;
+      return 0;
+    }
+  }
+  return 1;
+  
+}
+
+int openNumTimes(){
+  int numOpen = 0;
+  while(numOpen < numCC){
+    float sourceV = getSourceVolt();
+    
+    if( isOpen(sourceV) ){
+      // then the device has opened!
+      Serial.print("Open at ");
+      Serial.print(mapf(gateV,0,4095,0,5)*19.5);
+      Serial.print(" V with ");
+      Serial.print(sourceV);
+      Serial.println(" V on source");
+      numOpen += 1;
+    }
+
+    else{
+      Serial.print("closed at ");
+      Serial.print(numOpen);
+      Serial.print(" while waiting for ");
+      Serial.print(numCC);
+      Serial.println(" cycles.");
+      numOpen = 0;
+      return 0;
+    }
+  }
+  return 1;
 }
 
 void loop() {
@@ -210,6 +274,7 @@ void loop() {
 
           // need to make sure that it's open for enough time
           Serial.println("start ramp down");
+          
           // start ramp down
           int rd = rampDown();
           
@@ -219,11 +284,53 @@ void loop() {
             digitalWrite(ledPin, LOW);
           }
 
+
+          Serial.print("The gate voltage is waiting at ");
+          Serial.print(mapf(gateV,0,4095,0,5)*19.5);
+          Serial.println(" V. Waiting for RF Ready (r).");
+
+          // The switch has opened from the initial closure.
+          // Need to wait to be ready for RF application.
+          // If the switch is still noisy and closes beforehand, need
+          // to backoff more.
+          while(!rfReady){
+            
+            // check if should stop the process
+            if( killState == HIGH ){
+              write_value(0);
+              contLoop = 0;
+              Serial.println("state killed");
+              digitalWrite(ledPin,LOW);
+              break;
+            }
+            
+            // check if should continue loop
+            if ( Serial.available() > 0 ) {
+              inByte = Serial.read();
+              // s will be sent in ctrl+c case
+              if (inByte == 's') {
+                write_value(0);
+                contLoop = 0;
+                break;
+              }
+              if(inByte == 'r'){
+                rfReady = 1;
+                break;
+              }
+            }
+            
+            // check if need to ramp down
+            if(!openNumTimesQ()){
+              rampDown();
+            }
+          }
+
+          float sourceV = getSourceVolt();
+
           Serial.print("The gate voltage is waiting at ");
           Serial.print(mapf(gateV,0,4095,0,5)*19.5);
           Serial.println(" V. Maintaining voltage and waiting for closure.");
-
-          float sourceV = getSourceVolt();
+          
           // wait until kill. just hold until the RF pulse happens
           while(1){
 
@@ -239,7 +346,7 @@ void loop() {
             }
             
             // check if should stop
-            // check if should stop the process
+            // check if should stop the process of waiting for RF pulse
             if( killState == HIGH ){
               write_value(0);
               contLoop = 0;
@@ -248,7 +355,7 @@ void loop() {
               break;
             }
             
-            // check if should continue loop
+            // check if should continue loop of waiting for RF pulse
             if ( Serial.available() > 0 ) {
               inByte = Serial.read();
               // s will be sent in ctrl+c case
@@ -345,7 +452,7 @@ int rampUp(){
       Serial.println(" V on source");
 
       // don't want device to touch for a long time
-      // so neeresed to try to pull it off
+      // so need to try to pull it off
 
       // apply reset pulse
       backup();
@@ -364,11 +471,10 @@ int rampDown(){
   // return 0 on not success
   // This function will ramp the gate voltage up until
   // the devices opens or the gate voltage goes below 0
-
   // check the source voltage
   float sourceV = getSourceVolt();
 
-  if( abs(sourceRest - sourceV) < vS_thresh ){
+  if( openNumTimes() ){
     // the switch is open from the start
     Serial.print("Open from start of Ramp Down with ");
     Serial.print(sourceV);
@@ -377,7 +483,7 @@ int rampDown(){
   }
 
   // check if out of bounds to ramp up
-  if ( gateV < 0){
+  if ( gateV < gate_step ){
     Serial.println("Not Opening");
     return 0;
   }
@@ -398,8 +504,6 @@ int rampDown(){
     // decrease gate voltage if time is correct
     if(currentMillis - previousMillis >= gate_delay){
       previousMillis = currentMillis;
-      //Serial.print("gate V orig: ");
-      //Serial.println(utof(gateV));
       Serial.print("gate V final: ");
       Serial.println(utof(gateV)*19.5);
       
@@ -411,8 +515,9 @@ int rampDown(){
 
     // look at source voltage to see if switch
     sourceV = getSourceVolt();
-    
-    if( abs(sourceRest - sourceV) < vS_thresh ){
+
+    // check if open for n times
+    if( openNumTimes() ){
       // then the device has opened!
       Serial.print("Opened at ");
       Serial.print(mapf(gateV,0,4095,0,5)*19.5);
@@ -437,6 +542,7 @@ float getSourceVolt(){
 }
 
 void write_value(uint16_t value) {
+  // This function will write a value to the MCP49221E DAC
   // channel (0 = DACA, 1 = DACB) // Vref input buffer (0 = unbuffered, 1 = buffered) // gain (1 = 1x, 0 = 2x)  // Output power down power down (0 = output buffer disabled) //  12 bits of data
   uint16_t out = (0 << 15) | (1 << 14) | (1 << 13) | (1 << 12) | (value);
   digitalWrite(slaveSelectPin, LOW);
