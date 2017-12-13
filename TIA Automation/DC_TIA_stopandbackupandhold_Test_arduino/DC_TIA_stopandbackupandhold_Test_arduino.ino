@@ -16,6 +16,43 @@
 
 #include <SPI.h>
 
+uint16_t ftou(float x){
+  // This function converts a float to a uint16_t that will
+  // be written to the MCP4921E DAC
+    return x * (4096 / 5.0);
+}
+
+float utof(uint16_t x){
+  // This function converts a uint16_t that will
+  // be written to the MCP4921E DAC to a more readable float
+    return x * (5.0/4096);
+}
+
+//**************************************************************
+//*****************  VARIABLES TO CHANGE ***********************
+
+// initialize testing parameters
+uint16_t gate_start = ftou(0/19.5);
+uint16_t gate_step = 1;
+uint16_t gate_limit = ftou(50.0/19.5);
+uint16_t gate_restart = ftou(0/19.5);
+
+// delay between gate increase in ms
+const long gate_delay = 1;
+
+// 1/2 reset pulse length in ms
+int resetLength = 1;
+
+// 2.78 is the 'resting' voltage. Can change to
+// a moving average later.    
+float sourceRest = 2.78;
+float vS_thresh = 0.011;
+
+// number of open cycles before determining a switch as open
+int numOC = 10;
+//**************************************************************
+//*****************  END VARIABLES TO CHANGE *******************
+
 // initialize hardware pins
 int ledPin = 7;
 
@@ -33,39 +70,6 @@ byte printKill = HIGH;
 
 // variable to keep track of time passed for bias increase
 unsigned long previousMillis = 0;
-
-
-uint16_t ftou(float x){
-  // This function converts a float to a uint16_t that will
-  // be written to the MCP4921E DAC
-    return x * (4096 / 5.0);
-}
-
-float utof(uint16_t x){
-  // This function converts a uint16_t that will
-  // be written to the MCP4921E DAC to a more readable float
-    return x * (5.0/4096);
-}
-
-// initialize testing parameters
-uint16_t gate_start = ftou(0/19.5);
-uint16_t gate_step = 1;
-uint16_t gate_limit = ftou(50.0/19.5);
-uint16_t gate_restart = ftou(0/19.5);
-
-// delay in ms
-const long gate_delay = 1;
-
-// reset pulse length in ms
-int resetLength = 1;
-
-// 2.78 is the 'resting' voltage. Can change to
-// a moving average later.    
-float sourceRest = 2.78;
-float vS_thresh = 0.011;
-
-// number of open cycles before determining a switch as open
-int numOC = 10;
 
 // Variable to keep track of gate voltage
 uint16_t gateV = 0;
