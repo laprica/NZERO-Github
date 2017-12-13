@@ -14,19 +14,7 @@
 
 // Leanna Pancoast 15 Nov 2017
 
-#define DEBUG
-
 #include <SPI.h>
-
-#ifdef DEBUG
-#define DEBUG_PRINT(x)     Serial.print (x)
-#define DEBUG_PRINTDEC(x)     Serial.print (x, DEC)
-#define DEBUG_PRINTLN(x)  Serial.println (x)
-#else
-#define DEBUG_PRINT(x)
-#define DEBUG_PRINTDEC(x)
-#define DEBUG_PRINTLN(x) 
-#endif 
 
 // initialize hardware pins
 int ledPin = 7;
@@ -74,7 +62,7 @@ int resetLength = 1;
 // 2.78 is the 'resting' voltage. Can change to
 // a moving average later.    
 float sourceRest = 2.78;
-float vS_thresh = 0.015;
+float vS_thresh = 0.011;
 
 // number of open cycles before determining a switch as open
 int numOC = 10;
@@ -115,7 +103,7 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(interruptPin), killCode, FALLING);
 
   // Tell the user the Arduino is ready
-  Serial.println("Ready BUH v1.4.3");
+  Serial.println("Ready BUH v1.4.4");
 
   // give Arduino time before starting
   delay(100);
