@@ -488,6 +488,8 @@ int rampUp(){
     }
   }
   Serial.println("Reached limit, open switch");
+  resetPulse();
+  write_value(0);
   return 0;
 }
 
