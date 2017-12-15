@@ -215,7 +215,7 @@ void loop() {
     inByte = Serial.read();
 
     switch (inByte) {
-      case 'p':
+      case 'x':
         delay(10);
         // Parameters are being input
         // Gate start, gate step, gate end
@@ -233,6 +233,10 @@ void loop() {
       case 's':
         Serial.println("received s, stopping process");
         killState = HIGH;
+        break;
+      case 'p':
+        Serial.println("Received p, sending a reset pulse");
+        resetPulse();
         break;
       case 'b':
         // Begin the sweep
