@@ -45,8 +45,8 @@ int resetLength = 1;
 
 // 2.78 is the 'resting' voltage. Can change to
 // a moving average later.    
-float sourceRest = 2.78;
-float vS_thresh = 0.011;
+float sourceRest = 2.79;
+float vS_thresh = 0.111;
 
 // number of open cycles before determining a switch as open
 int numOC = 10;
@@ -58,7 +58,6 @@ int ledPin = 7;
 
 int slaveSelectPin = 10;
 
-int gatePin = 7;
 int sourcePin = A0;
 int resetPin = 5;
 
@@ -470,6 +469,12 @@ int rampUp(){
     sourceV = getSourceVolt();
     
     if( abs(sourceRest - sourceV) > vS_thresh ){
+
+      // don't want device to touch for a long time
+      // so need to try to pull it off
+      // apply reset pulse
+      backup();
+      
       // then the device has closed!
       Serial.print("Closed at ");
       Serial.print(mapf(gateV,0,4095,0,5)*19.5);
@@ -477,13 +482,6 @@ int rampUp(){
       Serial.print(sourceV);
       Serial.println(" V on source");
 
-      // don't want device to touch for a long time
-      // so need to try to pull it off
-
-      // apply reset pulse
-      backup();
-      
-      
       return 1;
     }
   }
