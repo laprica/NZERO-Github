@@ -1,0 +1,92 @@
+import visa
+import sys
+
+""" Module to access common GPIB commands on a Keithley 2400 """
+""" without needing to see the confusing GPIB commands """
+
+""" created by Leanna Pancoast 24 Feb 2017 """
+
+class KT2400:
+    
+    def __init__(self,instrument):
+        self.inst = instrument
+
+    def read_inst(self):
+        s = self.inst.query('*IDN?')
+        s = s.encode('ascii','ignore')
+        return s
+
+    def reset(self):
+        self.inst.write('*RST')
+
+    def read_output(self):
+        s = self.inst.query(':OUTP?')
+        s = s.encode('ascii','ignore')
+        return s
+
+    def set_output(self, s):
+        if(s != 'ON' and s !='OFF'):
+            sys.exit('you can only set output to ON or OFF')
+        self.inst.write(':OUTP {}'.format(s))
+
+
+    # ASCII Data format
+    # vvvvvvvvvvvvv,ccccccccccccc,rrrrrrrrrrrrr,ttttttttttttt,sssssssssssss
+    # voltage reading, current reading, resistance reading, time, status
+    # all have 13 characters
+    # +1.000205E+00 format
+
+    def read_volt(self):
+        s = self.inst.query('READ?')
+        s = s.encode('ascii','ignore')
+        return float(s[0:12])
+
+    def set_volt(self, n):
+        if(not isinstance(n, (int,float))):
+            sys.exit('you can only set numbers')
+        self.inst.write(':SOUR:VOLT:LEV {}'.format(n))
+
+    def read_curr(self):
+        s = self.inst.query('READ?')
+        s = s.encode('ascii','ignore')
+        return float(s[14:27])
+
+    def set_curr(self, n):
+        if(not isinstance(n, (int,float))):
+            sys.exit('you can only set numbers')
+        self.inst.write(':SOUR:CURR:LEV {}'.format(n))
+
+    def read_mode(self):
+        s = self.inst.query(':SOUR:FUNC:MODE?')
+        s = s.encode('ascii','ignore')
+        return s
+
+    def set_mode(self, s):
+        if(s != 'VOLT' and s !='CURR'):
+            sys.exit('you can only choose VOLT or CURR mode')
+        self.inst.write(':SOUR:FUNC {}'.format(s))
+
+    def read_curr_comp(self):
+        s = self.inst.query(':SENS:CURR:PROT?')
+        s = s.encode('ascii','ignore')
+        return float(s)
+
+    def set_curr_comp(self, n):
+        if(not isinstance(n, (int,float))):
+            sys.exit('you can only set numbers')
+        self.inst.write(':SENS:CURR:PROT {}'.format(n))
+
+    def set_volt_range(self, n):
+        if(not isinstance(n, (int,float))):
+            sys.exit('you can only set numbers')
+        self.inst.write(':SENS:VOLT:RANG {}'.format(n))
+
+    def read_volt_comp(self):
+        s = self.inst.query(':SENS:volt:PROT?')
+        s = s.encode('ascii','ignore')
+        return float(s)
+
+    def set_volt_comp(self, n):
+        if(not isinstance(n, (int,float))):
+            sys.exit('you can only set numbers')
+        self.inst.write(':SENS:volt:PROT {}'.format(n))
