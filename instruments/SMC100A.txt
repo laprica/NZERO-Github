@@ -36,57 +36,23 @@ class SMC100A:
     # all have 13 characters
     # +1.000205E+00 format
 
-    def read_volt(self):
+    def read_freq(self):
         s = self.inst.query('READ?')
         s = s.encode('ascii','ignore')
         return float(s[0:12])
 
-    def set_volt(self, n):
+    def set_freq(self, n):
         if(not isinstance(n, (int,float))):
             sys.exit('you can only set numbers')
         self.inst.write(':SOUR:VOLT:LEV {}'.format(n))
 
-    def read_curr(self):
+    def read_mod(self):
         s = self.inst.query('READ?')
         s = s.encode('ascii','ignore')
         return float(s[14:27])
 
-    def set_curr(self, n):
+    def set_mod(self, n):
         if(not isinstance(n, (int,float))):
             sys.exit('you can only set numbers')
         self.inst.write(':SOUR:CURR:LEV {}'.format(n))
 
-    def read_mode(self):
-        s = self.inst.query(':SOUR:FUNC:MODE?')
-        s = s.encode('ascii','ignore')
-        return s
-
-    def set_mode(self, s):
-        if(s != 'VOLT' and s !='CURR'):
-            sys.exit('you can only choose VOLT or CURR mode')
-        self.inst.write(':SOUR:FUNC {}'.format(s))
-
-    def read_curr_comp(self):
-        s = self.inst.query(':SENS:CURR:PROT?')
-        s = s.encode('ascii','ignore')
-        return float(s)
-
-    def set_curr_comp(self, n):
-        if(not isinstance(n, (int,float))):
-            sys.exit('you can only set numbers')
-        self.inst.write(':SENS:CURR:PROT {}'.format(n))
-
-    def set_volt_range(self, n):
-        if(not isinstance(n, (int,float))):
-            sys.exit('you can only set numbers')
-        self.inst.write(':SENS:VOLT:RANG {}'.format(n))
-
-    def read_volt_comp(self):
-        s = self.inst.query(':SENS:volt:PROT?')
-        s = s.encode('ascii','ignore')
-        return float(s)
-
-    def set_volt_comp(self, n):
-        if(not isinstance(n, (int,float))):
-            sys.exit('you can only set numbers')
-        self.inst.write(':SENS:volt:PROT {}'.format(n))
