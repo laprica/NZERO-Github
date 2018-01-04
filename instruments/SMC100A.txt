@@ -40,6 +40,10 @@ class SMC100A:
         s = self.inst.query('READ?')
         s = s.encode('ascii','ignore')
         return float(s[0:12])
+        
+        #function setFreqSMC100A(SMC100A,freq)
+#fprintf(SMC100A, [':SOURce:FREQuency:CW ' num2str(freq)]);
+#end
 
     def set_freq(self, n):
         if(not isinstance(n, (int,float))):
